@@ -1,38 +1,34 @@
-# OPD / RLVR：阅读笔记与实验代码
+# OPD / RL 研究与实验
 
-| 内容 | 入口 |
+这里整理论文阅读、复现代码和我们自己的实验。当前主要工作是 **G3a：固定老师，比较学生学到不同阶段时，哪种指导更有用**。
+
+| 想看什么 | 从这里开始 |
 |---|---|
-| 11 篇论文的中文解读、原文 PDF 与调研笔记 | [reading-notes](reading-notes/README.md) · [在线阅读](https://tasselszcx.github.io/opd-rlvr-paper-notes/reading-notes/) |
-| G-OPD 元教学 MVP 完整源码、配置和测试 | [repositories/gopd-meta-teaching-mvp](repositories/gopd-meta-teaching-mvp/) |
-| B300 部署与验收交接 | [HANDOFF_B300.md](repositories/gopd-meta-teaching-mvp/HANDOFF_B300.md) |
-| 发给 B300 Codex 的接手指令 | [START_B300_CODEX.txt](repositories/gopd-meta-teaching-mvp/START_B300_CODEX.txt) |
+| 当前实验想验证什么、怎么比较 | [G3a实验说明](docs/g3a-study.md) |
+| 当前训练、评测和恢复代码 | [student-state-guidance](experiments/student-state-guidance/README.md) |
+| 已保存的开发集结果与曲线 | [结果快照](docs/g3a-results.md) |
+| 论文中文解读、原文和离线页面 | [阅读笔记](reading-notes/README.md) · [在线阅读](https://tasselszcx.github.io/opd-rl-research/reading-notes/) |
+| 早期G-OPD元教学原型 | [历史归档](archive/README.md) |
 
-## 在 B300 上接手
+## 当前实验
 
-```bash
-git clone https://github.com/Tasselszcx/opd-rlvr-paper-notes.git
-cd opd-rlvr-paper-notes/repositories/gopd-meta-teaching-mvp
-```
+只做K&K逻辑题和GSM8K数学题，只跑训练种子42。先准备训练30步和90步的学生，再分别比较不给提示、只给答案、完整解法、针对错误给提示四种教法。每条对比都继续训练150步，共 **2条准备训练＋16条对比＝18条**。
 
-让执行端先读 `HANDOFF_B300.md`，再按 `START_B300_CODEX.txt` 完成环境适配和真实 8 卡 smoke。完整源码已放在当前目录，无需另传离线仓库包或初始化子模块。
+老师固定为Qwen3-8B，学生为Qwen3-1.7B-Base。提示只给老师看，学生始终只看原题。本轮只做OPD，不训练指导生成器，也不进入独立RL阶段。
 
-**当前训练代码经过 CPU 验证，B300 环境与 GPU 训练尚未实测。** 本仓库不包含模型权重、正式训练数据或已验证的 B300 环境锁。B300 不使用 `install-hopper`；执行端需复用或建立兼容环境后进行真实验收。
+结果文件是带日期的快照，不是实时看板。开发集成绩与最后的独立测试分开；实验未完成时，不把单个条件的变化写成“最佳教法”或状态差异结论。
 
 ## 目录
 
 ```text
-reading-notes/                        阅读页面、PDF、调研与生成工具
-repositories/
-  README.md                          代码目录说明
-  gopd-meta-teaching-mvp/             可直接编辑的完整 MVP 源码
-    HANDOFF_B300.md                   B300 交接
-    START_B300_CODEX.txt              接手指令
-    meta_teaching/                   教法选择与多轮实验调度
-    mvp_configs/                     smoke、pilot、固定时间配置
-    verl/                           G-OPD 所用 verl 及 MVP 修改
-    tests_mvp/                      CPU 与接口测试
+experiments/student-state-guidance/  当前G3a代码、配置、测试和运行入口
+docs/                               实验说明、结果解释、验证与维护记录
+results/g3a/                        精简开发集表格和图；不含原始回答或权重
+reading-notes/                      论文阅读页面、原文PDF及生成工具
+archive/gopd-meta-teaching-mvp/      早期原型，保留来源与原有验证记录
+tools/                              仓库结构、链接与发布内容检查
 ```
 
-阅读内容整体放在 `reading-notes/`，相对链接和离线资源保留。根目录是在线导航入口，旧论文页面地址通过 `404.html` 跳转到新位置。维护阅读页面时，从仓库根目录执行 `reading-notes/README.md` 中的构建命令。
+代码与数据准备步骤见[当前代码README](experiments/student-state-guidance/README.md)。Qwen训练权重、运行环境、真实checkpoint、原始训练/评测输出和机器配置均不存进Git；vendored代码仅保留上游自带的小型玩具测试模型。
 
-上游 G-OPD、verl、论文、字体及第三方资源保留各自许可证；代码来源见 [MVP_UPSTREAM.json](repositories/gopd-meta-teaching-mvp/MVP_UPSTREAM.json)。
+来源与许可见[第三方说明](THIRD_PARTY_NOTICES.md)。旧目录的迁移关系见[维护记录](docs/repository-maintenance.md)。

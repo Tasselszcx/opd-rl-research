@@ -1,0 +1,241 @@
+{
+  "status": "frozen",
+  "version": "G3a-20261029-full",
+  "primary_training_tasks": [
+    "knights_and_knaves",
+    "zebra",
+    "gsm8k"
+  ],
+  "auxiliary_training_tasks": [
+    "countdown"
+  ],
+  "transfer_eval": [
+    "MATH-500 on GSM8K endpoints only"
+  ],
+  "reference_steps": 150,
+  "reference_checkpoints": [
+    30,
+    90
+  ],
+  "branch_additional_steps": 150,
+  "global_endpoints": [
+    180,
+    240
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "guidance_conditions": [
+    "plain",
+    "answer_only",
+    "full_reasoning",
+    "key_steps",
+    "error_targeted"
+  ],
+  "formal_branches": 120,
+  "reference_runs": 12,
+  "total_runs": 132,
+  "total_batch_updates": 19800,
+  "devices_planned": 8,
+  "parallel_lanes": 2,
+  "gpus_per_lane": 4,
+  "launch_performed": false,
+  "train_batch_size": 128,
+  "rollouts_per_question": 8,
+  "learning_rate": 1e-06,
+  "response_limits": {
+    "logic": 4096,
+    "math": 8192
+  },
+  "test_questions": {
+    "kk": 1024,
+    "zebra": 1024,
+    "countdown": 1024,
+    "gsm8k": 1319,
+    "math500": 500
+  },
+  "test_samples_per_question": 32,
+  "development_questions": 512,
+  "development_samples_per_question": 8,
+  "diagnostic_questions": 128,
+  "teacher": "Qwen3-8B",
+  "student": "Qwen3-1.7B-Base",
+  "sources": [
+    "https://github.com/StringNLPLAB/opd-rlvr",
+    "https://arxiv.org/html/2609.04108v2",
+    "https://huggingface.co/datasets/openai/gsm8k",
+    "https://huggingface.co/datasets/HuggingFaceH4/MATH-500"
+  ],
+  "source_commit": "30e9ff3981092df97e9776b60a7acb0bce2855d2",
+  "authorized_date": "2026-10-29",
+  "scope": "G3a only; fixed teacher and post-OPD learning; no independent RL or learned generator",
+  "gpu_hour_cap": null,
+  "stop_on_failure": true,
+  "data": {
+    "kk": {
+      "task": "kk",
+      "splits": {
+        "train": {
+          "count": 20000,
+          "sha256": "76c0030eb9416331b546f0cf1a608941e8283945cbd554c0b558a43d4d547e6f",
+          "bytes": 36286242
+        },
+        "diagnostic": {
+          "count": 128,
+          "sha256": "9e0bc32c5631852241d85bbfe61bb88385492a2a7c80314856b7e00bd1a5c992",
+          "bytes": 232350
+        },
+        "dev": {
+          "count": 512,
+          "sha256": "49c79a7d92b972e96cf3bdbde8730ccd21746f050ade6f53703ae1ce825fbbf6",
+          "bytes": 929452
+        },
+        "test": {
+          "count": 1024,
+          "sha256": "b961247f478f54b6853fd9743128f7da72867ef5364b9eff8b9ef46e055510d5",
+          "bytes": 1859716
+        }
+      },
+      "skipped_duplicates": {
+        "train": 0,
+        "diagnostic": 0,
+        "dev": 0,
+        "test": 0
+      },
+      "zero_question_overlap": true,
+      "zero_structure_overlap": true,
+      "canonical_definition": "KK indexed statement trees; Zebra sorted clue text and target question; Countdown number multiset and target; GSM normalized question text. Not a complete logical-equivalence test.",
+      "split_seeds": {
+        "train": 5000000,
+        "diagnostic": 6000000,
+        "dev": 7000000,
+        "test": 8000000
+      },
+      "gsm8k_partition_seed": 20261029,
+      "seconds": 39.025808334350586
+    },
+    "gsm8k": {
+      "task": "gsm8k",
+      "splits": {
+        "diagnostic": {
+          "count": 128,
+          "sha256": "af716de73e7bb00bc4d11954a933ecf63080da509b1d153ee9d56a8e8e71abb8",
+          "bytes": 104468
+        },
+        "dev": {
+          "count": 512,
+          "sha256": "d5a075662f544305deb5abddcae52e0bc9edca5d6229ea843ec8eacf47303f5a",
+          "bytes": 431312
+        },
+        "train": {
+          "count": 6833,
+          "sha256": "4d68d1da98d747a9128bc4feb181ad3190f04e8cb65450260271b880b76ba606",
+          "bytes": 5767828
+        },
+        "test": {
+          "count": 1319,
+          "sha256": "468fb913963bac06a03108ff4000ebe607935eb55fe1fc6f5db6d35f5eee57e9",
+          "bytes": 1123947
+        }
+      },
+      "skipped_duplicates": {},
+      "zero_question_overlap": true,
+      "zero_structure_overlap": true,
+      "canonical_definition": "KK indexed statement trees; Zebra sorted clue text and target question; Countdown number multiset and target; GSM normalized question text. Not a complete logical-equivalence test.",
+      "split_seeds": {
+        "train": 0,
+        "diagnostic": 1000000,
+        "dev": 2000000,
+        "test": 3000000
+      },
+      "gsm8k_partition_seed": 20261029,
+      "seconds": 0.4208943843841553
+    },
+    "zebra": {
+      "task": "zebra",
+      "splits": {
+        "train": {
+          "count": 20000,
+          "sha256": "180b6120ea56ac0188b11b4c3432674d843ec1582c0fa6c7362b62485aec7a86",
+          "bytes": 1093981805
+        },
+        "diagnostic": {
+          "count": 128,
+          "sha256": "2597545249f70219d07a0a570708f00710859902038939794b0e60183d8d1751",
+          "bytes": 6910943
+        },
+        "dev": {
+          "count": 512,
+          "sha256": "3c8b813fa3810974fe5aeec7d1e4a7d133c7e3dcf53d91c5d14b953284f2615f",
+          "bytes": 27865543
+        },
+        "test": {
+          "count": 1024,
+          "sha256": "967c14b52f9718374d2cb1d17adebbcbad7498246dceae773b2a7ffce0c7a72d",
+          "bytes": 56080766
+        }
+      },
+      "skipped_duplicates": {
+        "train": 0,
+        "diagnostic": 0,
+        "dev": 0,
+        "test": 0
+      },
+      "zero_question_overlap": true,
+      "zero_structure_overlap": true,
+      "canonical_definition": "KK indexed statement trees; Zebra sorted clue text and target question; Countdown number multiset and target; GSM normalized question text. Not a complete logical-equivalence test.",
+      "split_seeds": {
+        "train": 10000000,
+        "diagnostic": 11000000,
+        "dev": 12000000,
+        "test": 13000000
+      },
+      "gsm8k_partition_seed": 20261029,
+      "seconds": 289.7482376098633
+    },
+    "countdown": {
+      "task": "countdown",
+      "splits": {
+        "train": {
+          "count": 20000,
+          "sha256": "49c419ae1f45ace57889758ad6186fb59f50d466f517dd0d12304e6098cedaea",
+          "bytes": 17350509
+        },
+        "diagnostic": {
+          "count": 128,
+          "sha256": "ae7021d078a92e173b875c2abef4ba1cb3a59a9b328dea9016d51ae09c224428",
+          "bytes": 110929
+        },
+        "dev": {
+          "count": 512,
+          "sha256": "872408a9013160a4f8f876a48c64723d846ef5a479ef479fce98c48436d68076",
+          "bytes": 443255
+        },
+        "test": {
+          "count": 1024,
+          "sha256": "730ae0b6501839b87751f68d1e3b170e369baf825dce80e5c6ff1d519407db62",
+          "bytes": 887121
+        }
+      },
+      "skipped_duplicates": {
+        "train": 77,
+        "diagnostic": 1,
+        "dev": 2,
+        "test": 9
+      },
+      "zero_question_overlap": true,
+      "zero_structure_overlap": true,
+      "canonical_definition": "KK indexed statement trees; Zebra sorted clue text and target question; Countdown number multiset and target; GSM normalized question text. Not a complete logical-equivalence test.",
+      "split_seeds": {
+        "train": 15000000,
+        "diagnostic": 16000000,
+        "dev": 17000000,
+        "test": 18000000
+      },
+      "gsm8k_partition_seed": 20261029,
+      "seconds": 41.63914966583252
+    }
+  }
+}

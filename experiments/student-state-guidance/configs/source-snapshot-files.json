@@ -1,0 +1,3610 @@
+{
+  "commit": "140f0cb5935637c7ccc500240da9c786056424cc",
+  "files": [
+    {
+      "path": ".gitignore",
+      "public_path": ".gitignore",
+      "sha256": "fcb1668fdbac69d8592b09036c9869cc80a7ae695ccf727b44bd115882b46e32"
+    },
+    {
+      "path": "LICENSE",
+      "public_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE",
+      "public_path": "NOTICE",
+      "sha256": "bb398a7d817a06a675ce0d9249b0c43fc743440d6ebf021f282f0dd81d794f38"
+    },
+    {
+      "path": "README.md",
+      "public_path": "UPSTREAM_README.md",
+      "sha256": "62dab2cf02d10b836c58531d576c2010342482b2946ee4e6206c40480304a86b"
+    },
+    {
+      "path": "guidance/PROTOCOL.md",
+      "public_path": "guidance/PROTOCOL.md",
+      "sha256": "989474cacf70cc0386896efbce4e45a89e0ec45b1836944c3299625c69909351"
+    },
+    {
+      "path": "guidance/__init__.py",
+      "public_path": "guidance/__init__.py",
+      "sha256": "857c002b5c93f51a371df5558717afdb6824c8bc812debcccacf9c14664f7de5"
+    },
+    {
+      "path": "guidance/analyze.py",
+      "public_path": "guidance/analyze.py",
+      "sha256": "b57e877b501a3cabe807623564bbe9fd2ec785654f244fbb90b831a9227e6e4d"
+    },
+    {
+      "path": "guidance/coordinator.py",
+      "public_path": "guidance/coordinator.py",
+      "sha256": "5a4eff818f32770d6c4cef8772ce16c56f14b19c088a7c577224b5104623b3f7"
+    },
+    {
+      "path": "guidance/costs.py",
+      "public_path": "guidance/costs.py",
+      "sha256": "97423dc10d615f7805291491f983ec565e079e64c09f2e4d60a4e5fc25e85581"
+    },
+    {
+      "path": "guidance/env.sh",
+      "public_path": "guidance/env.sh",
+      "sha256": "dac59af61f27f5bed48e0d4c75acc268a3aacd8ddc284ffb045383d1974e869a"
+    },
+    {
+      "path": "guidance/eval_worker.py",
+      "public_path": "guidance/eval_worker.py",
+      "sha256": "e91e71c1e1ae5f22fb83e82b66b247db746b6a6d7dc926b46ccf569eda109547"
+    },
+    {
+      "path": "guidance/frozen_dataset.py",
+      "public_path": "guidance/frozen_dataset.py",
+      "sha256": "065a63cc9f39fdd4ae406907503dbc660131b761b0b9b623e8382a8d25d17dfe"
+    },
+    {
+      "path": "guidance/prepare_data.py",
+      "public_path": "guidance/prepare_data.py",
+      "sha256": "38aedbbec617f5cef30016e19977c49774c85231736a5933d2e246236d4c9cd7"
+    },
+    {
+      "path": "guidance/proofs.py",
+      "public_path": "guidance/proofs.py",
+      "sha256": "b343f6e98aa1f4e2e7a9b28ebccc28a59e287129aba6016f6212f0ea420bcedc"
+    },
+    {
+      "path": "guidance/run_phase.py",
+      "public_path": "guidance/run_phase.py",
+      "sha256": "2b349f64a89e70d2210cf1a807d11b53c67be4385b3e5f1543c6e2fd603bfa3e"
+    },
+    {
+      "path": "guidance/teacher_inputs.py",
+      "public_path": "guidance/teacher_inputs.py",
+      "sha256": "e2d2fe4b85889fca803b14cde9350e89ea00ffd634d1c4810bc5ed1ce2d9a132"
+    },
+    {
+      "path": "guidance/test_guidance.py",
+      "public_path": "guidance/test_guidance.py",
+      "sha256": "296ad94c5a9e5a714bf8afd3c05d4336eb4ccc0def91423ad143739fe369ddbd"
+    },
+    {
+      "path": "length_audit/PROTOCOL.md",
+      "public_path": "length_audit/PROTOCOL.md",
+      "sha256": "fa8374537669d69680e5f1bbd92d0c9257ed7e2b4c69d8209150daa2020c08f8"
+    },
+    {
+      "path": "length_audit/__init__.py",
+      "public_path": "length_audit/__init__.py",
+      "sha256": "9ab17050d0e35683da1c1883234ad3d2fa104cec5fe25d1e149db9b2543910be"
+    },
+    {
+      "path": "length_audit/analyze.py",
+      "public_path": "length_audit/analyze.py",
+      "sha256": "1e22576aab42f76660e7a971703fceda53fe03586d159772c9f28855b16a6548"
+    },
+    {
+      "path": "length_audit/budget_watchdog.py",
+      "public_path": "length_audit/budget_watchdog.py",
+      "sha256": "260250624219eb9abb8bc9bb7452e04f6683ec0914114a70558ef39ef41f27e6"
+    },
+    {
+      "path": "length_audit/common.py",
+      "public_path": "length_audit/common.py",
+      "sha256": "4f8045b1e60d1be420a3cc818a7e14b5c0f4bb9174801bdf606120495279bca7"
+    },
+    {
+      "path": "length_audit/coordinator.py",
+      "public_path": "length_audit/coordinator.py",
+      "sha256": "ef19a53f9924f991d5a76e2adabd9249e3f403cf6ad14a5d53c67d1ab62a3bcc"
+    },
+    {
+      "path": "length_audit/env.sh",
+      "public_path": "length_audit/env.sh",
+      "sha256": "779155973be7eb98cd1ea7ac10605ae4896d9792603298088c883b7de57be51c"
+    },
+    {
+      "path": "length_audit/eval_worker.py",
+      "public_path": "length_audit/eval_worker.py",
+      "sha256": "2a16dccfe812b0e6fb3bfde1ec60709495049839c5b06bf4d664bdde535b83f3"
+    },
+    {
+      "path": "length_audit/prefix_scoring.py",
+      "public_path": "length_audit/prefix_scoring.py",
+      "sha256": "bad64dc61682519247c8d27f1f58bac01679ec00a312ef7990b7b8eade1aaa4e"
+    },
+    {
+      "path": "length_audit/test_control.py",
+      "public_path": "length_audit/test_control.py",
+      "sha256": "baac692bfbb6c420853bf4ea6a295c421fe71f48996654f1675085ad513e70c3"
+    },
+    {
+      "path": "length_audit/test_prefix.py",
+      "public_path": "length_audit/test_prefix.py",
+      "sha256": "970cb117622b5d6d403b6c78676ff20446f107bfe688f35f4eb1fed21cf2b16d"
+    },
+    {
+      "path": "logic/LICENSE.reasoning-gym",
+      "public_path": "logic/LICENSE.reasoning-gym",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "logic/NOTICE.txt",
+      "public_path": "logic/NOTICE.txt",
+      "sha256": "3561beeb12cd4927e38ff93bc61a13a601746f1a3b2bf7f4a8b39c5158af7f83"
+    },
+    {
+      "path": "logic/convert_verl_ckpt_to_hf.py",
+      "public_path": "logic/convert_verl_ckpt_to_hf.py",
+      "sha256": "30e02fc8e93ea5e493f92c4e1b435bee51b4271ff6e38705b02f8c40aa8d70e1"
+    },
+    {
+      "path": "logic/eval/evaluate.py",
+      "public_path": "logic/eval/evaluate.py",
+      "sha256": "321701fba3bf959d962c9afd8e782559fbb88bbcc085d8082e8fb5621aec470c"
+    },
+    {
+      "path": "logic/pyproject.toml",
+      "public_path": "logic/pyproject.toml",
+      "sha256": "f8bcf3f0a809e73045d00421969bf73aaa9b119f0cfed56db42375a7bbc34984"
+    },
+    {
+      "path": "logic/reasoning_gym/__init__.py",
+      "public_path": "logic/reasoning_gym/__init__.py",
+      "sha256": "82bf4b027fa08b9062d0f1128512ee073af55e8dc04fb3709bfb147d3f454143"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/__init__.py",
+      "public_path": "logic/reasoning_gym/algebra/__init__.py",
+      "sha256": "f9616996d2be6494b4fbefe54ecc657c9f1e0e6b022614237f7b9a33291131f2"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/complex_arithmetic.py",
+      "public_path": "logic/reasoning_gym/algebra/complex_arithmetic.py",
+      "sha256": "32beb8f40a25aa781b96f6293f11bd4de8b59c903ee30ea11e5659d8d8310d2a"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/intermediate_integration.py",
+      "public_path": "logic/reasoning_gym/algebra/intermediate_integration.py",
+      "sha256": "74838f0224b504e369d3750183e6d96586ecd365fd618e98f11b8488260ed8ef"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/polynomial_equations.py",
+      "public_path": "logic/reasoning_gym/algebra/polynomial_equations.py",
+      "sha256": "d41b84e2daf73105922c4211d8a49307ae0b143c0bc58c20cbbdcd25852fcf1a"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/polynomial_multiplication.py",
+      "public_path": "logic/reasoning_gym/algebra/polynomial_multiplication.py",
+      "sha256": "4a2d9db4b720f17861b02d17add43255741b871ad4c161929ec6fd54f6112b20"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/simple_equations.py",
+      "public_path": "logic/reasoning_gym/algebra/simple_equations.py",
+      "sha256": "8ff7a0f4a6d78e9fda239ef0690f10d233ced73a154aa3a00da7ab57329a0c73"
+    },
+    {
+      "path": "logic/reasoning_gym/algebra/simple_integration.py",
+      "public_path": "logic/reasoning_gym/algebra/simple_integration.py",
+      "sha256": "15e275301091a609745414f1e7b05a96dfe53ed19ed910ec2df065652299c698"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/__init__.py",
+      "public_path": "logic/reasoning_gym/algorithmic/__init__.py",
+      "sha256": "f77492da35192df6b595e57978c18d669aa2310c2c25f813cea7624dcef0015f"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/ab.py",
+      "public_path": "logic/reasoning_gym/algorithmic/ab.py",
+      "sha256": "a232e9cbf1cc7fb20f913cca845504d808578866734e085c9cffda12636bab65"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/base_conversion.py",
+      "public_path": "logic/reasoning_gym/algorithmic/base_conversion.py",
+      "sha256": "7d1a1564b6b9e462c73aba989bc572ee75a7d5bc5604637b181345ef94bb903e"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/binary_alternation.py",
+      "public_path": "logic/reasoning_gym/algorithmic/binary_alternation.py",
+      "sha256": "84cfba9930234cfe989c83a02533df1428d77e397dcd6d6b4c930ab482280464"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/binary_matrix.py",
+      "public_path": "logic/reasoning_gym/algorithmic/binary_matrix.py",
+      "sha256": "0697d49b6cb8812731713e2d930469023e9281c8c4354400655376a0becb6491"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/caesar_cipher.py",
+      "public_path": "logic/reasoning_gym/algorithmic/caesar_cipher.py",
+      "sha256": "c836398236ec5d9bd653d4c89c2fe6dfe19d7bd854e0be5978b4b79d08318694"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/count_primes.py",
+      "public_path": "logic/reasoning_gym/algorithmic/count_primes.py",
+      "sha256": "3f59935592b1a2782b738388c5245cd7b38bf2e52e919d07d3a7a84dbae752bd"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/cryptarithm.py",
+      "public_path": "logic/reasoning_gym/algorithmic/cryptarithm.py",
+      "sha256": "88d69025063ad6b9e70c917e69bca199ad86e22deecebfdf81d01363df914aef"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/game_of_life.py",
+      "public_path": "logic/reasoning_gym/algorithmic/game_of_life.py",
+      "sha256": "0cd5e37e542f2e956efcefb898ec84f4a1d34d44ba4b039e145fcb457e907f20"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "public_path": "logic/reasoning_gym/algorithmic/game_of_life_halting.py",
+      "sha256": "47c54e209b1ea551b191bf577bd0ad3a5eb3f94810174f2e69052a3f30706f28"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/graph_color.py",
+      "public_path": "logic/reasoning_gym/algorithmic/graph_color.py",
+      "sha256": "b89db0e352de50fe841f7126904dfff1153596811171e8da70eb4ae4295d4929"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/group_anagrams.py",
+      "public_path": "logic/reasoning_gym/algorithmic/group_anagrams.py",
+      "sha256": "85c3fe62b293f423b9c3c404afcfba53d50b4ef53e2e52caaed9c2a123adb35c"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/isomorphic_strings.py",
+      "public_path": "logic/reasoning_gym/algorithmic/isomorphic_strings.py",
+      "sha256": "6355eca12e11bba559a8545eb0d397693a9bd9e70f5506b15d8eaa6c4fb6fd76"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/jugs.py",
+      "public_path": "logic/reasoning_gym/algorithmic/jugs.py",
+      "sha256": "9a14c33afbb2fcf0b182d80a2c300ef62f42a70b04768032550020c50dfe0d8d"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/letter_counting.py",
+      "public_path": "logic/reasoning_gym/algorithmic/letter_counting.py",
+      "sha256": "52e442146f1067b6cacc24cf343ea022ab2e15cd02835624b13cfb870d4bc099"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/letter_jumble.py",
+      "public_path": "logic/reasoning_gym/algorithmic/letter_jumble.py",
+      "sha256": "1fc2b12a373460c72d9b5e0b31bd4f79c12082e708e6fd99470e91f853bec9b8"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/manipulate_matrix.py",
+      "public_path": "logic/reasoning_gym/algorithmic/manipulate_matrix.py",
+      "sha256": "7203c8ad02bb74fe52a91b88a9fcaca17647735a9d32acba09b04718a0458093"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/number_filtering.py",
+      "public_path": "logic/reasoning_gym/algorithmic/number_filtering.py",
+      "sha256": "ce86534027aad338ce6732efa1a78b58b4e27bce411ec65df9ab64a4fb198001"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/number_sorting.py",
+      "public_path": "logic/reasoning_gym/algorithmic/number_sorting.py",
+      "sha256": "a481e06274f9a978b213d43abd87d04943b796d73582d4b6febcfbe6a0f369f1"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/palindrome_generation.py",
+      "public_path": "logic/reasoning_gym/algorithmic/palindrome_generation.py",
+      "sha256": "6823b3787d901f0135c6483546b416d49f107046432eebb14749b67f73d2f7de"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/palindrome_partitioning.py",
+      "public_path": "logic/reasoning_gym/algorithmic/palindrome_partitioning.py",
+      "sha256": "a1c218cdd2bb9e90a692be8bf7877a3b93e6230c0028b5c9f506de4d971a9f4a"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/pool_matrix.py",
+      "public_path": "logic/reasoning_gym/algorithmic/pool_matrix.py",
+      "sha256": "36b24a7835769b132a22190f6477002b9ad516aa86c486e868b19e521eca8a9a"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/ransom_note.py",
+      "public_path": "logic/reasoning_gym/algorithmic/ransom_note.py",
+      "sha256": "92319316250a2a23f9000ba2d26f28bf90207af1fe3324e07f542cabeef20866"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/rotate_matrix.py",
+      "public_path": "logic/reasoning_gym/algorithmic/rotate_matrix.py",
+      "sha256": "264be4a9224025935878fbefa458bc6a364ef31f97bc9e8cc051824977591579"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/rotten_oranges.py",
+      "public_path": "logic/reasoning_gym/algorithmic/rotten_oranges.py",
+      "sha256": "2bf3d937e65980f138afbae89ed773b952ccb29ac8a9a35bb01443ea5c73ab92"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/sentence_reordering.py",
+      "public_path": "logic/reasoning_gym/algorithmic/sentence_reordering.py",
+      "sha256": "0a5ec0e35dccd4ab85edf8a158ab575fa33a8689128735856a6f7e1ae9be77cf"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/spell_backward.py",
+      "public_path": "logic/reasoning_gym/algorithmic/spell_backward.py",
+      "sha256": "a27f14e886fad4d7dd1bf0506644be70c095bb71201a5e8d71128647901d9773"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/spiral_matrix.py",
+      "public_path": "logic/reasoning_gym/algorithmic/spiral_matrix.py",
+      "sha256": "27e63792b604c4df29539d9c4c1adf910459c8dec89971a090ad4de5ee412b6c"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/string_insertion.py",
+      "public_path": "logic/reasoning_gym/algorithmic/string_insertion.py",
+      "sha256": "866e1de2b8fcd9f88de5b491e1b7e306a3db1041bf139cdbb79061b23fec40bf"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/string_manipulation.py",
+      "public_path": "logic/reasoning_gym/algorithmic/string_manipulation.py",
+      "sha256": "acd0355646b5a302cb1af04e4d39da4ff38b097c3489c3019a297a005d06d795"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/string_splitting.py",
+      "public_path": "logic/reasoning_gym/algorithmic/string_splitting.py",
+      "sha256": "6589eb75c508270a8e095595f8c3bf6c2a4450207f980936e29cd2f663dea081"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/string_synthesis.py",
+      "public_path": "logic/reasoning_gym/algorithmic/string_synthesis.py",
+      "sha256": "20298210ad442b0c2de736631b56845210ebccb648c2c1aef8e2579f727cc8e2"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/word_ladder.py",
+      "public_path": "logic/reasoning_gym/algorithmic/word_ladder.py",
+      "sha256": "8a82e0dee96401a019b6842bb99c2300e1b64b4cc03051a3f22675364acd9f5e"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "public_path": "logic/reasoning_gym/algorithmic/word_sequence_reversal.py",
+      "sha256": "912c346511855e7de945283420c472835e7d0397f74f3ef0d639d5d3b9d93e08"
+    },
+    {
+      "path": "logic/reasoning_gym/algorithmic/word_sorting.py",
+      "public_path": "logic/reasoning_gym/algorithmic/word_sorting.py",
+      "sha256": "32d554acf0613b0cec4236a806165bebb426420a851a9e5468943a0cb8deff41"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/__init__.py",
+      "public_path": "logic/reasoning_gym/arc/__init__.py",
+      "sha256": "8bdd79e291ed79dee3107f073ee05d67de7aff973ead6e4012f12a47acebc262"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/arc_1d.py",
+      "public_path": "logic/reasoning_gym/arc/arc_1d.py",
+      "sha256": "7180ae709160d07d05b46352d37afd7b3b2a10e9aec6178f554311dcb4b72b61"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/arc_1d_tasks.py",
+      "public_path": "logic/reasoning_gym/arc/arc_1d_tasks.py",
+      "sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/arc_agi.py",
+      "public_path": "logic/reasoning_gym/arc/arc_agi.py",
+      "sha256": "8055ffbf2e77b5225c4cbfb03db4434b67180600c20ad1decc055bd570c5d6ec"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/board_format.py",
+      "public_path": "logic/reasoning_gym/arc/board_format.py",
+      "sha256": "009ada0bc6e556eb52d832442d161284e09dee28a5c3eb8f5380965e2ae1e2d6"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc.py",
+      "public_path": "logic/reasoning_gym/arc/rearc.py",
+      "sha256": "258bc27a44dadf46e29dc9431f965962d25b7917de5265467e24593288d57ad7"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/__init__.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/dsl.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/dsl.py",
+      "sha256": "6e48af452f0d306644305733b65b7cbc71aefda3063bc448ebdacf0097dfee8d"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/generators/__init__.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/generators/__init__.py",
+      "sha256": "cbb97af74c5fb7cd9f0465fd78e8ff512b8d99b112a7d7403ab1da03cbed9858"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_00_99.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_00_99.py",
+      "sha256": "776aeb56206690a59eadd29c1596a57bf3a1054cce7961050899afb96758e847"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_100_199.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_100_199.py",
+      "sha256": "fca46035627711ff4c4b4e7218966846e8a7984068df55bdc0ac4c5a6cc5537a"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_200_299.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_200_299.py",
+      "sha256": "791a4c8d08051a80110ce872d74e7fa7e729caa11ea4092b89e9825e5443f043"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_300_399.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/generators/generators_300_399.py",
+      "sha256": "0e1d6efa689c8b98a2db490684d6795e43c9d9405360e996b15b2e14de88cf44"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/utils.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/utils.py",
+      "sha256": "ce068d662a3eb98d3b6197b67b7adbbc7a13a091663f4abf517716fd9d103dad"
+    },
+    {
+      "path": "logic/reasoning_gym/arc/rearc_utils/verifiers.py",
+      "public_path": "logic/reasoning_gym/arc/rearc_utils/verifiers.py",
+      "sha256": "58cd277527b293f5454ea771b3441fe4f76d1f1b102e97f9daed9c93bda7523b"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/__init__.py",
+      "public_path": "logic/reasoning_gym/arithmetic/__init__.py",
+      "sha256": "1e0d8a82d615504f73bad10e75552bdda4ed17e2b0369f4ae7d009737659b209"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/basic_arithmetic.py",
+      "public_path": "logic/reasoning_gym/arithmetic/basic_arithmetic.py",
+      "sha256": "9eb222cd9393ee7ce9e60e3cb2d00ba2da038aa0737f9fe46b866b3a6a682934"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/bitwise_arithmetic.py",
+      "public_path": "logic/reasoning_gym/arithmetic/bitwise_arithmetic.py",
+      "sha256": "d4c0fa2bf34ed1610c4cb3b2ec6ea40bdaf2b190875c3b64536f21e5540eacb5"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/calendar_arithmetic.py",
+      "public_path": "logic/reasoning_gym/arithmetic/calendar_arithmetic.py",
+      "sha256": "ad06cec5be9c14889c4860482218aecba128815b1357a1ee410b3aac4be54120"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/chain_sum.py",
+      "public_path": "logic/reasoning_gym/arithmetic/chain_sum.py",
+      "sha256": "7e811214e9e31aa67eeb5490a0cf8eb275fceab609c4523bb38ceec9f8dbcb9f"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/count_bits.py",
+      "public_path": "logic/reasoning_gym/arithmetic/count_bits.py",
+      "sha256": "32c9eb4539912277335c78a4fdbdbaf0af990d8ad2a0e02af5c7e641890f4d67"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "public_path": "logic/reasoning_gym/arithmetic/decimal_arithmetic.py",
+      "sha256": "e56416e0c10bb55f46961e93ef55826f419d1a0186ff75b6bb367d098dcca245"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/decimal_chain_sum.py",
+      "public_path": "logic/reasoning_gym/arithmetic/decimal_chain_sum.py",
+      "sha256": "1a4b13aceb3fc50dce3921f109b9d5b0d53aaa9c6eafc7acb01dd2988c15cc3e"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/dice.py",
+      "public_path": "logic/reasoning_gym/arithmetic/dice.py",
+      "sha256": "3b8f83d04f01b13526e2790245c09a52b2c0998c16baf92607b671d2459ba0d9"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/fraction_simplification.py",
+      "public_path": "logic/reasoning_gym/arithmetic/fraction_simplification.py",
+      "sha256": "54a6641f90029f4c2a396e577d62ba950e141fa208072055fa20940ad64678ab"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/gcd.py",
+      "public_path": "logic/reasoning_gym/arithmetic/gcd.py",
+      "sha256": "d9a0d704f1425c5f03cee24683f63f819b324b882542da45886ca2f9682e3d2c"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/gsm_symbolic/__init__.py",
+      "public_path": "logic/reasoning_gym/arithmetic/gsm_symbolic/__init__.py",
+      "sha256": "f72ad7e5ef0ab1a572438830bd1e177ac3350da12acda3eda7ad459ea1fa20cb"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/gsm_symbolic/generators_00_49.py",
+      "public_path": "logic/reasoning_gym/arithmetic/gsm_symbolic/generators_00_49.py",
+      "sha256": "78b85da5a9225fec76d7fc27e1bad207b0dfb58b386d5e3c1089b9542c04b1e7"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/gsm_symbolic/generators_50_99.py",
+      "public_path": "logic/reasoning_gym/arithmetic/gsm_symbolic/generators_50_99.py",
+      "sha256": "29e28c60ac623defb0acabdbf568771b4f43abb75027d2432c368d670ff4889e"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/gsm_symbolic/gsm_symbolic.py",
+      "public_path": "logic/reasoning_gym/arithmetic/gsm_symbolic/gsm_symbolic.py",
+      "sha256": "511e30a979511719c65019082ea298e215f4fbfab7d7660b384fa51c0fd03ee1"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/lcm.py",
+      "public_path": "logic/reasoning_gym/arithmetic/lcm.py",
+      "sha256": "1c9e9249a6ff30b1de11dba82ca4847053a72a570d98a1d55eadf69c3bb7d834"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/leg_counting.py",
+      "public_path": "logic/reasoning_gym/arithmetic/leg_counting.py",
+      "sha256": "6b530e05a8c6725406f9d32f583f7da0531b50ed06c702beb04874f88c72dcd7"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/number_format.py",
+      "public_path": "logic/reasoning_gym/arithmetic/number_format.py",
+      "sha256": "a30fb4f8086eff3a9fbc481e2dd423fa0d552502d3746c0a8bd2bff12e1b92e2"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/power_function.py",
+      "public_path": "logic/reasoning_gym/arithmetic/power_function.py",
+      "sha256": "fd820443cce4f23ac04de5c6cded9899c4898c399ea379e36d1e744b0c0ced91"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/prime_factorization.py",
+      "public_path": "logic/reasoning_gym/arithmetic/prime_factorization.py",
+      "sha256": "30f0822f1143c58e41f96f1bf400c91f7265688914b72abc824d8b34924f187a"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/products.py",
+      "public_path": "logic/reasoning_gym/arithmetic/products.py",
+      "sha256": "63959e2c03580d8d408e2e91c2c30c7016d8ca2ad937fd5656e83c371d5dcbc0"
+    },
+    {
+      "path": "logic/reasoning_gym/arithmetic/time_intervals.py",
+      "public_path": "logic/reasoning_gym/arithmetic/time_intervals.py",
+      "sha256": "b42d9a9f992eead49d028f13e0ffd454b24676f92402e1a323cbabdd74d20100"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/__init__.py",
+      "public_path": "logic/reasoning_gym/coaching/__init__.py",
+      "sha256": "fe6348ae36bb02ab3d5c3e814fee7b000e9bc3ee6371ecbbd594d0eec4a6234e"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/attributes.py",
+      "public_path": "logic/reasoning_gym/coaching/attributes.py",
+      "sha256": "724868b3a8ed278261d14db00cd475b0c78de6c3cb69af6a6b5fe80555de88d8"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/base_curriculum.py",
+      "public_path": "logic/reasoning_gym/coaching/base_curriculum.py",
+      "sha256": "0e899f0c884e1bc7d4fb8b2fb6b15c75d6989540b3c2f7ca98470af5a81ced09"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/curriculum_config.py",
+      "public_path": "logic/reasoning_gym/coaching/curriculum_config.py",
+      "sha256": "90b1094c23d8d918bfbe71b81b364e313998f7146acaee03fefbbc139955f809"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/experiment.py",
+      "public_path": "logic/reasoning_gym/coaching/experiment.py",
+      "sha256": "1744d4fd795b18044c56d5918e128f14178a485f889b92b7605a976ad465c792"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/registry.py",
+      "public_path": "logic/reasoning_gym/coaching/registry.py",
+      "sha256": "8b33538ce47d6e029166fb30d59cdbe2f5d34b3661cd45f8c90eba19b7d70c93"
+    },
+    {
+      "path": "logic/reasoning_gym/coaching/score_board.py",
+      "public_path": "logic/reasoning_gym/coaching/score_board.py",
+      "sha256": "e2fc26518f11065cadd7090b8de68310fdbd229080a9a0d634386d1dcfe3100e"
+    },
+    {
+      "path": "logic/reasoning_gym/code/__init__.py",
+      "public_path": "logic/reasoning_gym/code/__init__.py",
+      "sha256": "e8de75e81aae45cd827d8a33f984f6afed7fe1c8d3977b67966f7bfe8b8326ce"
+    },
+    {
+      "path": "logic/reasoning_gym/code/bf.py",
+      "public_path": "logic/reasoning_gym/code/bf.py",
+      "sha256": "dc71afe6d2da76414b4e46f1adcbe3ebba9d361f8995226815d5de98a7038f94"
+    },
+    {
+      "path": "logic/reasoning_gym/code/codeio.py",
+      "public_path": "logic/reasoning_gym/code/codeio.py",
+      "sha256": "4b89883697cd20518a1bac0390e3612725414e1b561764ead3c583f03e611d45"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/__init__.py",
+      "public_path": "logic/reasoning_gym/code/contrib/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/BF-it.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/BF-it.py",
+      "sha256": "7e63692abbc233120c8735394f2363e14bbd7bd52c16a8ed3e1f736b3f47e73d"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Compiler.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Compiler.py",
+      "sha256": "b556e2b4f8745347aa29bb8819312102cf1ad381edd27d0fecb32a92c9ed6334"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Exceptions.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Exceptions.py",
+      "sha256": "809bb40492cd51ba8555d9d0f3e3bdee58b8914ab51d8f6b16cc06c11d3c6c00"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/FunctionCompiler.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/FunctionCompiler.py",
+      "sha256": "3b50039b60775a1bd098e8a8d5c8244cf256302a70c8c594e1857f33ece28660"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Functions.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Functions.py",
+      "sha256": "d30c1c53f5cc5326505ed267cf1b4c70b751e5a2f35e111c01df7ffea069af71"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/General.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/General.py",
+      "sha256": "1154a4e7af50e36f18f54a96b34f18b45b84ec89f8745d3ad0c5666778a50c78"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Globals.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Globals.py",
+      "sha256": "110a48b54375b045e54dd3c5197e60db494673a8f46a8380ce374e24780903c2"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Lexical_analyzer.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Lexical_analyzer.py",
+      "sha256": "b6c40389277fa03e97e95f67869ab3e7923e3be73c858c856de0653263660b6d"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/LibraryFunctionCompiler.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/LibraryFunctionCompiler.py",
+      "sha256": "e3b09c9cb833ce02088cb6b5ebecd61b37225601eaa68eddcc55a42f65002837"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Minify.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Minify.py",
+      "sha256": "0e6a4be8e27cec51cbc23e0531b60165b16a0f7de9002fa598515656253564cf"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Node.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Node.py",
+      "sha256": "8c3d52936d2cc62c4a0f155a61e07ba632f1cf056fb4264c093ac991b85d02de"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Optimizer.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Optimizer.py",
+      "sha256": "94150682b341eb22d92f2d8761fd00e7f0487d279246f0f7b19a0695acdc98df"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Parser.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Parser.py",
+      "sha256": "1836ca757af09ea88aabe5f1b8c1654a9a3f8f38478c4d584d57bd516d97fef6"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Token.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/Token.py",
+      "sha256": "362e6ca4a1766154de032f844ecb35700b316a59d5510ceb9a1e2eff68645139"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Compiler/__init__.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Compiler/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/Interpreter.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/Interpreter.py",
+      "sha256": "36fabc74a33406727d9333292b62c94f5b9234906a8ea6b9678f32527393725f"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/LICENSE.md",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/LICENSE.md",
+      "sha256": "e207b874e65175eb5a08a40a95d3c63e54d4b52c160c6148a78823866c9c4550"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/README.md",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/README.md",
+      "sha256": "5e35ab01ad71ecd6e18135eabdaeb57e1cb4d84650e96e4008649def2e4e3339"
+    },
+    {
+      "path": "logic/reasoning_gym/code/contrib/bfit/__init__.py",
+      "public_path": "logic/reasoning_gym/code/contrib/bfit/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/__init__.py",
+      "public_path": "logic/reasoning_gym/cognition/__init__.py",
+      "sha256": "007bf97131b1d109466c34f605e8bfc50997b5ae6c39ac44b8228ded53ff0861"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/color_cube_rotation.py",
+      "public_path": "logic/reasoning_gym/cognition/color_cube_rotation.py",
+      "sha256": "0ea2f095bedd12372096fde20a06b5017820b3228e2603bc1f8a8dd188dab93e"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/figlet_fonts.py",
+      "public_path": "logic/reasoning_gym/cognition/figlet_fonts.py",
+      "sha256": "a39ae5e48acca9018a8d2d13d3e2543ffc2da7a8cf100c251f53dc956833500f"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/modulo_grid.py",
+      "public_path": "logic/reasoning_gym/cognition/modulo_grid.py",
+      "sha256": "d82791d3fef00397e4ba7cf45909274e2aebef55e0a630c54eb5c273eafa7735"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/needle_data.py",
+      "public_path": "logic/reasoning_gym/cognition/needle_data.py",
+      "sha256": "c9cf26529cd43f277c3efa3d3717ff9a42588c69cc522901460e9ce63eb7b525"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/needle_haystack.py",
+      "public_path": "logic/reasoning_gym/cognition/needle_haystack.py",
+      "sha256": "c9f3c04bdff4b288a4265fdfacb1e7bc2b7c6d3dbe254c1dbdfb08924bad7bdc"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/number_sequences.py",
+      "public_path": "logic/reasoning_gym/cognition/number_sequences.py",
+      "sha256": "55e52b526312c06e57872d25b9ae250ddb7ec2723f35f7fcc7795cf17594f68d"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/rectangle_count.py",
+      "public_path": "logic/reasoning_gym/cognition/rectangle_count.py",
+      "sha256": "cbe4bb706e5db274cd9c2d600ce50e239572f700a6ba3a4043cf59f320f83769"
+    },
+    {
+      "path": "logic/reasoning_gym/cognition/rubiks_cube.py",
+      "public_path": "logic/reasoning_gym/cognition/rubiks_cube.py",
+      "sha256": "6e218e556f6940501d758702507fc7cc7b4ef929e9736239d8e49dfa34a09661"
+    },
+    {
+      "path": "logic/reasoning_gym/composite.py",
+      "public_path": "logic/reasoning_gym/composite.py",
+      "sha256": "e12486e1c39cd081c56ad9837868698a2519a34d8edb2aa7f51ee3b4f1d63878"
+    },
+    {
+      "path": "logic/reasoning_gym/data/__init__.py",
+      "public_path": "logic/reasoning_gym/data/__init__.py",
+      "sha256": "6e2765fa00aae8e25be2fdd6ae40e64ee4977a259e283df3130e962e34dce026"
+    },
+    {
+      "path": "logic/reasoning_gym/data/acre_objects.json",
+      "public_path": "logic/reasoning_gym/data/acre_objects.json",
+      "sha256": "2caa21243962bbf9c80fcf7b5844e7637e0cf7a3beb8e8ef46b465e1e92e1999"
+    },
+    {
+      "path": "logic/reasoning_gym/data/anagrams.jsonl",
+      "public_path": "logic/reasoning_gym/data/anagrams.jsonl",
+      "sha256": "10dcda3a3eea6a8bc18b3f18cc50c271100e308b3189363f73effd638b6e58e7"
+    },
+    {
+      "path": "logic/reasoning_gym/data/codeio-hq.jsonl.gz",
+      "public_path": "logic/reasoning_gym/data/codeio-hq.jsonl.gz",
+      "sha256": "7f2effca40d6412d9f7ccf37e866c5416984e20b2b59d84b4e16b38b18cd5c00"
+    },
+    {
+      "path": "logic/reasoning_gym/data/codeio.jsonl.gz",
+      "public_path": "logic/reasoning_gym/data/codeio.jsonl.gz",
+      "sha256": "a088810cf4d020279ec50dc5e64f25b7eccc8a428a6f76a25c70c126e4370f33"
+    },
+    {
+      "path": "logic/reasoning_gym/data/holdout_words.txt",
+      "public_path": "logic/reasoning_gym/data/holdout_words.txt",
+      "sha256": "3ceac338c2ab8f2e5a874b9d3bec7aeb72507015e4c32dabd90899e5a52b2f2e"
+    },
+    {
+      "path": "logic/reasoning_gym/data/in_the_year_2889.txt",
+      "public_path": "logic/reasoning_gym/data/in_the_year_2889.txt",
+      "sha256": "e9048bcd282207d6f093bff92b3ad7c94689352205105c3716f0fdf5e245a25c"
+    },
+    {
+      "path": "logic/reasoning_gym/data/rush_18k.txt",
+      "public_path": "logic/reasoning_gym/data/rush_18k.txt",
+      "sha256": "43daa0f5bfe386f89a8e941b794ee810e65d4eddca37bf8a990dd12ff332b85e"
+    },
+    {
+      "path": "logic/reasoning_gym/data/wordle_words.py",
+      "public_path": "logic/reasoning_gym/data/wordle_words.py",
+      "sha256": "0782494e1796c2f960e9b6eb7811580f77969febb2decec309d7c788d098e8af"
+    },
+    {
+      "path": "logic/reasoning_gym/data/words.csv",
+      "public_path": "logic/reasoning_gym/data/words.csv",
+      "sha256": "dddda1a46938d3ba6f2164d0dae29ebcccf08714c931dc799f5bf9302f0f3c15"
+    },
+    {
+      "path": "logic/reasoning_gym/data/words3to10.txt",
+      "public_path": "logic/reasoning_gym/data/words3to10.txt",
+      "sha256": "834c0c0748d16484cd646aaff67a1a6af25d5b0f52de0d0e7262c785086fcef2"
+    },
+    {
+      "path": "logic/reasoning_gym/dataset.py",
+      "public_path": "logic/reasoning_gym/dataset.py",
+      "sha256": "480caacca5b12865e13bac68937687a799977e040ace5ae0496e71c1d77971e6"
+    },
+    {
+      "path": "logic/reasoning_gym/factory.py",
+      "public_path": "logic/reasoning_gym/factory.py",
+      "sha256": "fc651cc93205fafab926526a7d2c7a88c9dfa569af6e895135a1db48765e75bf"
+    },
+    {
+      "path": "logic/reasoning_gym/games/__init__.py",
+      "public_path": "logic/reasoning_gym/games/__init__.py",
+      "sha256": "2bea8a60126b2ab0c990a56b47166e9a50ada51400bf17a96bcb4d691a219133"
+    },
+    {
+      "path": "logic/reasoning_gym/games/boxnet.py",
+      "public_path": "logic/reasoning_gym/games/boxnet.py",
+      "sha256": "358d0f7d3fd245b4f7606a9397fd9311b1b606a7ee745168837a6724a3aa6307"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/__init__.py",
+      "public_path": "logic/reasoning_gym/games/contrib/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/LICENSE",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/LICENSE",
+      "sha256": "e98308ef3d9f882ab78535ce1a33c70f0e28bc33deeab6fa50cf9dc7557cd13c"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/README.md",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/README.md",
+      "sha256": "734feb12639fbb6e566170d45d09796fb14c2e20ecab27bc51005ec4fb3dbc3c"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/__init__.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/__init__.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/astar.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/astar.py",
+      "sha256": "ed23e2ef5156cff0eb394faad2b700d0480f6534abd267a426c66e364b21baa6"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/bfs.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/bfs.py",
+      "sha256": "99c186a4417b49ed10006049a16dcd0220a04c060576bfcfc789af0ef8ae3d4c"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/box.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/box.py",
+      "sha256": "57463b06e64f9383b705c37c169f2917a29cb52d01a8092a390469b767e4d003"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/game.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/game.py",
+      "sha256": "6736c62d5011e1a555ff8be11222d5498497d01136d117a419107dc8ae1e95cc"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/generator.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/generator.py",
+      "sha256": "a7eb2cda74e0def9685c81c3dd1997daa8f9a056db65ee5d40aac238b022f881"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/player.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/player.py",
+      "sha256": "44d06d629b9f14b098e04cb15c1c6736409fb1ce6b8dfd7805fd7a21ef34a8e0"
+    },
+    {
+      "path": "logic/reasoning_gym/games/contrib/sokoban/src/utils.py",
+      "public_path": "logic/reasoning_gym/games/contrib/sokoban/src/utils.py",
+      "sha256": "362a8d3401df94a8b113baeff5de39c0eaee29e31ec4a7c172a7959cc3f59cac"
+    },
+    {
+      "path": "logic/reasoning_gym/games/countdown.py",
+      "public_path": "logic/reasoning_gym/games/countdown.py",
+      "sha256": "6e9e2bbb467a6b16bfe5cb0351f60b031e67b8062f9d7466492f81dd2e3bb2b6"
+    },
+    {
+      "path": "logic/reasoning_gym/games/emoji_mystery.py",
+      "public_path": "logic/reasoning_gym/games/emoji_mystery.py",
+      "sha256": "6345fd95cc54e614e3b92e9cc82f96b8eeb4362f95bdcaafe0424b85a895f2fd"
+    },
+    {
+      "path": "logic/reasoning_gym/games/futoshiki.py",
+      "public_path": "logic/reasoning_gym/games/futoshiki.py",
+      "sha256": "1e17d801b9695f35d04047bde037beae0e6b1e6622ef89b287ec5c2061c2db5e"
+    },
+    {
+      "path": "logic/reasoning_gym/games/kakurasu.py",
+      "public_path": "logic/reasoning_gym/games/kakurasu.py",
+      "sha256": "32952922a3c863ba14acc2773230e18e2226e221cae093dd04956e7f86f69ab8"
+    },
+    {
+      "path": "logic/reasoning_gym/games/knight_swap.py",
+      "public_path": "logic/reasoning_gym/games/knight_swap.py",
+      "sha256": "f19aecb8a8f50ecfd823242d51cfda95ada9c9cf259fcc77440607a1b951af8f"
+    },
+    {
+      "path": "logic/reasoning_gym/games/mahjong.py",
+      "public_path": "logic/reasoning_gym/games/mahjong.py",
+      "sha256": "421d9b55bdd6eef32b23b208cfa56e8cd4f30e43b71f9a583b6d3058955b4304"
+    },
+    {
+      "path": "logic/reasoning_gym/games/maze.py",
+      "public_path": "logic/reasoning_gym/games/maze.py",
+      "sha256": "7702a962fe389d8f8160cc8c7e55786777420b9887234e46cba353cdd0c588fd"
+    },
+    {
+      "path": "logic/reasoning_gym/games/mini_sudoku.py",
+      "public_path": "logic/reasoning_gym/games/mini_sudoku.py",
+      "sha256": "20b77f97b1f5a9aa364940311d6647c4fa3e2b69834995371e0b20dd9f818c0c"
+    },
+    {
+      "path": "logic/reasoning_gym/games/n_queens.py",
+      "public_path": "logic/reasoning_gym/games/n_queens.py",
+      "sha256": "2738aad6232b45f21e57c0cb6d58dbcd1752a97e95e7abb8cf8c1002a4bf4c64"
+    },
+    {
+      "path": "logic/reasoning_gym/games/puzzle24.py",
+      "public_path": "logic/reasoning_gym/games/puzzle24.py",
+      "sha256": "542f8a43867de1cc0a4269fbb885fdf749954a9ea525e3edef0423f8dffdbd92"
+    },
+    {
+      "path": "logic/reasoning_gym/games/rush_hour.py",
+      "public_path": "logic/reasoning_gym/games/rush_hour.py",
+      "sha256": "75a9a4f18b7376661551e7febc67f53f4046fd967aa488912fb1aebb9fff3d61"
+    },
+    {
+      "path": "logic/reasoning_gym/games/sokoban.py",
+      "public_path": "logic/reasoning_gym/games/sokoban.py",
+      "sha256": "19bdaa006e58627dbc76c46ae7641e34b2c9305603b1e68d47640e51c7c6b4bb"
+    },
+    {
+      "path": "logic/reasoning_gym/games/sudoku.py",
+      "public_path": "logic/reasoning_gym/games/sudoku.py",
+      "sha256": "dcb9e0c968d33b0f7883390d7b3155aa7a6088fae9db48bba832ca9aea21f4e0"
+    },
+    {
+      "path": "logic/reasoning_gym/games/survo.py",
+      "public_path": "logic/reasoning_gym/games/survo.py",
+      "sha256": "6d506c11d914f8b1d7c910c26b8da9a44e9ad8bbec1b9cf595a426f8c8cf864a"
+    },
+    {
+      "path": "logic/reasoning_gym/games/tower_of_hanoi.py",
+      "public_path": "logic/reasoning_gym/games/tower_of_hanoi.py",
+      "sha256": "6a983d45cd5ef3a6380b509ef7313af859defa52d02526b022f52fae85298eef"
+    },
+    {
+      "path": "logic/reasoning_gym/games/tsumego.py",
+      "public_path": "logic/reasoning_gym/games/tsumego.py",
+      "sha256": "5978a0f3b5b785e98b58190fb5ddf90403f16165094d2369d4a84f2a59daa021"
+    },
+    {
+      "path": "logic/reasoning_gym/geometry/__init__.py",
+      "public_path": "logic/reasoning_gym/geometry/__init__.py",
+      "sha256": "421b34730ceaea23fdd4c3981fecab1bc1224213787b46f3fe1d5d40f8b9f428"
+    },
+    {
+      "path": "logic/reasoning_gym/geometry/advanced_geometry.py",
+      "public_path": "logic/reasoning_gym/geometry/advanced_geometry.py",
+      "sha256": "0a914f1a4095cf7d25e0bb2ba19d1e86bb7fe0cd8abb33a0acce81dbc6f7f34c"
+    },
+    {
+      "path": "logic/reasoning_gym/geometry/simple_geometry.py",
+      "public_path": "logic/reasoning_gym/geometry/simple_geometry.py",
+      "sha256": "32466b093be1da746e181447c41a3cd15a896835d410b58ad5d67c50bd2652d0"
+    },
+    {
+      "path": "logic/reasoning_gym/graphs/__init__.py",
+      "public_path": "logic/reasoning_gym/graphs/__init__.py",
+      "sha256": "9cb2f45698555b841fe648ae866f4a964edea123e90f960b62f24555999422c8"
+    },
+    {
+      "path": "logic/reasoning_gym/graphs/course_schedule.py",
+      "public_path": "logic/reasoning_gym/graphs/course_schedule.py",
+      "sha256": "379d5519579cc9d1ed0948e91056f0fe4eb0e792f031ed5608d5e7626a8a527c"
+    },
+    {
+      "path": "logic/reasoning_gym/graphs/family_relationships.py",
+      "public_path": "logic/reasoning_gym/graphs/family_relationships.py",
+      "sha256": "b00459b1242416befddbb4c0bb6880d02bf1c967a1057f9c39a298d5a4bda455"
+    },
+    {
+      "path": "logic/reasoning_gym/graphs/largest_island.py",
+      "public_path": "logic/reasoning_gym/graphs/largest_island.py",
+      "sha256": "9b3cff09d4d001443e91612c937b399c53349fc24d848503850cda25b392b502"
+    },
+    {
+      "path": "logic/reasoning_gym/graphs/quantum_lock.py",
+      "public_path": "logic/reasoning_gym/graphs/quantum_lock.py",
+      "sha256": "2f96d165fe0a33fb3dabdc92ffb99966fbcda41351d87f1c12df497da64311d8"
+    },
+    {
+      "path": "logic/reasoning_gym/graphs/shortest_path.py",
+      "public_path": "logic/reasoning_gym/graphs/shortest_path.py",
+      "sha256": "dbc76184ebe79f1a12e214b3aa791e9036709ebe7efde4f96391dc07413cc15e"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/__init__.py",
+      "public_path": "logic/reasoning_gym/induction/__init__.py",
+      "sha256": "63737d4b3429f1974d6f6838f366ebfac88e31b42eac7e9b602da3a58eccc4e3"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/acre/acre.py",
+      "public_path": "logic/reasoning_gym/induction/acre/acre.py",
+      "sha256": "77e2fe8e91d1017002cbb746779765a2c0d1d32a8542e88969720865f893e0a6"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/acre/blicket.py",
+      "public_path": "logic/reasoning_gym/induction/acre/blicket.py",
+      "sha256": "1b471a22b8607a2851e2ab7442c6fb6e788d0e137cb27042b1ec79a5c96d0767"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/acre/const.py",
+      "public_path": "logic/reasoning_gym/induction/acre/const.py",
+      "sha256": "39d5bdc195aa390e6e7bae51f40dddc00a404c06623442a0c05f1947a2ebdfc7"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/list_functions/__init__.py",
+      "public_path": "logic/reasoning_gym/induction/list_functions/__init__.py",
+      "sha256": "7f1e3958166bbde0a4af03d71fa49f9d1f5e4549dd24d66bea2fe229630a15a8"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/list_functions/generators.py",
+      "public_path": "logic/reasoning_gym/induction/list_functions/generators.py",
+      "sha256": "095d01c16ce16bdb6e705e7f2c68c8c2fff23a1eafe426ee6b36e89ac96ff915"
+    },
+    {
+      "path": "logic/reasoning_gym/induction/list_functions/list_functions.py",
+      "public_path": "logic/reasoning_gym/induction/list_functions/list_functions.py",
+      "sha256": "c39605972d1ff57ba4cd890ef98f5e35756115c9b4cf7d4cdba0b6ab68d737d8"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/__init__.py",
+      "public_path": "logic/reasoning_gym/logic/__init__.py",
+      "sha256": "cc083b9efabcc8b9a907ad7e9c454779482afdeaa29e92cd2bb847228a51361e"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/aiw.py",
+      "public_path": "logic/reasoning_gym/logic/aiw.py",
+      "sha256": "2c51c0ed6e89251f1e375023b336a43c8ea04a6f6ce34a6b5b608082104f3e4e"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/circuit_logic.py",
+      "public_path": "logic/reasoning_gym/logic/circuit_logic.py",
+      "sha256": "04858f961e50c87f16aab89e2f83b000c9577dd83704a7a205b919f92d14a56f"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/__init__.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/README.md",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/README.md",
+      "sha256": "799403ec41032899dea2cf011f60688d8a59bd64ce415a4063c4c577e3cdd289"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/__init__.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/clues.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/clues.py",
+      "sha256": "7d98385414ae98aa160579c70ed879356501d4a87e95f85556621d8194223ca9"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/generate.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/generate.py",
+      "sha256": "0b720d4d0069261b03f653400d42bea258a7bc4931f96b4527ea9f317ca2b61b"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/literals.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/literals.py",
+      "sha256": "7a694f9ca28b7c88eff823b75fe16228c95d880cc327810e30621569d0d1e49e"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/puzzle.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/puzzle.py",
+      "sha256": "80872b68f938f04ce0f03ee77db2fbaa496d280cef9202ea14369e291913b824"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/contrib/logic_puzzle/sat_utils.py",
+      "public_path": "logic/reasoning_gym/logic/contrib/logic_puzzle/sat_utils.py",
+      "sha256": "4b3e1961959e42e28b11201012397bc4a4bb99c19438236b4bc4834238018651"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/knights_knaves.py",
+      "public_path": "logic/reasoning_gym/logic/knights_knaves.py",
+      "sha256": "00fd50b057cd06bae3824c9fc56c0d429f85e5ad43a46cb17bd329a81701e10d"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/propositional_logic.py",
+      "public_path": "logic/reasoning_gym/logic/propositional_logic.py",
+      "sha256": "8367b082850207e87ffeda3cccf74d96ce92f93e449c520bc2f1b96aeacff5e6"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/self_reference.py",
+      "public_path": "logic/reasoning_gym/logic/self_reference.py",
+      "sha256": "8b0eebadba3c07a56a58fd9f88830be40b49cb94882a9cb595672ae337143424"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/syllogisms.py",
+      "public_path": "logic/reasoning_gym/logic/syllogisms.py",
+      "sha256": "c2fa3a6cc9615e7970fb058856987b9a42ac64ec0177f637cb76ac97bfb86999"
+    },
+    {
+      "path": "logic/reasoning_gym/logic/zebra_puzzles.py",
+      "public_path": "logic/reasoning_gym/logic/zebra_puzzles.py",
+      "sha256": "41312f2635a0a7f920fd6a8006a9e8b1b7e4225d7900da504078b1fd5560e580"
+    },
+    {
+      "path": "logic/reasoning_gym/utils.py",
+      "public_path": "logic/reasoning_gym/utils.py",
+      "sha256": "25fe815ebfce019dad92aa79e61528e0418a04edbce2aa86d019a5a3f186e9d1"
+    },
+    {
+      "path": "logic/reasoning_gym/version_manager.py",
+      "public_path": "logic/reasoning_gym/version_manager.py",
+      "sha256": "5b36d8ae6d8ebcc5e0607abb6085ff152f8f4d6c89032e0981d50483e1431128"
+    },
+    {
+      "path": "logic/tests/_verl_api_compat.py",
+      "public_path": "logic/tests/_verl_api_compat.py",
+      "sha256": "49cab4275b51b655eee90965c689daa930e582889437c62fe262a64f25216f95"
+    },
+    {
+      "path": "logic/tests/test_grpo_opd_cliff_gate.py",
+      "public_path": "logic/tests/test_grpo_opd_cliff_gate.py",
+      "sha256": "eb0d1f9f44834565fcc2cb6ec47c3a8f9e1f111c5330f51b42ffdffe8142f05f"
+    },
+    {
+      "path": "logic/tests/test_grpo_rlsd.py",
+      "public_path": "logic/tests/test_grpo_rlsd.py",
+      "sha256": "8a22a9d6221c14551e1f21e1bf695c042cdfbbe8662322610508306b031317b3"
+    },
+    {
+      "path": "logic/tests/test_grpo_srpo_routing.py",
+      "public_path": "logic/tests/test_grpo_srpo_routing.py",
+      "sha256": "474c830d98dee7f3c5d819284be1cc7e80b0cd24c411e8e4b672ea8cd06c0492"
+    },
+    {
+      "path": "logic/tests/test_trrd_policy_loss.py",
+      "public_path": "logic/tests/test_trrd_policy_loss.py",
+      "sha256": "42fe62cfbf5cbbe35352c9d17aa9ad22036c7ace1d53abd3fe9fbd4728ab2292"
+    },
+    {
+      "path": "logic/tests/test_verl_api_compat.py",
+      "public_path": "logic/tests/test_verl_api_compat.py",
+      "sha256": "3055bf1a99ddcd68540b95ba527a798faaee5b9f379b15b454fbe9ac56c92c58"
+    },
+    {
+      "path": "logic/training/configs/gkd_configs/countdown.yaml",
+      "public_path": "logic/training/configs/gkd_configs/countdown.yaml",
+      "sha256": "2f96bce3086a9c589aa478b074515fa21ad6b06b731b685dd417ba9d69cbfad4"
+    },
+    {
+      "path": "logic/training/configs/gkd_configs/kk.yaml",
+      "public_path": "logic/training/configs/gkd_configs/kk.yaml",
+      "sha256": "0ae5cf28d1175dc64e57b270211c3e8e906b9232376bece011689bf24e372f37"
+    },
+    {
+      "path": "logic/training/configs/gkd_configs/mini_sudoku.yaml",
+      "public_path": "logic/training/configs/gkd_configs/mini_sudoku.yaml",
+      "sha256": "c436358f8db0d3f1162708365c72523036303b1254c7e44c807e2b3e7e116b3e"
+    },
+    {
+      "path": "logic/training/configs/gkd_configs/zebra.yaml",
+      "public_path": "logic/training/configs/gkd_configs/zebra.yaml",
+      "sha256": "3a73ee954e8542ae74f7044f33c62d1fc0915bd6aac9d81078f4e6e82c17079a"
+    },
+    {
+      "path": "logic/training/rewards/__init__.py",
+      "public_path": "logic/training/rewards/__init__.py",
+      "sha256": "f35d6326325f4f73f2b9659536f19eb9bfeef7b4ae710d91738b019ed0642348"
+    },
+    {
+      "path": "logic/training/rewards/reward.py",
+      "public_path": "logic/training/rewards/reward.py",
+      "sha256": "f9f4654f15b2f000255b2c8d4a30981f359f7e284c20196d3100002b18e2e9ca"
+    },
+    {
+      "path": "logic/training/train_grpo.py",
+      "public_path": "logic/training/train_grpo.py",
+      "sha256": "ec9bc49ba1a38dd2223c2689b780533df4c42e82774e39963e448992aa9db3a1"
+    },
+    {
+      "path": "logic/training/trainers/__init__.py",
+      "public_path": "logic/training/trainers/__init__.py",
+      "sha256": "96029fc94f66461272cf0f990a13ad3ccaaed6393671ca68183bd462ef4273ce"
+    },
+    {
+      "path": "logic/training/trainers/ray_grpo_trainer.py",
+      "public_path": "logic/training/trainers/ray_grpo_trainer.py",
+      "sha256": "8842a8bc375d9c5c38e0c218c4da966ee1c651fe185f85cbc29eddde7ae2711f"
+    },
+    {
+      "path": "logic/training/utils/__init__.py",
+      "public_path": "logic/training/utils/__init__.py",
+      "sha256": "3aae4750fae6fdd771c2b2e54d02864318184eddf85bd1ce0a59f1e159ee6fcf"
+    },
+    {
+      "path": "logic/training/utils/datasets.py",
+      "public_path": "logic/training/utils/datasets.py",
+      "sha256": "b6ba0aca6cf6f82a96ecd85201a7c0030bb7cf472e1e975ed53e401cc2a7cc1e"
+    },
+    {
+      "path": "logic/training/utils/load_fsdp_to_hf.py",
+      "public_path": "logic/training/utils/load_fsdp_to_hf.py",
+      "sha256": "2fcfb027cc53704725320957d7c343a3922e530baca1536372693583ead0a330"
+    },
+    {
+      "path": "logic/verl_legacy_model_merger.py",
+      "public_path": "logic/verl_legacy_model_merger.py",
+      "sha256": "594402f51e3a2f2ea9306bf13ba57e317683a34c51665ea0c5e44d4df5e2bf49"
+    },
+    {
+      "path": "math/LICENSE.deepmath",
+      "public_path": "math/LICENSE.deepmath",
+      "sha256": "61fb9be10bc026deacdd53a6cae7f31ce7610d8985bc0c58a473cc7a0aa07638"
+    },
+    {
+      "path": "math/uni_eval.py",
+      "public_path": "math/uni_eval.py",
+      "sha256": "ef9a1f87acc22e8172bf287655a645c393a993036d2f4a557744f463c2ba8b93"
+    },
+    {
+      "path": "math/utils/__init__.py",
+      "public_path": "math/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "math/utils/chat_template.py",
+      "public_path": "math/utils/chat_template.py",
+      "sha256": "a01a2f308d29d6b24ecc3d14855ade71cee2352043b5edd5ff8c88b73ad02bb7"
+    },
+    {
+      "path": "math/utils/data_utils.py",
+      "public_path": "math/utils/data_utils.py",
+      "sha256": "67b135da5da973e57453162f2cc0d3997b56b0d3b820108ba6a019ef2b8adf5f"
+    },
+    {
+      "path": "math/utils/openmathinst_utils.py",
+      "public_path": "math/utils/openmathinst_utils.py",
+      "sha256": "26a866f927462f7d6c8904849bb807b898fafe2b7c85843fe4f8cd6a99b24aca"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/README.md",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/README.md",
+      "sha256": "84c66548694970c67d19904c4ab428e4738dfd68f6f61035bdcb54e488c951f9"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/asciimath_printer.py",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/asciimath_printer.py",
+      "sha256": "3dbccdc82bea098cffc8a469004c176f7148d75bc5ec17bc0419af89b6d4446c"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/assets/PS.g4",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/assets/PS.g4",
+      "sha256": "58baa7b7ae8f08ec2df1a34df7dc2f555274dcdb84722db19341a1410dee5cc0"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/gen/PSLexer.py",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/gen/PSLexer.py",
+      "sha256": "0316c7728e8e5a7cb0940b003ccb01f81c91e8e5a1d3edf4ca96acfa40a64dae"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/gen/PSListener.py",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/gen/PSListener.py",
+      "sha256": "be48dc05d04b568ad86e7c8baf138d137b794c5cd480a7a4213f00de8028202f"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/gen/PSParser.py",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/gen/PSParser.py",
+      "sha256": "4f519225994ddf2c938481f14093fb3a1e0135be356bae7381f3823aef22fed1"
+    },
+    {
+      "path": "math/utils/polymath/bundled/latex2sympy2/latex2sympy2.py",
+      "public_path": "math/utils/polymath/bundled/latex2sympy2/latex2sympy2.py",
+      "sha256": "da9aa217c1634fe49287a19669e30daa5f4df0d1bbe526ee4e9e66dd02c3b652"
+    },
+    {
+      "path": "math/utils/polymath/bundled/symeval/_modidx.py",
+      "public_path": "math/utils/polymath/bundled/symeval/_modidx.py",
+      "sha256": "ca3fbb24ae73d5a67a9200517720da4293df21deca399d78622c934d03f55404"
+    },
+    {
+      "path": "math/utils/polymath/bundled/symeval/core.py",
+      "public_path": "math/utils/polymath/bundled/symeval/core.py",
+      "sha256": "1fabe6c4f2630e1e7d84553e9503608b7f21f47ffec99ed722ff4c225554f1c7"
+    },
+    {
+      "path": "math/utils/polymath/judge.py",
+      "public_path": "math/utils/polymath/judge.py",
+      "sha256": "b3db8e9ed1e8bfdb9d824c4d37a880cc8e5295cb276646204a4fc39f94dfd4e1"
+    },
+    {
+      "path": "math/utils/polymath/run_eval.py",
+      "public_path": "math/utils/polymath/run_eval.py",
+      "sha256": "bc5faee6fe31a1e87e73c36a8dea81de764ffaa8626712ec0e37eb1b7826d9bb"
+    },
+    {
+      "path": "math/utils/polymath/scripts.py",
+      "public_path": "math/utils/polymath/scripts.py",
+      "sha256": "ed88acd2467bd0926e8f2dede4a893dd85a7a64e03243c5b6f4104837efb7b8a"
+    },
+    {
+      "path": "math/utils/reward_utils/__Init__.py",
+      "public_path": "math/utils/reward_utils/__Init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "math/utils/reward_utils/reward_func.py",
+      "public_path": "math/utils/reward_utils/reward_func.py",
+      "sha256": "728c4453a360b136417d7c066d633ce001efbe4d85764f2497a93c8f62b40f19"
+    },
+    {
+      "path": "math/utils/reward_utils/reward_func_2.py",
+      "public_path": "math/utils/reward_utils/reward_func_2.py",
+      "sha256": "e4ddde07c99f417ddb2c13c253cc68cc1ee3cde90cc18ad30f81ec0dd8e2f582"
+    },
+    {
+      "path": "methods/estimators.py",
+      "public_path": "methods/estimators.py",
+      "sha256": "bd5f7c2c18e88a7a476f68e64d805ec01f65fad12e09dbd13a998492d2db29d6"
+    },
+    {
+      "path": "methods/test_estimators.py",
+      "public_path": "methods/test_estimators.py",
+      "sha256": "84fa4363aed82166d2f4acd05394e9e8bec79495f5583b6859b79afc43ec6cac"
+    },
+    {
+      "path": "reproduction/analyze_results.py",
+      "public_path": "reproduction/analyze_results.py",
+      "sha256": "a1e5327dda132984ae1950e88d65b24c65c103e9a15025819f30fa44d83a12e7"
+    },
+    {
+      "path": "reproduction/coordinator.py",
+      "public_path": "reproduction/coordinator.py",
+      "sha256": "0ed0affd67540fd3fc5c6a3d9ea975f529dd2eb1fc91c3a517b4e877deec1b5d"
+    },
+    {
+      "path": "reproduction/coordinator_4x2.py",
+      "public_path": "reproduction/coordinator_4x2.py",
+      "sha256": "b830c8547bda1e2f239fdd6fdaf30f39b0472933a8c154489d5047951a626e6a"
+    },
+    {
+      "path": "reproduction/env.sh",
+      "public_path": "reproduction/env.sh",
+      "sha256": "43a1b6ec8aaa548769d2cc05876cf968d01b6446879028842931523cd4b21fa8"
+    },
+    {
+      "path": "reproduction/eval_worker.py",
+      "public_path": "reproduction/eval_worker.py",
+      "sha256": "b42dff2163437f01a41d7c2cb04bc0e379dff031667bdc1dff3cb70a60e7ced8"
+    },
+    {
+      "path": "reproduction/prepare_data.py",
+      "public_path": "reproduction/prepare_data.py",
+      "sha256": "da08af8d16fd5c567c6461b3b9855fb5bdc9f903ab5fc3a812096d7eea36173e"
+    },
+    {
+      "path": "reproduction/run_phase.py",
+      "public_path": "reproduction/run_phase.py",
+      "sha256": "e9c3f7829cefce3a719888f756047a09753f2368b6dcc747b6369e4bcda11d3d"
+    },
+    {
+      "path": "reproduction/tests/test_parallel_coordinator.py",
+      "public_path": "reproduction/tests/test_parallel_coordinator.py",
+      "sha256": "795988facbbbe375d7ffd6d7ceb52af291d16ca7e41754fd690b7c8dc02c8818"
+    },
+    {
+      "path": "reproduction/tests/test_phase_validation.py",
+      "public_path": "reproduction/tests/test_phase_validation.py",
+      "sha256": "e454cfbf0a9476c40f230232a0fb0683dbc448120bc21ec149d53ea6323ce24b"
+    },
+    {
+      "path": "scripts/README.md",
+      "public_path": "scripts/README.md",
+      "sha256": "6c0f5e6b93b49e53d0492372084c1571ac34c0360c822fee3a69d6400c1bdb34"
+    },
+    {
+      "path": "scripts/eval_logic.sh",
+      "public_path": "scripts/eval_logic.sh",
+      "sha256": "55781f15df620bd11edd00118309e6e9aa97e028443591620ddb4bd9c93c4d80"
+    },
+    {
+      "path": "scripts/eval_math.sh",
+      "public_path": "scripts/eval_math.sh",
+      "sha256": "31e251421bd29b1f496a37a6722b3d11e67c83927caf56d9334867aec73e46cf"
+    },
+    {
+      "path": "scripts/train_logic.sh",
+      "public_path": "scripts/train_logic.sh",
+      "sha256": "fbfb78db12945a8103297988cb15e21bae87a1f91a03fe4f422cb7bbe5dfb300"
+    },
+    {
+      "path": "scripts/train_math.sh",
+      "public_path": "scripts/train_math.sh",
+      "sha256": "2fc48008f9cd79eb0728c5f4ed33b30b16bf6e087e041a58bfa8deb9b1e0e600"
+    },
+    {
+      "path": "state_guidance/__init__.py",
+      "public_path": "state_guidance/__init__.py",
+      "sha256": "6f8115a33bc31250ad041bd05e6a1a30a36875c43d180b6b25b8c98f2b01caf0"
+    },
+    {
+      "path": "state_guidance/adoption.py",
+      "public_path": "state_guidance/adoption.py",
+      "sha256": "8b1542d4628fe37fc8fe5e2abfb2e745f8cfd8a5fdc6f9d20af2ca9ec2109e91"
+    },
+    {
+      "path": "state_guidance/analyze.py",
+      "public_path": "state_guidance/analyze.py",
+      "sha256": "f0f13ec60b738807e6cc94a07e2b8efa2a0156542fd9218a890f4437536d6b4b"
+    },
+    {
+      "path": "state_guidance/audit_prompts.py",
+      "public_path": "state_guidance/audit_prompts.py",
+      "sha256": "ce658050101547f4c5eb07bcec519f3cdc045dd0faa78eb98c2f511c274d863b"
+    },
+    {
+      "path": "state_guidance/bootstrap_cache.py",
+      "public_path": "state_guidance/bootstrap_cache.py",
+      "sha256": "3f536008282824533e314bccc28b2d09da2bcb31b770750570a962845710842f"
+    },
+    {
+      "path": "state_guidance/control.py",
+      "public_path": "state_guidance/control.py",
+      "sha256": "0dc8c6850e35136af6c0bd0f98625376b5af78420fbc3c9d21ea6747aaa8dbe8"
+    },
+    {
+      "path": "state_guidance/coordinator.py",
+      "public_path": "state_guidance/coordinator.py",
+      "sha256": "cb3f02dfd55509c84a2391d1893b5222d05e61d02b294714a837b193b2a1d237"
+    },
+    {
+      "path": "state_guidance/data.py",
+      "public_path": "state_guidance/data.py",
+      "sha256": "97ff58e5d13acb9f1092302be57e672e6b8585afe9c794564490f3e450342521"
+    },
+    {
+      "path": "state_guidance/env.sh",
+      "public_path": "state_guidance/env.sh",
+      "sha256": "6aaa6f22b64a215dc1531da51e818c88f1cc6eef6f100ff8651670dec2a06d2f"
+    },
+    {
+      "path": "state_guidance/eval_worker.py",
+      "public_path": "state_guidance/eval_worker.py",
+      "sha256": "8260aa74ce8494f288867727e0509b25acc16e4220135ac62e418f664febeeda"
+    },
+    {
+      "path": "state_guidance/finalize.py",
+      "public_path": "state_guidance/finalize.py",
+      "sha256": "6d909159f3774119b84cda2d30a3de532ee465a4ea2a96fecbd228c68313b65a"
+    },
+    {
+      "path": "state_guidance/finalizer_wait.py",
+      "public_path": "state_guidance/finalizer_wait.py",
+      "sha256": "d8dc930f505fd0d1c146564ce3f7aa49aef64cb795ed6b5bd835be78c66d2754"
+    },
+    {
+      "path": "state_guidance/guides.py",
+      "public_path": "state_guidance/guides.py",
+      "sha256": "2cb905893af83d6bd306de1715ee19a2ca004dd1581482153db2ba2d23e823dd"
+    },
+    {
+      "path": "state_guidance/health_gate.py",
+      "public_path": "state_guidance/health_gate.py",
+      "sha256": "e4afbd075d1cd9725bc19009f6d24f0342ef5a79cce15d6c7417dcd4f7f61901"
+    },
+    {
+      "path": "state_guidance/health_watchdog.py",
+      "public_path": "state_guidance/health_watchdog.py",
+      "sha256": "dcdbbfe4bb9d6ae4f0dcd4e8aaa0831be6747786a90f1492145978181e6d97a3"
+    },
+    {
+      "path": "state_guidance/migration.py",
+      "public_path": "state_guidance/migration.py",
+      "sha256": "79551c5e5a34898121710f7a3815c49f5dcf2881a9ea60dab7f9181089a11451"
+    },
+    {
+      "path": "state_guidance/prepare_data.py",
+      "public_path": "state_guidance/prepare_data.py",
+      "sha256": "c291fcdd58192ea5cb446ee4535187a19788512a510c5b8aa76e62d5367d6ac2"
+    },
+    {
+      "path": "state_guidance/prepare_guidance.py",
+      "public_path": "state_guidance/prepare_guidance.py",
+      "sha256": "c19228241d836dcb68d49eb05ff3366156664ca0bf0d6828f6e0bab8b123f4c9"
+    },
+    {
+      "path": "state_guidance/run_phase.py",
+      "public_path": "state_guidance/run_phase.py",
+      "sha256": "fc607dc71f59dc771f4570f4b0ba8284e6ce5dda5fa32f25f6276d0ab944d811"
+    },
+    {
+      "path": "state_guidance/runtime_paths.py",
+      "public_path": "state_guidance/runtime_paths.py",
+      "sha256": "a1dcb701dc7d57dd2f33b832843fa0786ac2739dc54860c3ac993cda8bf3d4ef"
+    },
+    {
+      "path": "state_guidance/scope.py",
+      "public_path": "state_guidance/scope.py",
+      "sha256": "509dc85f4a40d684fa80e3063b031481eea4d671ed87c73d02a967a81e8c787d"
+    },
+    {
+      "path": "state_guidance/teacher_inputs.py",
+      "public_path": "state_guidance/teacher_inputs.py",
+      "sha256": "67cdb705de103e922254f042c0ab00b7eccbabc65b0947a441d710b6c788dbdd"
+    },
+    {
+      "path": "state_guidance/test_cost_discovery.py",
+      "public_path": "state_guidance/test_cost_discovery.py",
+      "sha256": "3693998774427e09562dada27ac2eb2594639ed2ca4a54bed449fb5a332ce67b"
+    },
+    {
+      "path": "state_guidance/test_finalizer.py",
+      "public_path": "state_guidance/test_finalizer.py",
+      "sha256": "1656e45a9dc13d12abdd058646907a6901f12e5f6b8901b4475bced06c0d5b8c"
+    },
+    {
+      "path": "state_guidance/test_finalizer_wait.py",
+      "public_path": "state_guidance/test_finalizer_wait.py",
+      "sha256": "d8ec220c4999a84046d72a483949b09c2beffb1953e27808a5acb89a65c72ed1"
+    },
+    {
+      "path": "state_guidance/test_health_gate.py",
+      "public_path": "state_guidance/test_health_gate.py",
+      "sha256": "449aee025eb16df3a974ce703348b0905319c8cb4e464737cc8663c0705a5504"
+    },
+    {
+      "path": "state_guidance/test_migration.py",
+      "public_path": "state_guidance/test_migration.py",
+      "sha256": "5ac72db07a0713235eff0e9c8717261e4c109bcfddd118c2d1eb5280ee59441d"
+    },
+    {
+      "path": "state_guidance/test_protocol.py",
+      "public_path": "state_guidance/test_protocol.py",
+      "sha256": "cd48c8a710bdaa412c852dd532d0b1f111c28a2f38834d55560f4b263386c893"
+    },
+    {
+      "path": "state_guidance/test_runtime_paths.py",
+      "public_path": "state_guidance/test_runtime_paths.py",
+      "sha256": "ad3ae64b1f98c29e338a417bf795425af48147d1b484227daec26f316a7eb467"
+    },
+    {
+      "path": "state_guidance/test_scope.py",
+      "public_path": "state_guidance/test_scope.py",
+      "sha256": "825d989f7b900e502355874a663b5aa9f25698eb9d79448d734eeb4e31693a8b"
+    },
+    {
+      "path": "verl/.github/dependabot.yml",
+      "public_path": "verl/.github/dependabot.yml",
+      "sha256": "d02cc711acca76ded8729ab7bf33d456e379a255fbc37e6ba4c20d04ccbd9cf8"
+    },
+    {
+      "path": "verl/.github/workflows/dataset.yml",
+      "public_path": "verl/.github/workflows/dataset.yml",
+      "sha256": "7204f55aab06a1ee33fdbd857621375e6a83866328c4cd997a29c5cb194b3ae7"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_ascend.yml",
+      "public_path": "verl/.github/workflows/e2e_ascend.yml",
+      "sha256": "2b5b56310938fa9aa120f468612be89b4bfa80bd22264f61397f0ae389d94c2e"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_digit_completion.yml",
+      "public_path": "verl/.github/workflows/e2e_digit_completion.yml",
+      "sha256": "6857b60f22e29876f4f7885be6882ea2279f632d42b99cf023e1efab466f7299"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_digit_completion_fire.yml",
+      "public_path": "verl/.github/workflows/e2e_digit_completion_fire.yml",
+      "sha256": "027bb940ce25d95ecd55b5f7962d245d75822fae658cc0d7653a081ab05a4f1a"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_gsm8k.yml",
+      "public_path": "verl/.github/workflows/e2e_gsm8k.yml",
+      "sha256": "6800990642364565dd70b8345b2be5f400c188a638f1f9fcb4a92ba81819eadf"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_gsm8k_megatron.yml",
+      "public_path": "verl/.github/workflows/e2e_gsm8k_megatron.yml",
+      "sha256": "c28aad67e15684e3b20fea87824d90306433d81d0a0a96cf988bd5c033966a4e"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_gsm8k_prime.yml",
+      "public_path": "verl/.github/workflows/e2e_gsm8k_prime.yml",
+      "sha256": "082bd0a7637ec9b329c0d3fbff14312290ccd44dc7bc5744e35a651a611acb6f"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_lora.yml",
+      "public_path": "verl/.github/workflows/e2e_lora.yml",
+      "sha256": "6e66b713756d0ba2d6539ce2dc52aae0c66afb367db081556f5207306ecdf9fb"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_sft.yml",
+      "public_path": "verl/.github/workflows/e2e_sft.yml",
+      "sha256": "85d32e8a2efcb688ce3c3d2dec55dee868c354255eda3e46b413daa22c7eeccb"
+    },
+    {
+      "path": "verl/.github/workflows/e2e_vlm_geo3k.yml",
+      "public_path": "verl/.github/workflows/e2e_vlm_geo3k.yml",
+      "sha256": "23c1c81261e0ee27477305bbbbffd2dd5f6b94f166e5a936b64f45424ee47d0e"
+    },
+    {
+      "path": "verl/.github/workflows/model.yml",
+      "public_path": "verl/.github/workflows/model.yml",
+      "sha256": "d0a2c881bf793f58ca13be85d574aacf9d655a296c61dd43e2fc9a48315e4332"
+    },
+    {
+      "path": "verl/.github/workflows/ray_test.yml",
+      "public_path": "verl/.github/workflows/ray_test.yml",
+      "sha256": "1b84942aacf900e77688e807426cba7fe3950beeb6bcd021b232cc2aeb93acc7"
+    },
+    {
+      "path": "verl/.github/workflows/sandbox.yml",
+      "public_path": "verl/.github/workflows/sandbox.yml",
+      "sha256": "472f3437be05ad64d1df995a34d5bcf6b63fdcd8de31f1eafe38e167bf50bd9b"
+    },
+    {
+      "path": "verl/.github/workflows/sanity.yml",
+      "public_path": "verl/.github/workflows/sanity.yml",
+      "sha256": "712ce89f2990ee26c86702d95b352cbaca11b0015d38eeb0c4e50012dc828395"
+    },
+    {
+      "path": "verl/.github/workflows/scorecard.yml",
+      "public_path": "verl/.github/workflows/scorecard.yml",
+      "sha256": "9b5f6edf0294a03e34ecb5cca22dafa18ad3f0c189a8cbf8366d3f767e5c5c43"
+    },
+    {
+      "path": "verl/.github/workflows/secrets_scan.yml",
+      "public_path": "verl/.github/workflows/secrets_scan.yml",
+      "sha256": "cfee991cea0ecd86f283193d92e7122a4fa506a61e2fc7c8325fa7fda23019b7"
+    },
+    {
+      "path": "verl/.github/workflows/vllm.yml",
+      "public_path": "verl/.github/workflows/vllm.yml",
+      "sha256": "d66c4a8732dd62177d86f28385b9a197b3a3786b5e071aad603304eda79e219c"
+    },
+    {
+      "path": "verl/.github/workflows/yapf_format.yml",
+      "public_path": "verl/.github/workflows/yapf_format.yml",
+      "sha256": "c6ca42bb026bfbaced931513b247182e478d4cb2fa9d7b29c9d652be8a77492c"
+    },
+    {
+      "path": "verl/.gitignore",
+      "public_path": "verl/.gitignore",
+      "sha256": "d1299858abe1c2dd5b1ed092a655f50b1432c7b8608ca691d9af467e2730bfb6"
+    },
+    {
+      "path": "verl/.readthedocs.yaml",
+      "public_path": "verl/.readthedocs.yaml",
+      "sha256": "2af885534db6e46e2fe429a44f44a20844954a5835277c0a7fcb8fa0e2a7713b"
+    },
+    {
+      "path": "verl/.style.yapf",
+      "public_path": "verl/.style.yapf",
+      "sha256": "adac0165702f08670fc26d4230eea39971b9d548fe6d16a1100af99cfaa60955"
+    },
+    {
+      "path": "verl/LICENSE",
+      "public_path": "verl/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "verl/Notice.txt",
+      "public_path": "verl/Notice.txt",
+      "sha256": "f40ed94400d2b9636afb1f8019ab817255b19892d426c40eebe0c60d4850a1c9"
+    },
+    {
+      "path": "verl/README.md",
+      "public_path": "verl/README.md",
+      "sha256": "81b62bd53a65f7ac9ab12db9661ed9cc6da6f25b8e9ddb24c86715039f2a983f"
+    },
+    {
+      "path": "verl/docker/Dockerfile.megatron",
+      "public_path": "verl/docker/Dockerfile.megatron",
+      "sha256": "82854ab6fa253db0d6c03ea104b14d05fea28d7355a09c38f2b303730fc99921"
+    },
+    {
+      "path": "verl/docker/Dockerfile.ngc.vllm",
+      "public_path": "verl/docker/Dockerfile.ngc.vllm",
+      "sha256": "ab6ee30f52dd1d55f16c1024cea8d8508520380519c3f9491cb072c9980d67fe"
+    },
+    {
+      "path": "verl/docker/Dockerfile.rocm",
+      "public_path": "verl/docker/Dockerfile.rocm",
+      "sha256": "976bd68de1e8f03698d0939bff8fcc96970fb3a6e22c5f9575155a2936259073"
+    },
+    {
+      "path": "verl/docker/Dockerfile.vemlp.vllm.te",
+      "public_path": "verl/docker/Dockerfile.vemlp.vllm.te",
+      "sha256": "65d90696fb05d0dabddac5eeb2cde5e415320d22c601c8e802e81f7f28d9ba51"
+    },
+    {
+      "path": "verl/docs/Makefile",
+      "public_path": "verl/docs/Makefile",
+      "sha256": "20f3695e30f0d5f63a45f51956893e4923019a40f894df50fdcc1b2288940d93"
+    },
+    {
+      "path": "verl/docs/README.md",
+      "public_path": "verl/docs/README.md",
+      "sha256": "3e2c52aa62d5c75ebd13ec13d58ac01b2ab8d4519cee835fe1ab77fe04699039"
+    },
+    {
+      "path": "verl/docs/README_vllm0.7.md",
+      "public_path": "verl/docs/README_vllm0.7.md",
+      "sha256": "0233054830f0661ed8936549454df1d803c46bb9c85730019af4e42b3b8e240d"
+    },
+    {
+      "path": "verl/docs/_static/logo.png",
+      "public_path": "verl/docs/_static/logo.png",
+      "sha256": "fd27c16b2122527e513ea8884e0ad175f59c73af2ca1e10b1acaab38196a8638"
+    },
+    {
+      "path": "verl/docs/advance/dpo_extension.rst",
+      "public_path": "verl/docs/advance/dpo_extension.rst",
+      "sha256": "ec1baa02e5b00f939e30d06c05b977100eed0533ed6dea5339f83394b1c1eb05"
+    },
+    {
+      "path": "verl/docs/advance/fsdp_extension.rst",
+      "public_path": "verl/docs/advance/fsdp_extension.rst",
+      "sha256": "342a351df067187345ff7ff47c2b1e6fc067a4b75742a5fd5f058a98fd1cd79b"
+    },
+    {
+      "path": "verl/docs/advance/megatron_extension.rst",
+      "public_path": "verl/docs/advance/megatron_extension.rst",
+      "sha256": "70c4c0984ebeea90de1d1ca5f3fd43219e5833b5103be38a0ebc1dc6193dd5ee"
+    },
+    {
+      "path": "verl/docs/advance/placement.rst",
+      "public_path": "verl/docs/advance/placement.rst",
+      "sha256": "d7544b9545ae67dc9ba2bae213e67e16be7e0a49db50ee13f132f68c39420fac"
+    },
+    {
+      "path": "verl/docs/amd_tutorial/amd_build_dockerfile.md",
+      "public_path": "verl/docs/amd_tutorial/amd_build_dockerfile.md",
+      "sha256": "73fe38b5a848be4c3bbb23b2b8d006c8b961e06b4edb537c5f629b78685b5686"
+    },
+    {
+      "path": "verl/docs/amd_tutorial/amd_existing_docker.md",
+      "public_path": "verl/docs/amd_tutorial/amd_existing_docker.md",
+      "sha256": "c52c9d5612a2079f47e4cb62da6c4009901ac7d478c50287932cdc760d21e929"
+    },
+    {
+      "path": "verl/docs/conf.py",
+      "public_path": "verl/docs/conf.py",
+      "sha256": "4bcd9d2d16c0d1c2129541fa74e598475cf71ada4949070c6fb435b466e31686"
+    },
+    {
+      "path": "verl/docs/data.rst",
+      "public_path": "verl/docs/data.rst",
+      "sha256": "57b8de091b6c3497d7fdf5de9331c1491a99e6f4735b75efad6abbba310b236f"
+    },
+    {
+      "path": "verl/docs/examples/config.rst",
+      "public_path": "verl/docs/examples/config.rst",
+      "sha256": "a63bf939aac9368f7168540b5143fd49729569236b304286ad60c257a4fbe178"
+    },
+    {
+      "path": "verl/docs/examples/gsm8k_example.rst",
+      "public_path": "verl/docs/examples/gsm8k_example.rst",
+      "sha256": "e6ba4775ef90057f3456bd5d6e41e1bc3f3e111771fe565c3f086fb183faaca1"
+    },
+    {
+      "path": "verl/docs/examples/ppo_code_architecture.rst",
+      "public_path": "verl/docs/examples/ppo_code_architecture.rst",
+      "sha256": "7286e204abb15cb4cac5a1058bc9e2fbacfd3c5040a70252d8c80c89c2fc7d5c"
+    },
+    {
+      "path": "verl/docs/experiment/ppo.rst",
+      "public_path": "verl/docs/experiment/ppo.rst",
+      "sha256": "7ff31aae3a6f48610b33eeaa262ca9fae237e07a2934d4cd55de5cb348b6ab8d"
+    },
+    {
+      "path": "verl/docs/faq/faq.rst",
+      "public_path": "verl/docs/faq/faq.rst",
+      "sha256": "e71edbb8b514a809d0dfe3e09d130427151df2b34de1a284541fa0b90d8aceef"
+    },
+    {
+      "path": "verl/docs/hybrid_flow.rst",
+      "public_path": "verl/docs/hybrid_flow.rst",
+      "sha256": "6cd0bfc20258d14d1bd94db371d5d29df6dfc8eca4d29177eee3fc5b7b7d2c92"
+    },
+    {
+      "path": "verl/docs/index.rst",
+      "public_path": "verl/docs/index.rst",
+      "sha256": "36581369c7ea1c59e3afd9dc359f869101be79e335237bceb166ae89293acc0d"
+    },
+    {
+      "path": "verl/docs/perf/perf_tuning.rst",
+      "public_path": "verl/docs/perf/perf_tuning.rst",
+      "sha256": "1574fd8d4af45d28af6efca417f7b1aadcacdf72f4e1b73a84c385dfde1ac702"
+    },
+    {
+      "path": "verl/docs/preparation/prepare_data.rst",
+      "public_path": "verl/docs/preparation/prepare_data.rst",
+      "sha256": "ce5339c5a802f540062f8741d525dcea886da50a6f025a7826ebc1b1bdc1e8e6"
+    },
+    {
+      "path": "verl/docs/preparation/reward_function.rst",
+      "public_path": "verl/docs/preparation/reward_function.rst",
+      "sha256": "c8064df120c0988ca3317a479e862fac57e2fee14647ffaf5d997fe493d7cb0e"
+    },
+    {
+      "path": "verl/docs/requirements-docs.txt",
+      "public_path": "verl/docs/requirements-docs.txt",
+      "sha256": "1200b668c26cc26fd81fedf3519a18a7908ecaf11b6c840e1387a75748df7c9d"
+    },
+    {
+      "path": "verl/docs/start/install.rst",
+      "public_path": "verl/docs/start/install.rst",
+      "sha256": "300c9432d295549bf52a004f0d28d8a7fd75e87d3d0c1eb246e27e59ca4cbee6"
+    },
+    {
+      "path": "verl/docs/start/multinode.rst",
+      "public_path": "verl/docs/start/multinode.rst",
+      "sha256": "217b229467c592419e9744b1ca693d8b36ad055ed70d84d43432c73720f86ec2"
+    },
+    {
+      "path": "verl/docs/start/quickstart.rst",
+      "public_path": "verl/docs/start/quickstart.rst",
+      "sha256": "f86eaee8906e346478086fffb7c7fef253d86949d19d0e2836a4183b10c644a7"
+    },
+    {
+      "path": "verl/docs/workers/fsdp_workers.rst",
+      "public_path": "verl/docs/workers/fsdp_workers.rst",
+      "sha256": "3ea0fe5a9ace001aebec73da34cac86886ed499219c88a48c16932a50cfaf853"
+    },
+    {
+      "path": "verl/docs/workers/megatron_workers.rst",
+      "public_path": "verl/docs/workers/megatron_workers.rst",
+      "sha256": "74f0136a419a3db14ee46c1c3fbfee256677d12a9b6d3cd4d21f56b546eaf23a"
+    },
+    {
+      "path": "verl/docs/workers/ray_trainer.rst",
+      "public_path": "verl/docs/workers/ray_trainer.rst",
+      "sha256": "b27007448ff5e8fe63ecbd8e1c78be2752f7725357534853512a3253d820af15"
+    },
+    {
+      "path": "verl/examples/data_preprocess/deepmath_103k.py",
+      "public_path": "verl/examples/data_preprocess/deepmath_103k.py",
+      "sha256": "1799815fad24605f4523445826d3f83f1506d58c1303f7a24db5b2f3918ca2f4"
+    },
+    {
+      "path": "verl/examples/data_preprocess/full_hh_rlhf.py",
+      "public_path": "verl/examples/data_preprocess/full_hh_rlhf.py",
+      "sha256": "1ca01f0e2dc0154dc8bbd490294b892bc49447dcb3c6d723a9ee06faf16f6a27"
+    },
+    {
+      "path": "verl/examples/data_preprocess/geo3k.py",
+      "public_path": "verl/examples/data_preprocess/geo3k.py",
+      "sha256": "c250feacd1752d7ce4d2f074c3340dbd0440720c2ccc29740de1bfb5fa9201cf"
+    },
+    {
+      "path": "verl/examples/data_preprocess/gsm8k.py",
+      "public_path": "verl/examples/data_preprocess/gsm8k.py",
+      "sha256": "59eda2554179c5ac033166914c4f0660c1ca83cd28d4112ea7719078bbc9fab8"
+    },
+    {
+      "path": "verl/examples/data_preprocess/hellaswag.py",
+      "public_path": "verl/examples/data_preprocess/hellaswag.py",
+      "sha256": "7374bad8f3d147a38b9c1b2927457d15e4da1b6e6eaf405ad93323c9de8f9645"
+    },
+    {
+      "path": "verl/examples/data_preprocess/math_dataset.py",
+      "public_path": "verl/examples/data_preprocess/math_dataset.py",
+      "sha256": "631296368c1b1e346331eb1cb74a7ec1e093304b991bc92b56a8390544616cc8"
+    },
+    {
+      "path": "verl/examples/generation/run_deepseek_v2_lite_math.sh",
+      "public_path": "verl/examples/generation/run_deepseek_v2_lite_math.sh",
+      "sha256": "b89ecec15625881459dc3bd956acb8616621bf41137793963ef97cfbd0c2bf4c"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_deepseek7b_llm.sh",
+      "public_path": "verl/examples/grpo_trainer/run_deepseek7b_llm.sh",
+      "sha256": "e63fb5e30c8797b45900b9c4f9977531737cd9a591705e3b7c2e6d740b010e75"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_deepseek7b_llm_math.sh",
+      "public_path": "verl/examples/grpo_trainer/run_deepseek7b_llm_math.sh",
+      "sha256": "0c90486bbae7377272415003d57e379b1fb5b32e1a3f20c7a0df4f6db478747e"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_deepseek7b_llm_math_megatron.sh",
+      "public_path": "verl/examples/grpo_trainer/run_deepseek7b_llm_math_megatron.sh",
+      "sha256": "7a3b9c47a5b5dcf6938dc0a4717a43d24eed3950d8d5c0bf3aeb99e577488265"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_deepseek7b_llm_megatron.sh",
+      "public_path": "verl/examples/grpo_trainer/run_deepseek7b_llm_megatron.sh",
+      "sha256": "f7b74bb25b75e194b1e94ae8b07172f5f063f60fcc1db222bc697358fe1d0191"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_deepseek7b_llm_seq_balance.sh",
+      "public_path": "verl/examples/grpo_trainer/run_deepseek7b_llm_seq_balance.sh",
+      "sha256": "11e617ed25ab24e69b82bd137ec7e44250df1b529e9400147af3fdbed408936d"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_qwen2-7b.sh",
+      "public_path": "verl/examples/grpo_trainer/run_qwen2-7b.sh",
+      "sha256": "eb43d663a99a838e16bf03fa2eea307426c18ae0a415e4c2297f8cf597f8bc85"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_qwen2-7b_math.sh",
+      "public_path": "verl/examples/grpo_trainer/run_qwen2-7b_math.sh",
+      "sha256": "300b0faac512ceb725fbbff8384d743783081345982a547733f8e4a471ab0bea"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_qwen2-7b_math_megatron.sh",
+      "public_path": "verl/examples/grpo_trainer/run_qwen2-7b_math_megatron.sh",
+      "sha256": "a8f449a2d0915aa212fe2d83af981798d8a92c345d8bf44f6855ea0113a7b93e"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_qwen2-7b_megatron.sh",
+      "public_path": "verl/examples/grpo_trainer/run_qwen2-7b_megatron.sh",
+      "sha256": "c7ac16fc7e953eb690c2b35f9dd97a46292cd97bbdb44adc8f8304b1f58540bc"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_qwen2-7b_seq_balance.sh",
+      "public_path": "verl/examples/grpo_trainer/run_qwen2-7b_seq_balance.sh",
+      "sha256": "489868f0257b0e0cc9e1dbb9f10ce37b025a2de29e6f352c73f7b87d8e6c2ea3"
+    },
+    {
+      "path": "verl/examples/grpo_trainer/run_qwen2_5_vl-7b.sh",
+      "public_path": "verl/examples/grpo_trainer/run_qwen2_5_vl-7b.sh",
+      "sha256": "dab0984d74c74a54052e8ac398639551710b20298100961b69b7737872c519f7"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_deepseek7b_llm.sh",
+      "public_path": "verl/examples/ppo_trainer/run_deepseek7b_llm.sh",
+      "sha256": "2735213b3208513d59392465c6601ff00061cdc911ac1e8e1a02c8da20465b8f"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_deepseek7b_llm_modelscope.sh",
+      "public_path": "verl/examples/ppo_trainer/run_deepseek7b_llm_modelscope.sh",
+      "sha256": "f5ee592d7ea5e87f907195dfb100d8275f59c00d230414473282a5e229954624"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_deepseek7b_llm_sp2.sh",
+      "public_path": "verl/examples/ppo_trainer/run_deepseek7b_llm_sp2.sh",
+      "sha256": "b65d67be1d2921090e0b00894f92960a32a3fbad546eac63d70a09ca5ff67ef3"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_deepseek_full_hh_rlhf.sh",
+      "public_path": "verl/examples/ppo_trainer/run_deepseek_full_hh_rlhf.sh",
+      "sha256": "3627bc9b8211cdc20107904f21c6976dc4a7cd207009fc85868d64aa1ef3d151"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_deepseek_math_gsm8k_megatron.sh",
+      "public_path": "verl/examples/ppo_trainer/run_deepseek_math_gsm8k_megatron.sh",
+      "sha256": "0ce38db1b018d8dbe5f8c471dec2bff6107be0169755755ae75281cd88c9d0cd"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_deepseek_megatron.sh",
+      "public_path": "verl/examples/ppo_trainer/run_deepseek_megatron.sh",
+      "sha256": "9e5ecfabd228b913f5aa51dbb03126155dd981b02e2eebbbbf48bedbf81bda53"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_gemma.sh",
+      "public_path": "verl/examples/ppo_trainer/run_gemma.sh",
+      "sha256": "2ec6f48fdb3618748451757f222613e0e82f6644f816c907bd83e9b94382850a"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_qwen2-7b_math_gsm8k_megatron.sh",
+      "public_path": "verl/examples/ppo_trainer/run_qwen2-7b_math_gsm8k_megatron.sh",
+      "sha256": "6d35edf55d032e9ea78af89c07b650640fff34abe79f6342c5e58637303710eb"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_qwen2-7b_megatron.sh",
+      "public_path": "verl/examples/ppo_trainer/run_qwen2-7b_megatron.sh",
+      "sha256": "5da421bf02dee7fe31418a01743b166e1c195aa1e6b8de7d5dfcd97910f6fb5d"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_qwen2-7b_rm.sh",
+      "public_path": "verl/examples/ppo_trainer/run_qwen2-7b_rm.sh",
+      "sha256": "365b728a9d3af2810ee6a0c7ec0c39083436fe3d9ccf1c7f7b71201733490c4e"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_qwen2-7b_rm_seq_balance.sh",
+      "public_path": "verl/examples/ppo_trainer/run_qwen2-7b_rm_seq_balance.sh",
+      "sha256": "35405835634ce377dc17cea6d45bb3cb3fe85a052c46d62294d5fbdc09319d92"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_qwen2-7b_seq_balance.sh",
+      "public_path": "verl/examples/ppo_trainer/run_qwen2-7b_seq_balance.sh",
+      "sha256": "a7b3564c4ec148681efd00bcc856491abdd12c6f97a5578983d87a9134ef4b04"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/run_qwen2.5-32b.sh",
+      "public_path": "verl/examples/ppo_trainer/run_qwen2.5-32b.sh",
+      "sha256": "0976b102f0d1546b2a5214275259746abd3376d1bcd29634640531e8f2ba2420"
+    },
+    {
+      "path": "verl/examples/ppo_trainer/verl_getting_started.ipynb",
+      "public_path": "verl/examples/ppo_trainer/verl_getting_started.ipynb",
+      "sha256": "c1c0d748233a01dee14310f58cf7f7f72af89e33cb6d287b82f4822d9f1d0978"
+    },
+    {
+      "path": "verl/examples/ray/tutorial.ipynb",
+      "public_path": "verl/examples/ray/tutorial.ipynb",
+      "sha256": "a4914a820abc2f70e46e4b920beca23b3f78ab55776473c1d2ff3d5fa4cbc6dc"
+    },
+    {
+      "path": "verl/examples/remax_trainer/run_qwen2.5-3b_seq_balance.sh",
+      "public_path": "verl/examples/remax_trainer/run_qwen2.5-3b_seq_balance.sh",
+      "sha256": "9f1e98bbcd4c878b0e85cee1adf731043b8e22e1e773e8b815a83c9e417acc28"
+    },
+    {
+      "path": "verl/examples/remax_trainer/run_qwen2.5-7b_seq_balance.sh",
+      "public_path": "verl/examples/remax_trainer/run_qwen2.5-7b_seq_balance.sh",
+      "sha256": "1dcb6db0a492dbc64d91d3b99e0d7ece161cb34455f9ddca584ed8d1cc17a057"
+    },
+    {
+      "path": "verl/examples/rloo_trainer/run_qwen2-7b.sh",
+      "public_path": "verl/examples/rloo_trainer/run_qwen2-7b.sh",
+      "sha256": "18fcdd6a70e0dbd2194c68537ac929e98fd0f9f9617f0e9ca4df1a81af09a067"
+    },
+    {
+      "path": "verl/examples/sft/gsm8k/run_deepseek_6b7.sh",
+      "public_path": "verl/examples/sft/gsm8k/run_deepseek_6b7.sh",
+      "sha256": "14ccc0c307cfcf5cd8c301361e7cf845d0271b0c2cb6a3ab5f88cb1e690a4daf"
+    },
+    {
+      "path": "verl/examples/sft/gsm8k/run_gemma_2b.sh",
+      "public_path": "verl/examples/sft/gsm8k/run_gemma_2b.sh",
+      "sha256": "07b87d6dd9e7a5379b1e42b4b78fcb4e1b60498fddee5c2db0ffed0c0f1c8e81"
+    },
+    {
+      "path": "verl/examples/sft/gsm8k/run_gemma_7b.sh",
+      "public_path": "verl/examples/sft/gsm8k/run_gemma_7b.sh",
+      "sha256": "19958625f7eac0531bd1d68ded1c1582545fc266fb79c59cb2ea0831e5ee6bde"
+    },
+    {
+      "path": "verl/examples/sft/gsm8k/run_qwen_05_peft.sh",
+      "public_path": "verl/examples/sft/gsm8k/run_qwen_05_peft.sh",
+      "sha256": "205fcc434a4f8adcab8c31fbbfe7f8d37c6ab0c31b4f692ddec20d15007d7dc8"
+    },
+    {
+      "path": "verl/examples/sft/gsm8k/run_qwen_05_sp2.sh",
+      "public_path": "verl/examples/sft/gsm8k/run_qwen_05_sp2.sh",
+      "sha256": "dfa54502cfe537829cc28337e7c9ca5207d807b8652498bff1412f793ce089b1"
+    },
+    {
+      "path": "verl/examples/sft/gsm8k/run_qwen_05_sp2_liger.sh",
+      "public_path": "verl/examples/sft/gsm8k/run_qwen_05_sp2_liger.sh",
+      "sha256": "0699455dd89da61908bdce8ab617f74aea57383bc23c0b331d934810b96296c1"
+    },
+    {
+      "path": "verl/examples/slurm/ray_on_slurm.slurm",
+      "public_path": "verl/examples/slurm/ray_on_slurm.slurm",
+      "sha256": "842de7677c8cdf8db690477bf498542d0f893443ff48095509a48063b337fbd9"
+    },
+    {
+      "path": "verl/examples/split_placement/README.md",
+      "public_path": "verl/examples/split_placement/README.md",
+      "sha256": "f97f63cc209fc4f4d29e6f45af06332645e1b3112f677afaa0bea16385f77310"
+    },
+    {
+      "path": "verl/examples/split_placement/config/ppo_trainer_split.yaml",
+      "public_path": "verl/examples/split_placement/config/ppo_trainer_split.yaml",
+      "sha256": "3a4d27450ffd6fc9b0863feb83901bd9e919373ec94823ef3a1463d9a290aa4f"
+    },
+    {
+      "path": "verl/examples/split_placement/main_ppo_split.py",
+      "public_path": "verl/examples/split_placement/main_ppo_split.py",
+      "sha256": "a4cc024e0d2ec7e07518da8ea71cd2a14638a16fb8f4e639a051c76270af01fa"
+    },
+    {
+      "path": "verl/examples/split_placement/run_deepseek7b_llm.sh",
+      "public_path": "verl/examples/split_placement/run_deepseek7b_llm.sh",
+      "sha256": "000c5058d53321abcb777f990409eef51c09cba8951bdb33a16c1280dac2c462"
+    },
+    {
+      "path": "verl/examples/split_placement/split_monkey_patch.py",
+      "public_path": "verl/examples/split_placement/split_monkey_patch.py",
+      "sha256": "2d19c4487446d020031b68907f1d3838737e49b17bb992e0871b28f2f6fc3e5e"
+    },
+    {
+      "path": "verl/patches/megatron_v4.patch",
+      "public_path": "verl/patches/megatron_v4.patch",
+      "sha256": "657f49dc464f8a7993f4dbb082b295390df3fc81c2b52c3d24666ae3865c3405"
+    },
+    {
+      "path": "verl/pyproject.toml",
+      "public_path": "verl/pyproject.toml",
+      "sha256": "c18ee0df6cbf1d2638601781a9d91a820088eeab9e37426f28f7b2b22438d084"
+    },
+    {
+      "path": "verl/recipe/dapo/README.md",
+      "public_path": "verl/recipe/dapo/README.md",
+      "sha256": "b2d96cf150536318fcda39a04a6da7030861f5e8094624406764c5ca965c9455"
+    },
+    {
+      "path": "verl/recipe/dapo/prepare_dapo_data.sh",
+      "public_path": "verl/recipe/dapo/prepare_dapo_data.sh",
+      "sha256": "628d55a7038262e07d63e7d1ec5343e0690d002a9f4ec007ac95b28a348aa5ca"
+    },
+    {
+      "path": "verl/recipe/dapo/run_dapo_early_qwen2.5_32b.sh",
+      "public_path": "verl/recipe/dapo/run_dapo_early_qwen2.5_32b.sh",
+      "sha256": "cdf92a6d16b178d5df0603a85621b773d408d0ca0d0955ca029bdf448670e89a"
+    },
+    {
+      "path": "verl/recipe/dapo/run_dapo_qwen2.5_32b.sh",
+      "public_path": "verl/recipe/dapo/run_dapo_qwen2.5_32b.sh",
+      "sha256": "65d928924e1c42ef0240ed27cd8531089e6c9e101cfc5209538a433aacc820bf"
+    },
+    {
+      "path": "verl/recipe/dapo/test_dapo_7b.sh",
+      "public_path": "verl/recipe/dapo/test_dapo_7b.sh",
+      "sha256": "9e27a2baf87469e722d8fda5fa3ad5d8fc31b2ae0d2c9dca8f9d82029c10dc21"
+    },
+    {
+      "path": "verl/recipe/prime/__init__.py",
+      "public_path": "verl/recipe/prime/__init__.py",
+      "sha256": "102bebcdd89541ef0d337f1daf5e5b5627bab5e48a9b26c4994dfe15f4b09a0b"
+    },
+    {
+      "path": "verl/recipe/prime/config/prime_trainer.yaml",
+      "public_path": "verl/recipe/prime/config/prime_trainer.yaml",
+      "sha256": "03013393155760f7f155c342f50dd86ebc416e6d7f8b7ac939fd3974acdfbb5c"
+    },
+    {
+      "path": "verl/recipe/prime/main_prime.py",
+      "public_path": "verl/recipe/prime/main_prime.py",
+      "sha256": "9e97303d5598e20254c8deef0a58e2e351b7ee9b0e2934eae51d0fc4b57e7a44"
+    },
+    {
+      "path": "verl/recipe/prime/prime_core_algos.py",
+      "public_path": "verl/recipe/prime/prime_core_algos.py",
+      "sha256": "3a01c9532970bb06d7c7e32e6d0b6bf6c2109cf44c8f8dc436c05fde5a5b1a2d"
+    },
+    {
+      "path": "verl/recipe/prime/prime_dp_rm.py",
+      "public_path": "verl/recipe/prime/prime_dp_rm.py",
+      "sha256": "6d68d9e0a80b64d569a9e43e27003acf40e12cc0c895b2005cef37af54b30dcd"
+    },
+    {
+      "path": "verl/recipe/prime/prime_fsdp_workers.py",
+      "public_path": "verl/recipe/prime/prime_fsdp_workers.py",
+      "sha256": "54070f7d2e39f8e232f32eacf83d49df527512753c14df7aef3a042e2c1795c2"
+    },
+    {
+      "path": "verl/recipe/prime/prime_ray_trainer.py",
+      "public_path": "verl/recipe/prime/prime_ray_trainer.py",
+      "sha256": "d5be4083b5a5e429308f9289c034fd7fb9a277950170e42b900180d84b27fde4"
+    },
+    {
+      "path": "verl/recipe/prime/run_prime_qwen.sh",
+      "public_path": "verl/recipe/prime/run_prime_qwen.sh",
+      "sha256": "db9e807832afecb59d20e9dfb503f4ce9da23668f7fbc83575f433b74e869115"
+    },
+    {
+      "path": "verl/requirements.txt",
+      "public_path": "verl/requirements.txt",
+      "sha256": "fd2e306ab1d415f30f6bc6594f47e3ad47985de868973ecf9e67d59f713452ed"
+    },
+    {
+      "path": "verl/scripts/format.sh",
+      "public_path": "verl/scripts/format.sh",
+      "sha256": "586b736cc347bdff504d9bec000eb2d97202843b1d61804824c0bef76b9c9b90"
+    },
+    {
+      "path": "verl/scripts/model_merger.py",
+      "public_path": "verl/scripts/model_merger.py",
+      "sha256": "054972f9b28470f6b774e67dfd75ccd864bd575956f445643bbcd9ff70908d88"
+    },
+    {
+      "path": "verl/setup.py",
+      "public_path": "verl/setup.py",
+      "sha256": "2ce1f7addd3bb32a1eb7589ab44d4f59bc7e55a78941a44a8cfcac59358047b4"
+    },
+    {
+      "path": "verl/tests/__init__.py",
+      "public_path": "verl/tests/__init__.py",
+      "sha256": "c0240b4d2ee7fe3fa82b4785c7e278e4b346f5179f04bf7716811f612a25a7d0"
+    },
+    {
+      "path": "verl/tests/checkpoint/test_fsdp_ckpt.py",
+      "public_path": "verl/tests/checkpoint/test_fsdp_ckpt.py",
+      "sha256": "a8cd2e02def827fe1abc03e268f110d9e1c34887a413f458919c87c897b8187a"
+    },
+    {
+      "path": "verl/tests/checkpoint/test_megatron_ckpt.py",
+      "public_path": "verl/tests/checkpoint/test_megatron_ckpt.py",
+      "sha256": "1b89d6c226d3ec4319a3d6a89a443507707b26d4c2cb96485a97b2f5ce1cb3b0"
+    },
+    {
+      "path": "verl/tests/distributed/run_all.sh",
+      "public_path": "verl/tests/distributed/run_all.sh",
+      "sha256": "6292f00120b740a4e6daa3e825c946ca341a0d64068765734c2be45e2e1dcea4"
+    },
+    {
+      "path": "verl/tests/distributed/test_tensor_dict.py",
+      "public_path": "verl/tests/distributed/test_tensor_dict.py",
+      "sha256": "59073fa3a1075a395bfac3b288491da5d0026b3bfcfec6b7a5a13d5358f76bec"
+    },
+    {
+      "path": "verl/tests/distro/requirements.py",
+      "public_path": "verl/tests/distro/requirements.py",
+      "sha256": "281cddebb1edd1c6197a2fb6daa6d2216ca17b46cd27125f5addd06ada332ed7"
+    },
+    {
+      "path": "verl/tests/e2e/__init__.py",
+      "public_path": "verl/tests/e2e/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/model/config.json",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/model/config.json",
+      "sha256": "ad6b45e618d2b0649f73fb5c69757afe832491c122515683405456fa7249d327"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/model/create_model_tokenizer.py",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/model/create_model_tokenizer.py",
+      "sha256": "b62a699fe16cea28e3d02b5df980879df58424eb40a0616b856ca4073c331073"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/model/generation_config.json",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/model/generation_config.json",
+      "sha256": "f380141cd54f85ab882a0e9ed14a56d51a7d8400dc4beb3db891dbae84a1bb89"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/model/model.safetensors",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/model/model.safetensors",
+      "sha256": "3dcf33555c1207f9989d5fba5dc4d8b935c55736456e9b76b604a45215ac5cc4"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/model/tokenizer_config.json",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/model/tokenizer_config.json",
+      "sha256": "b0b977fc389f7b530f43d123b528ab21a5ccd5a4e9e4ea2e70919c366343382d"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/rl/README.md",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/rl/README.md",
+      "sha256": "94d3f6e0c97bce4448e371bf90e54a2d7940724b00cb4570bfbe271906832ce1"
+    },
+    {
+      "path": "verl/tests/e2e/arithmetic_sequence/rl/main_trainer.py",
+      "public_path": "verl/tests/e2e/arithmetic_sequence/rl/main_trainer.py",
+      "sha256": "3075401b68648b473a7996f69ee644940ce069832eedd86eef3443dd535526cd"
+    },
+    {
+      "path": "verl/tests/e2e/check_custom_rwd_fn.py",
+      "public_path": "verl/tests/e2e/check_custom_rwd_fn.py",
+      "sha256": "9ad57960f44cf09526c38872d76d06b08203ff998792e3b74bea467f6f6af420"
+    },
+    {
+      "path": "verl/tests/e2e/check_results.py",
+      "public_path": "verl/tests/e2e/check_results.py",
+      "sha256": "cc500c2d001c13bb84b4bf4c9e7be60a1a0432fc988c564d3d2996dec2459968"
+    },
+    {
+      "path": "verl/tests/e2e/envs/__init__.py",
+      "public_path": "verl/tests/e2e/envs/__init__.py",
+      "sha256": "f972b4201e6a012ac129a376b8944c754d5c761ed84f62ca7e38a333ac3079fe"
+    },
+    {
+      "path": "verl/tests/e2e/envs/digit_completion/__init__.py",
+      "public_path": "verl/tests/e2e/envs/digit_completion/__init__.py",
+      "sha256": "fb1df6ca8e6b5dccb88618a786ed9fdaa9645f29c591b80ddb433dc87f1dc654"
+    },
+    {
+      "path": "verl/tests/e2e/envs/digit_completion/task.py",
+      "public_path": "verl/tests/e2e/envs/digit_completion/task.py",
+      "sha256": "205e68f0cd831b45d3d80327e3a64020dc7a45e1ff3ddb6bdca1b1d74871d9c5"
+    },
+    {
+      "path": "verl/tests/e2e/envs/digit_completion/tokenizer.py",
+      "public_path": "verl/tests/e2e/envs/digit_completion/tokenizer.py",
+      "sha256": "683e49c38fadbc73ac169fcad9474b594f7ef90f3e7ea34721a455d05d412dbc"
+    },
+    {
+      "path": "verl/tests/e2e/run_deepseek_megatron.sh",
+      "public_path": "verl/tests/e2e/run_deepseek_megatron.sh",
+      "sha256": "b3ce2e6f902912ec6cd03a35d86a333aa99433a1bf31ed615a4b3ddde0cce4ed"
+    },
+    {
+      "path": "verl/tests/e2e/run_deepseek_megatron_parallelism.sh",
+      "public_path": "verl/tests/e2e/run_deepseek_megatron_parallelism.sh",
+      "sha256": "5d5adc7e2146b37858a4ee84918c73755b3caa53021affee93fd657a87ab5782"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen2vl_geo3k_function_rm.sh",
+      "public_path": "verl/tests/e2e/run_qwen2vl_geo3k_function_rm.sh",
+      "sha256": "4265558d22361c0b202266e19d7909eb649d1d0ef9e3f8f0b6a6cd7c41a581a3"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_custom_function_rm.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_custom_function_rm.sh",
+      "sha256": "aa3bff8cac0b30254be88ef90a2ad05388c2310f2b0879b61ee150386ad44ea5"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_function_rm.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_function_rm.sh",
+      "sha256": "b64e129d75dff96edbb1be93c7af208aa1856c44912ab7de1e2b2bfb6c6b4b81"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_function_rm_grpo.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_function_rm_grpo.sh",
+      "sha256": "ca9fe1528bb0edb7bea3b361f07a25d2d9bbda9719d1235591ec0a8fa4cc5b01"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_function_rm_no_rmpad.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_function_rm_no_rmpad.sh",
+      "sha256": "1b51d8538d752e322e4ed38f68af6ef872f34171ee5d387fbb160794e8117c09"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_function_rm_remax.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_function_rm_remax.sh",
+      "sha256": "2b1fec9d09c403cc4e984d6faf7b4e147f238270f920c4077c1147155b3738be"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_model_rm.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_model_rm.sh",
+      "sha256": "dc7e47cb759f05f852a5a5ee95eab6c4e205001699d154a22df8441c2d9ce8c7"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_liger_kernel.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_liger_kernel.sh",
+      "sha256": "c165c145d1d59c34778f75e4eb042342683c90d35567e16b1357a90935d8f807"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_no_rmpad.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_no_rmpad.sh",
+      "sha256": "810512fb1ec044ab9773a3defd2a096cc7c9c35ff7e1b2377cc5aeaadf5aec7a"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_seq_balance.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_seq_balance.sh",
+      "sha256": "09cc3515bb083e5b75173225d8c03baa6706a784e7e452a0783a520c99a2b17f"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_ulysses.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_model_rm_ulysses.sh",
+      "sha256": "46781e8c336fc8e19ead0f022493ba0752a1b3d4279c6cb2c1b002a017191513"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_gsm8k_prime.sh",
+      "public_path": "verl/tests/e2e/run_qwen_gsm8k_prime.sh",
+      "sha256": "92e3011da81a05181e549dbe64190f0f1dbc387a3d7e141a8cd0d615ff696f56"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_megatron.sh",
+      "public_path": "verl/tests/e2e/run_qwen_megatron.sh",
+      "sha256": "b88cbdb4cd8418eac1993c7beb4ad928aa57a0ff1be7e4f4d1f3ffea295f884e"
+    },
+    {
+      "path": "verl/tests/e2e/run_qwen_megatron_parallelism.sh",
+      "public_path": "verl/tests/e2e/run_qwen_megatron_parallelism.sh",
+      "sha256": "f5fabccdbefc2ce40ef0c9d9cc199042cfd9d7a58370ccaea0f63652889cd9bf"
+    },
+    {
+      "path": "verl/tests/e2e/run_ray_trainer.sh",
+      "public_path": "verl/tests/e2e/run_ray_trainer.sh",
+      "sha256": "fcc602bf16749e3cd251815ab25c4ca1742b97b092dd0b9319fce9f23e606004"
+    },
+    {
+      "path": "verl/tests/e2e/run_ray_trainer_fire_sampling.sh",
+      "public_path": "verl/tests/e2e/run_ray_trainer_fire_sampling.sh",
+      "sha256": "bcdd8905ec21fc8edeebb786e83ceaf0572fabc5ac3ebac2c6dd6fa0ee15fe57"
+    },
+    {
+      "path": "verl/tests/e2e/run_ray_trainer_rmpad.sh",
+      "public_path": "verl/tests/e2e/run_ray_trainer_rmpad.sh",
+      "sha256": "2f5b8d1a965ca289e4d0fcb0dc66e9a1f6d1fd26bfc19e95b25044352ea83d6c"
+    },
+    {
+      "path": "verl/tests/generation/run_gen_qwen05.sh",
+      "public_path": "verl/tests/generation/run_gen_qwen05.sh",
+      "sha256": "226139f59b13c4500ed5d386adfdeda884abeab48aac2bc14a669baf4843fa52"
+    },
+    {
+      "path": "verl/tests/gpu_utility/test_memory_buffers.py",
+      "public_path": "verl/tests/gpu_utility/test_memory_buffers.py",
+      "sha256": "35df4664e8f7c26ae6bb5d18c63766954f1940e7b52dad648a23c49bdcf31c8d"
+    },
+    {
+      "path": "verl/tests/gpu_utility/test_ops.py",
+      "public_path": "verl/tests/gpu_utility/test_ops.py",
+      "sha256": "2b2fc62b158fb792f42e24e2d8dee039d4cfd39400dcbb40fc6bc3ee5a4e9379"
+    },
+    {
+      "path": "verl/tests/gpu_utility/test_torch_functional.py",
+      "public_path": "verl/tests/gpu_utility/test_torch_functional.py",
+      "sha256": "0ff098040e10d373b1c4bab92d0c8bc5739694d3bc67c4a23f0ed9ae44af780c"
+    },
+    {
+      "path": "verl/tests/kill_github_tests.sh",
+      "public_path": "verl/tests/kill_github_tests.sh",
+      "sha256": "28e3028bd1a450f36250afcf6bafccb9587be873100d90bb262fd10bd833acbe"
+    },
+    {
+      "path": "verl/tests/model/test_transformer.py",
+      "public_path": "verl/tests/model/test_transformer.py",
+      "sha256": "2a2009edddce362e21e140c3bf744d97cca693b1f7f5a5459de14873d8e0a6db"
+    },
+    {
+      "path": "verl/tests/model/test_transformers_ulysses.py",
+      "public_path": "verl/tests/model/test_transformers_ulysses.py",
+      "sha256": "0a7ab31de4119577abdb157a49948b0b68d4f07b2c8cdaddc3ff15ee38c78888"
+    },
+    {
+      "path": "verl/tests/ray/check_worker_alive/main.py",
+      "public_path": "verl/tests/ray/check_worker_alive/main.py",
+      "sha256": "4a9905a8c2d2a3ed4654f816570f702ac15aa94081c98bf61da53d9d9821c3cd"
+    },
+    {
+      "path": "verl/tests/ray/detached_worker/README.md",
+      "public_path": "verl/tests/ray/detached_worker/README.md",
+      "sha256": "21f9d64b62e4cc7c8160ae82ec294a137be532c7da27c7535e531b7c0ad2351d"
+    },
+    {
+      "path": "verl/tests/ray/detached_worker/client.py",
+      "public_path": "verl/tests/ray/detached_worker/client.py",
+      "sha256": "481ac7699649e8551c2d2df9e33450cda1c00eb22c279727e39df4fb5f91efa9"
+    },
+    {
+      "path": "verl/tests/ray/detached_worker/run.sh",
+      "public_path": "verl/tests/ray/detached_worker/run.sh",
+      "sha256": "e40d384af705cca56a35074e3b3fc554eead94a30aa83cd57d29ea4382a3af6c"
+    },
+    {
+      "path": "verl/tests/ray/detached_worker/server.py",
+      "public_path": "verl/tests/ray/detached_worker/server.py",
+      "sha256": "4e6da9cf27394e806c6e5fe24ac8f4e67e0c2d36c85ab5e00266c426bed0a60c"
+    },
+    {
+      "path": "verl/tests/ray/test_check_worker_alive.py",
+      "public_path": "verl/tests/ray/test_check_worker_alive.py",
+      "sha256": "5e4191a20eed5ec7623f7f43894001892039f94a51e31e6c955096bf1bdc4b2d"
+    },
+    {
+      "path": "verl/tests/ray/test_colocated_workers.py",
+      "public_path": "verl/tests/ray/test_colocated_workers.py",
+      "sha256": "fb7b46afa2b0277505be639047170c02fbfed67117badf5ceab26328933e2861"
+    },
+    {
+      "path": "verl/tests/ray/test_data_transfer.py",
+      "public_path": "verl/tests/ray/test_data_transfer.py",
+      "sha256": "292e0bf3eeec43deb800e46dd4a591685ed51e642dbdac6158d8429b64fcc6b0"
+    },
+    {
+      "path": "verl/tests/ray/test_driverfunc_to_worker.py",
+      "public_path": "verl/tests/ray/test_driverfunc_to_worker.py",
+      "sha256": "c8d08e47936e100f07525df8acac5146684687f56c51ad3e6fb5d153510301af"
+    },
+    {
+      "path": "verl/tests/ray/test_high_level_scheduling_api.py",
+      "public_path": "verl/tests/ray/test_high_level_scheduling_api.py",
+      "sha256": "ca5c6ab8585006ca4e3acfabbd370610cc208dac754c6c1d28775e4c17f3bb5c"
+    },
+    {
+      "path": "verl/tests/ray/test_ray_local_envs.py",
+      "public_path": "verl/tests/ray/test_ray_local_envs.py",
+      "sha256": "0b48f7991030c215454284523b93c8be8a98cd91c5255bddd29a88f0a22dbfaf"
+    },
+    {
+      "path": "verl/tests/ray/test_rvdz.py",
+      "public_path": "verl/tests/ray/test_rvdz.py",
+      "sha256": "c2e467c5b9a6b80acdc3afcdc76441f20c623d0e4fb4eaacd41efe7b97e446fd"
+    },
+    {
+      "path": "verl/tests/ray/test_worker_group_basics.py",
+      "public_path": "verl/tests/ray/test_worker_group_basics.py",
+      "sha256": "e060dfba21c94ff81d73b5e8a40d7a04ac25412e7c192e03489dc1331e6703c9"
+    },
+    {
+      "path": "verl/tests/ray/test_worker_group_torch.py",
+      "public_path": "verl/tests/ray/test_worker_group_torch.py",
+      "sha256": "71764d3b08e4bf34f2574c2fc917f43e4a4efa77013e29bc702c0945919f22a5"
+    },
+    {
+      "path": "verl/tests/rollout/run_fsdp_vllm.py",
+      "public_path": "verl/tests/rollout/run_fsdp_vllm.py",
+      "sha256": "c5782f2875595d9f7c0070e34089176a70f13370e869b1e8926d64a2f2851f55"
+    },
+    {
+      "path": "verl/tests/rollout/test_vllm_hf_loader.py",
+      "public_path": "verl/tests/rollout/test_vllm_hf_loader.py",
+      "sha256": "aff744c70bd169c1b0e0ad6a7ed5c3a39734ff3597054432a4efcf9ef3b40c38"
+    },
+    {
+      "path": "verl/tests/rollout/test_vllm_spmd.py",
+      "public_path": "verl/tests/rollout/test_vllm_spmd.py",
+      "sha256": "6d6f75418d5142c8e4670aa3f74f016913d93466ab0c63de22dd4955e135e2da"
+    },
+    {
+      "path": "verl/tests/sandbox/test_sandbox.py",
+      "public_path": "verl/tests/sandbox/test_sandbox.py",
+      "sha256": "ad257c4950082158fe92cfc69631ab05a19c460034b3cb023be9ad4a84af65ea"
+    },
+    {
+      "path": "verl/tests/sanity/check_license.py",
+      "public_path": "verl/tests/sanity/check_license.py",
+      "sha256": "2d5df4564caddecf8f77ed49d4b61b257b76af55e3ee53c05f5855ffdaa7c663"
+    },
+    {
+      "path": "verl/tests/sanity/test_import.py",
+      "public_path": "verl/tests/sanity/test_import.py",
+      "sha256": "c2bfe6e87949a90531827eb486a8bf92e2950477e8ec590df29665c7252e7b59"
+    },
+    {
+      "path": "verl/tests/sft/run_sft.sh",
+      "public_path": "verl/tests/sft/run_sft.sh",
+      "sha256": "4205833b796fe7301d55871d8d59fdcc9ea5e82c5c86a2a3c4c0f7397a56ba51"
+    },
+    {
+      "path": "verl/tests/sft/run_sft_qwen05_peft.sh",
+      "public_path": "verl/tests/sft/run_sft_qwen05_peft.sh",
+      "sha256": "bc1cced476376c3ac88238e124e1a6bd4b03a5202339ac79c71dbe57e9938d0d"
+    },
+    {
+      "path": "verl/tests/sft/run_sft_qwen05_sp2_liger.sh",
+      "public_path": "verl/tests/sft/run_sft_qwen05_sp2_liger.sh",
+      "sha256": "bb36e8c06d34294e44c2ab79b72b8c1ea45fdbc9a6ed5803552676762f86c124"
+    },
+    {
+      "path": "verl/tests/sft/run_sft_sp_loss_match.sh",
+      "public_path": "verl/tests/sft/run_sft_sp_loss_match.sh",
+      "sha256": "d4fb5487a2968bc352f114e58b0be2f418099e8b583827e6297e11552c834f8b"
+    },
+    {
+      "path": "verl/tests/sft/test_sp_loss_match.py",
+      "public_path": "verl/tests/sft/test_sp_loss_match.py",
+      "sha256": "fd9bd143683b520019cae42537575f4a2f100dec3fab35f122f9bf368609c5c8"
+    },
+    {
+      "path": "verl/tests/utility/test_tensor_dict_utilities.py",
+      "public_path": "verl/tests/utility/test_tensor_dict_utilities.py",
+      "sha256": "a738e95cfcb3c15c430f8575ab61b768dd136e86522f0abe3ca05d9a80c35cc9"
+    },
+    {
+      "path": "verl/tests/verl/utils/dataset/test_rl_dataset.py",
+      "public_path": "verl/tests/verl/utils/dataset/test_rl_dataset.py",
+      "sha256": "4d87512cbb0837e98c6d796ab2417b5a7e5ec727b1d127ef0f8c1f26ed2cd6e7"
+    },
+    {
+      "path": "verl/tests/verl/utils/dataset/test_rm_dataset.py",
+      "public_path": "verl/tests/verl/utils/dataset/test_rm_dataset.py",
+      "sha256": "5f49a58d4b95d59306a4ea614beab2e8c197f7d8a77c9681ea94446da05e0813"
+    },
+    {
+      "path": "verl/tests/verl/utils/dataset/test_sft_dataset.py",
+      "public_path": "verl/tests/verl/utils/dataset/test_sft_dataset.py",
+      "sha256": "9b65c17b9d169b17f9be5cb2404aa75bf150930421b9853754451a3a517c4dcd"
+    },
+    {
+      "path": "verl/verl/__init__.py",
+      "public_path": "verl/verl/__init__.py",
+      "sha256": "a8c0cc4eba61e4f20ca6f70e891a53602b0ee41e4242d5c244a56025da07c317"
+    },
+    {
+      "path": "verl/verl/models/README.md",
+      "public_path": "verl/verl/models/README.md",
+      "sha256": "5e3bd067a590fca3a0d571b639ac466e1c6a5ad68abc18fcb6a3a176fb5ab476"
+    },
+    {
+      "path": "verl/verl/models/__init__.py",
+      "public_path": "verl/verl/models/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/models/llama/__init__.py",
+      "public_path": "verl/verl/models/llama/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/__init__.py",
+      "public_path": "verl/verl/models/llama/megatron/__init__.py",
+      "sha256": "bacfa32a69412dc2a3d55134a1a5a287288d2179c76700b72eed4bc42ed94d53"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/checkpoint_utils/__init__.py",
+      "public_path": "verl/verl/models/llama/megatron/checkpoint_utils/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "public_path": "verl/verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "sha256": "c43466f005bab749fe5fb1f994ed0a69c1cd455e515008a5ed95a4f49ddd0417"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "public_path": "verl/verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "sha256": "bc0a0c5e55b889b48467bf51765cca5f89fd2e6a78b76cbc378cb649686bb12d"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/layers/__init__.py",
+      "public_path": "verl/verl/models/llama/megatron/layers/__init__.py",
+      "sha256": "164f9b46a38b7c500c99f5a1f11a6b6d0a3160bda61296f8062d20c2720d5743"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/layers/parallel_attention.py",
+      "public_path": "verl/verl/models/llama/megatron/layers/parallel_attention.py",
+      "sha256": "223115766f99e5c92baa9a2d6f2d0451c2f472ddc3e05da176399dbd438daa5e"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/layers/parallel_decoder.py",
+      "public_path": "verl/verl/models/llama/megatron/layers/parallel_decoder.py",
+      "sha256": "aaf2f4cbb9ca900fc064e5497f0a8891989f7cdb03a8774636dcf0426ffc8166"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/layers/parallel_linear.py",
+      "public_path": "verl/verl/models/llama/megatron/layers/parallel_linear.py",
+      "sha256": "abea6cdb51b6321ee3bf4ba9f043c32c4ec2dbfad64ebf0981f5beb30293bb11"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/layers/parallel_mlp.py",
+      "public_path": "verl/verl/models/llama/megatron/layers/parallel_mlp.py",
+      "sha256": "752d7674c3746007caa5a111ae15f47d30fb769cf30721ede17fca4c2c5e3bab"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "public_path": "verl/verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "sha256": "fd9c0692745aae1afab37e9730178f19ea0c2388f08cdb67646e3a371a3c1deb"
+    },
+    {
+      "path": "verl/verl/models/llama/megatron/modeling_llama_megatron.py",
+      "public_path": "verl/verl/models/llama/megatron/modeling_llama_megatron.py",
+      "sha256": "fc5c8658c0d5b1dac2765b7d5b50aef821f468a4978804b93aa72f79fc3a4213"
+    },
+    {
+      "path": "verl/verl/models/qwen2/__init__.py",
+      "public_path": "verl/verl/models/qwen2/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/__init__.py",
+      "public_path": "verl/verl/models/qwen2/megatron/__init__.py",
+      "sha256": "e0b2356fd7251c1424b8baef5b939c33e9f043ace729e05230741112bc81769e"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/checkpoint_utils/__init__.py",
+      "public_path": "verl/verl/models/qwen2/megatron/checkpoint_utils/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader.py",
+      "public_path": "verl/verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader.py",
+      "sha256": "afffbd1f8d6a7c9b0e27985f6ce9ca9ac87c53e557d16551cc068b9afac17c0a"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/checkpoint_utils/qwen2_saver.py",
+      "public_path": "verl/verl/models/qwen2/megatron/checkpoint_utils/qwen2_saver.py",
+      "sha256": "551e411baa6dd4b37c8198195bf3e2d36d7027538afd31a28f348cad00e7c717"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/layers/__init__.py",
+      "public_path": "verl/verl/models/qwen2/megatron/layers/__init__.py",
+      "sha256": "4b1f9e91c6049c31efa241f1b38d411b98a4c0ecc4797578d6ea16b0ff32da38"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/layers/parallel_attention.py",
+      "public_path": "verl/verl/models/qwen2/megatron/layers/parallel_attention.py",
+      "sha256": "fa6143fa0f1549bdafbb83b1474ed6ed7ad0611613efa7f30529a4e02715c89f"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/layers/parallel_decoder.py",
+      "public_path": "verl/verl/models/qwen2/megatron/layers/parallel_decoder.py",
+      "sha256": "5f026aa68deb74d92df5c768b5aa06b19463b9217e8931e30cab4775bce3c3f1"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/layers/parallel_linear.py",
+      "public_path": "verl/verl/models/qwen2/megatron/layers/parallel_linear.py",
+      "sha256": "abea6cdb51b6321ee3bf4ba9f043c32c4ec2dbfad64ebf0981f5beb30293bb11"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/layers/parallel_mlp.py",
+      "public_path": "verl/verl/models/qwen2/megatron/layers/parallel_mlp.py",
+      "sha256": "8284b8883a0bdb4bb189c63457e62094e2a4bbf6a56bc3df19a78d1a9d63960f"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/layers/parallel_rmsnorm.py",
+      "public_path": "verl/verl/models/qwen2/megatron/layers/parallel_rmsnorm.py",
+      "sha256": "5176f070202865302e04102b9b54ae3b4a353c2775b11802f2579478e31f1f0b"
+    },
+    {
+      "path": "verl/verl/models/qwen2/megatron/modeling_qwen2_megatron.py",
+      "public_path": "verl/verl/models/qwen2/megatron/modeling_qwen2_megatron.py",
+      "sha256": "76dcff71b072e03b0efbabfdb627b354bb8fc336974de6787f9417ac8d2037f8"
+    },
+    {
+      "path": "verl/verl/models/registry.py",
+      "public_path": "verl/verl/models/registry.py",
+      "sha256": "c48d7bc2d4d8a861f12fff820f9a5487ebde70aaf1b15289fc9cb354851176d9"
+    },
+    {
+      "path": "verl/verl/models/transformers/__init__.py",
+      "public_path": "verl/verl/models/transformers/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/models/transformers/llama.py",
+      "public_path": "verl/verl/models/transformers/llama.py",
+      "sha256": "e127f52fc5685ece8f31a3feb9d44a0c449108d6820c85e4ba19b2bda4e2bc68"
+    },
+    {
+      "path": "verl/verl/models/transformers/monkey_patch.py",
+      "public_path": "verl/verl/models/transformers/monkey_patch.py",
+      "sha256": "662bfce80182249fdbe3e2dd985e2f8d719ed1b5e2f172187bbf489cbbf68335"
+    },
+    {
+      "path": "verl/verl/models/transformers/qwen2.py",
+      "public_path": "verl/verl/models/transformers/qwen2.py",
+      "sha256": "3ba9b47b05d1e7df556b1ec294a8d2a5edecd640cb80e07cead1de220e14e52a"
+    },
+    {
+      "path": "verl/verl/models/transformers/qwen2_vl.py",
+      "public_path": "verl/verl/models/transformers/qwen2_vl.py",
+      "sha256": "6739eaa2f6e2e037b6fd843c7f7ccab74295d14e2a7ab73935b9d77b095bd082"
+    },
+    {
+      "path": "verl/verl/models/weight_loader_registry.py",
+      "public_path": "verl/verl/models/weight_loader_registry.py",
+      "sha256": "207018f070b2814a9110d4f833dd79b59a4f5a580b29403f66aed1eccedd7659"
+    },
+    {
+      "path": "verl/verl/protocol.py",
+      "public_path": "verl/verl/protocol.py",
+      "sha256": "c7cb366d7c724900493a29f3ddcea8f787d05631adf24eabd4f451dde245d84a"
+    },
+    {
+      "path": "verl/verl/single_controller/__init__.py",
+      "public_path": "verl/verl/single_controller/__init__.py",
+      "sha256": "d4cb82038873740c5f8a48ee569d386b545e215b2c859b24df904cbf90d0c6a6"
+    },
+    {
+      "path": "verl/verl/single_controller/base/__init__.py",
+      "public_path": "verl/verl/single_controller/base/__init__.py",
+      "sha256": "16b0e0dd56f861250bab3548d4ca3aaa29c8d2e5d33adcec5d836b04a36452ef"
+    },
+    {
+      "path": "verl/verl/single_controller/base/decorator.py",
+      "public_path": "verl/verl/single_controller/base/decorator.py",
+      "sha256": "b6e4cd3c8ad3c4fa2eea07df3ef45344bb5dc2e1e8357c0b94a9d19a6bd4daac"
+    },
+    {
+      "path": "verl/verl/single_controller/base/megatron/__init__.py",
+      "public_path": "verl/verl/single_controller/base/megatron/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/single_controller/base/megatron/worker.py",
+      "public_path": "verl/verl/single_controller/base/megatron/worker.py",
+      "sha256": "c38e8f7c0fb89baa2a2a16abff389615cc475a57cefbabf51f2eadb6be81f7b6"
+    },
+    {
+      "path": "verl/verl/single_controller/base/megatron/worker_group.py",
+      "public_path": "verl/verl/single_controller/base/megatron/worker_group.py",
+      "sha256": "73362d1f9a2c162dcad2470c3ae93cb0867273a5fa236b135357e76807fa987f"
+    },
+    {
+      "path": "verl/verl/single_controller/base/register_center/__init__.py",
+      "public_path": "verl/verl/single_controller/base/register_center/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/single_controller/base/register_center/ray.py",
+      "public_path": "verl/verl/single_controller/base/register_center/ray.py",
+      "sha256": "453fb6557bd4dde011730d92d96b8004e280c2dd75bb60f4d3eff9b8947ae702"
+    },
+    {
+      "path": "verl/verl/single_controller/base/worker.py",
+      "public_path": "verl/verl/single_controller/base/worker.py",
+      "sha256": "338dd39d7a4d07b0e3532625bab7d4a9cf1376ad6dff897c36765abf32a672be"
+    },
+    {
+      "path": "verl/verl/single_controller/base/worker_group.py",
+      "public_path": "verl/verl/single_controller/base/worker_group.py",
+      "sha256": "be16a708f25795fadc3f02d7e180dc3c1c349eb3c7d605957b326af18c15637a"
+    },
+    {
+      "path": "verl/verl/single_controller/ray/__init__.py",
+      "public_path": "verl/verl/single_controller/ray/__init__.py",
+      "sha256": "1fb16f4db639ff031e1a09b42fcc862c1ff6c960a845f262d60b5c85120d5787"
+    },
+    {
+      "path": "verl/verl/single_controller/ray/base.py",
+      "public_path": "verl/verl/single_controller/ray/base.py",
+      "sha256": "37864cffe45c643845674908855b829f95a323253b320996182ca21ce39205a8"
+    },
+    {
+      "path": "verl/verl/single_controller/ray/megatron.py",
+      "public_path": "verl/verl/single_controller/ray/megatron.py",
+      "sha256": "094e2cc2fc7e62e81334c718f8a2a308f0bfdc4fc04dd53339c17b28e765de32"
+    },
+    {
+      "path": "verl/verl/third_party/__init__.py",
+      "public_path": "verl/verl/third_party/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/__init__.py",
+      "public_path": "verl/verl/third_party/vllm/__init__.py",
+      "sha256": "a5979d1649c1608f64ff627f94e9be1fbb4ee2f9c39c626a1a8eafc754faffed"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/__init__.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py",
+      "sha256": "241d3e47e1bf283647237be71099df7ff857e11ce24c1f6082f9225929a7d4be"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/config.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/config.py",
+      "sha256": "868aa707443c67986ef8b2c5437b617d640f4d47a53026f7e378ddde22ce7965"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/llm.py",
+      "sha256": "bb5dd8a628d2d58b9daf33fe97fd471778b11e07212f5a7ac75c47a48273dca7"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py",
+      "sha256": "ae76e88278e330c7a82b9ed149e76022e1e9522b5199a48f272ea514ed80b6cd"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/model_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/model_loader.py",
+      "sha256": "9178cfe4c30b03a55856a0a59bdd2cf14856181185050814502fe9012cfcde10"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/model_runner.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/model_runner.py",
+      "sha256": "3ea4154e940f51a1d1f4770240c905b46ed9b923e32f9aa399a715b9ac9c5ff7"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/parallel_state.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/parallel_state.py",
+      "sha256": "7129fc091140197f245ef083b829dafb7b68341f5f7e83959a31e0cbc063b76d"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/tokenizer.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/tokenizer.py",
+      "sha256": "557315a3db0e6e7d6cf5bd1dae035e15d69c5d0fb707ee395b629f2f9443e7f1"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/weight_loaders.py",
+      "sha256": "5f5e0fe0298bb98c6b8c453f5d8b403c14786b95ccfaa2e02c83db5f91a2f6df"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_3_1/worker.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_3_1/worker.py",
+      "sha256": "20cdda355891836b9c8e80e1ba6c8af30634ec5a8f345259d4cc2463b3c04d13"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/__init__.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/arg_utils.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/arg_utils.py",
+      "sha256": "072ff25d639aac9716f353a7f9573db9296e6f2cdbde8c905b0966f193c5570c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/config.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/config.py",
+      "sha256": "fafdec45f81c2def3798ca7ea86d00cfda7b3ee790c9ba4cc5f00a842ff9a181"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/dtensor_weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/dtensor_weight_loaders.py",
+      "sha256": "8567b6e6a43a709cad9f2ba6d7d3fc34d19c24ba3c9d8c5866d506207aaf64b0"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/hf_weight_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/hf_weight_loader.py",
+      "sha256": "05fb8e715913bd4e0ac7384bf4e116610639a25700e46c6aafb2fc5df4c81bdc"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/llm.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/llm.py",
+      "sha256": "8ad6dfe89c1178ebcb764d2cfd9b888d2de1df3ec4a3124935ea6c5bb7a7c4ce"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py",
+      "sha256": "daf7e56923a73e6075ce7e45a648b7d9f2957e26e7c4476be9dec3efb7625556"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py",
+      "sha256": "8031edaf38d3e80ec53b872b3dae963254d54d49bcbd060db61f2b4037461181"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/model_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/model_loader.py",
+      "sha256": "ec29dcd0785c71e44a3e755ca0d649afc27a98929128f9b76eaa078d76051f13"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/model_runner.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/model_runner.py",
+      "sha256": "9a7a637e14192a5253c708ba86584995a4f6fecc9a0ec6935c60957f6ca94750"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/parallel_state.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/parallel_state.py",
+      "sha256": "cc50df68dca62edfce15e46ae0ec07cd5ae819a5f4e03b47f05a86a43aa24f1c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/spmd_gpu_executor.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/spmd_gpu_executor.py",
+      "sha256": "29254e03f754ed706f1265f7ab839dd9c465cd48cbd8549ad6cdf8a4db702a63"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/tokenizer.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/tokenizer.py",
+      "sha256": "497a401f78f5c164308c4d48df0144e8b0c7a47bd4dfb3212681c8d511fe98bb"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_4_2/worker.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_4_2/worker.py",
+      "sha256": "5de27b2ac756955564514b6e0e097b2e7d1c98c93f6a495ffd5ae29a240865a1"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/__init__.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/arg_utils.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/arg_utils.py",
+      "sha256": "f4fe86d839cefc374e4606f13ce53a7f224e13c2221bca80d775eabb6c03990c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/config.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/config.py",
+      "sha256": "5dac246763fa9ba0331f36ee72bbb43fae1a702bb354adc156e08cbaa6f0fa5e"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/dtensor_weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/dtensor_weight_loaders.py",
+      "sha256": "3f71614c586d78588d8ee69d66e1533896c51e985e0cb8719cb8bd124e35c3f3"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/hf_weight_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/hf_weight_loader.py",
+      "sha256": "8c819582f3ad7b23df842087cdf4a1992392e931cd419bcdc19879742ee828fe"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/llm.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/llm.py",
+      "sha256": "47be604307df31d16239191df3051ded9a7a0d7d7a69f3ee88539686556c2f30"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/llm_engine_sp.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/llm_engine_sp.py",
+      "sha256": "85fe01207028cd8b23f86be73179e2795eb7f45420a7f48db0d27835c9dcd1d1"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/megatron_weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/megatron_weight_loaders.py",
+      "sha256": "08dccb70b440541f1f3c68e5f519c1c419bce66360885af1084c4fee2b972079"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/model_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/model_loader.py",
+      "sha256": "0e43f762258581069c1d20717591a6cbeb42288c033fa2aabc92c77f536768f4"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/model_runner.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/model_runner.py",
+      "sha256": "5f3ed36a09a9ae7c3ce2036c77f955a6c1b5ed1999dcf7e4df65a2b3ce606c1d"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/parallel_state.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/parallel_state.py",
+      "sha256": "f6ee10da1649890e720155630a6979b4b2aa1ed195f700f34d94cccfdff23b53"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/spmd_gpu_executor.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/spmd_gpu_executor.py",
+      "sha256": "3ce0cddfb329f0898287fcef40209e88cd8d8f6e4dc1e7ad78e31ac2bacfce7f"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/tokenizer.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/tokenizer.py",
+      "sha256": "497a401f78f5c164308c4d48df0144e8b0c7a47bd4dfb3212681c8d511fe98bb"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py",
+      "sha256": "4235c9a8d985c1c4c4b6db086b3515c38681517a11f77004a488c6790383897c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/__init__.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/arg_utils.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/arg_utils.py",
+      "sha256": "fa211803d2705904fa27b4af7c4db629e60623046cc675bc04f5786a20675efc"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/config.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/config.py",
+      "sha256": "9380fdc1024ef0ec327c75c35195a009edfdcf39a4e92f53a45149fe246cec6d"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/dtensor_weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/dtensor_weight_loaders.py",
+      "sha256": "280ba6eacd660cb208f6e0fe1b427cd634c67927121328d6b3bc1226d59d0280"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/hf_weight_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/hf_weight_loader.py",
+      "sha256": "01e371e44c45c0a4ecc2a757f3244a7220f6baa31c52a57d3b6c58f07a367752"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/llm.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/llm.py",
+      "sha256": "5bc262b93ac5e938c82cc51f0e48b22a33cf13d0f5966f02afa15b60445203ff"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py",
+      "sha256": "618c464b9b80f595863c9c831c65a53a854f695012cc506f63c691073bf86e53"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py",
+      "sha256": "e80e58eae9125693894dea02991f2ea91ae06d93d2dc5ae2a694dc3a08519366"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/model_loader.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/model_loader.py",
+      "sha256": "3f033175550ad920a7398e36a7f0b4e16859b692c4098eeb3a5eca7b97219945"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/model_runner.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/model_runner.py",
+      "sha256": "a30b7696071da0d9a08f30a0b42335cce3acd5331abbfdc0bc64fa3ef56a21ac"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py",
+      "sha256": "c63e53effe7be48e3291d790bd02a7c95795692594655c39922a49381d93b56b"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/spmd_gpu_executor.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/spmd_gpu_executor.py",
+      "sha256": "0dd0c264240aeaac9f3bdd86054f1493334194143833de54a8636cfc200d27ae"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/tokenizer.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/tokenizer.py",
+      "sha256": "f6f2517ebbac01f4cfb234ec71776d54e15a088cd883d48014f6c120d73a8da2"
+    },
+    {
+      "path": "verl/verl/third_party/vllm/vllm_v_0_6_3/worker.py",
+      "public_path": "verl/verl/third_party/vllm/vllm_v_0_6_3/worker.py",
+      "sha256": "d63fc21f39c9a730c9ddd1e776a98f554a7adc7dc9de96ae895d63b476e0577a"
+    },
+    {
+      "path": "verl/verl/trainer/__init__.py",
+      "public_path": "verl/verl/trainer/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/trainer/config/evaluation.yaml",
+      "public_path": "verl/verl/trainer/config/evaluation.yaml",
+      "sha256": "106cd5daf5846e03aa5866897c7f7c13096e2859cd87a9cb2b73417143aa50ec"
+    },
+    {
+      "path": "verl/verl/trainer/config/generation.yaml",
+      "public_path": "verl/verl/trainer/config/generation.yaml",
+      "sha256": "6a35436cea40efdfc9738f09fabe065c1a2b5c9b33cfddc6160fb9ecd7efbaf3"
+    },
+    {
+      "path": "verl/verl/trainer/config/ppo_megatron_trainer.yaml",
+      "public_path": "verl/verl/trainer/config/ppo_megatron_trainer.yaml",
+      "sha256": "9fca83063cde5bfd75437680b96bed08c6c0c3cdc74ebf923e2458f73a6bb717"
+    },
+    {
+      "path": "verl/verl/trainer/config/ppo_trainer.yaml",
+      "public_path": "verl/verl/trainer/config/ppo_trainer.yaml",
+      "sha256": "fa70d1804fbedbb36daa01a8699ab0bbbdb036c880c99541a34424512ab386f1"
+    },
+    {
+      "path": "verl/verl/trainer/config/sft_trainer.yaml",
+      "public_path": "verl/verl/trainer/config/sft_trainer.yaml",
+      "sha256": "1f0f3922f886f750c293b8315b27844c76cc3ecc55f1479684118571c50705cc"
+    },
+    {
+      "path": "verl/verl/trainer/fsdp_sft_trainer.py",
+      "public_path": "verl/verl/trainer/fsdp_sft_trainer.py",
+      "sha256": "d622b3044aa31b3a9046f655aae90d8c4a207160d6df3d61baadc69f28719354"
+    },
+    {
+      "path": "verl/verl/trainer/main_eval.py",
+      "public_path": "verl/verl/trainer/main_eval.py",
+      "sha256": "c23c01eaa70ee79aa25b1e2fa859e93b3917b0b9d0476378e739a7275f3d639c"
+    },
+    {
+      "path": "verl/verl/trainer/main_generation.py",
+      "public_path": "verl/verl/trainer/main_generation.py",
+      "sha256": "cc9324a95122fd702e5f05ac17fff72513fbf8a9dec3fa592af30f7eb4f38ccb"
+    },
+    {
+      "path": "verl/verl/trainer/main_ppo.py",
+      "public_path": "verl/verl/trainer/main_ppo.py",
+      "sha256": "2bffb41c2ba69de3f4832ad5602e5975c34c4e56017fc84398e632d56791a845"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/__init__.py",
+      "public_path": "verl/verl/trainer/ppo/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/core_algos.py",
+      "public_path": "verl/verl/trainer/ppo/core_algos.py",
+      "sha256": "a68f24848ee43c5deaa27c12fc69b52edf8f33c6752f5e33177fd599d85ea6c1"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/metric_utils.py",
+      "public_path": "verl/verl/trainer/ppo/metric_utils.py",
+      "sha256": "b911d7c57d55e1233a0c47ab5751ca778b349bdeae4cc271b1c5ef5641328626"
+    },
+    {
+      "path": "verl/verl/trainer/ppo/ray_trainer.py",
+      "public_path": "verl/verl/trainer/ppo/ray_trainer.py",
+      "sha256": "a1039466479075762dda65d90608692d7e513f8526f4a537322c0da8cc34bc13"
+    },
+    {
+      "path": "verl/verl/trainer/runtime_env.yaml",
+      "public_path": "verl/verl/trainer/runtime_env.yaml",
+      "sha256": "4b48b9246dcaa5df082844675c32e6095abd198e347eb928fc8c7d931c13e4d6"
+    },
+    {
+      "path": "verl/verl/utils/__init__.py",
+      "public_path": "verl/verl/utils/__init__.py",
+      "sha256": "d7d26ffc06c512f63e6c1feb1d7808a9dfca903c32a36add16824074b51cb0a8"
+    },
+    {
+      "path": "verl/verl/utils/checkpoint/__init__.py",
+      "public_path": "verl/verl/utils/checkpoint/__init__.py",
+      "sha256": "c0240b4d2ee7fe3fa82b4785c7e278e4b346f5179f04bf7716811f612a25a7d0"
+    },
+    {
+      "path": "verl/verl/utils/checkpoint/checkpoint_manager.py",
+      "public_path": "verl/verl/utils/checkpoint/checkpoint_manager.py",
+      "sha256": "13e832f9bf7ca29457439256d9a53da37383891052b41e612e8bd3127ce8d922"
+    },
+    {
+      "path": "verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "public_path": "verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "sha256": "2f6b4a861df02460bde7da5f94d1b25272ea469d9c2ebcd1aa282ae53e8bf628"
+    },
+    {
+      "path": "verl/verl/utils/config.py",
+      "public_path": "verl/verl/utils/config.py",
+      "sha256": "b59763b8653abf6a011abf5304c2679b9e68690d2acc33a9a05fd6cfe0aab542"
+    },
+    {
+      "path": "verl/verl/utils/dataset/README.md",
+      "public_path": "verl/verl/utils/dataset/README.md",
+      "sha256": "de346fc1a883566c1b8f1f22c0ba4563efadfdb7b53d5935796401ad18d56f57"
+    },
+    {
+      "path": "verl/verl/utils/dataset/__init__.py",
+      "public_path": "verl/verl/utils/dataset/__init__.py",
+      "sha256": "a09f7eb8b95104f78fd0b155a90551bdd834f384e8fa547cff5c7f80904c0065"
+    },
+    {
+      "path": "verl/verl/utils/dataset/rl_dataset.py",
+      "public_path": "verl/verl/utils/dataset/rl_dataset.py",
+      "sha256": "f85f8a745a434facb8a4780ed79acd2489c9a765021a5c4e27e180019049bf0f"
+    },
+    {
+      "path": "verl/verl/utils/dataset/rm_dataset.py",
+      "public_path": "verl/verl/utils/dataset/rm_dataset.py",
+      "sha256": "cb8a482fb97e75f89d3cf0baf7d569668af049895fb7e5b07ab1aecb3e5cc1f1"
+    },
+    {
+      "path": "verl/verl/utils/dataset/sft_dataset.py",
+      "public_path": "verl/verl/utils/dataset/sft_dataset.py",
+      "sha256": "c687213032e83d3be3fd1ecf7edff4935f5620c21cd40eb1b2eef71aafe6c1ad"
+    },
+    {
+      "path": "verl/verl/utils/debug/__init__.py",
+      "public_path": "verl/verl/utils/debug/__init__.py",
+      "sha256": "7c2e66dafef4ae2d091deec16c763299acc927bc7486268190239d9290c0b77c"
+    },
+    {
+      "path": "verl/verl/utils/debug/performance.py",
+      "public_path": "verl/verl/utils/debug/performance.py",
+      "sha256": "a27524298cce8e7c5b0dc060a9d58f4c79d5a63a2da36293dee491dbb927a211"
+    },
+    {
+      "path": "verl/verl/utils/debug/trajectory_tracker.py",
+      "public_path": "verl/verl/utils/debug/trajectory_tracker.py",
+      "sha256": "f47db3824fe10b827c62110cb49151e075ae3e8bc9ea95905bb5dd915d60b897"
+    },
+    {
+      "path": "verl/verl/utils/distributed.py",
+      "public_path": "verl/verl/utils/distributed.py",
+      "sha256": "ee90007c15948b647338f404dd865cc5a0e2586903b8790ce6331d1cf01d2244"
+    },
+    {
+      "path": "verl/verl/utils/flops_counter.py",
+      "public_path": "verl/verl/utils/flops_counter.py",
+      "sha256": "96e15bff93202dbc6de9bf20ccdeab67b3065c35afb3e8713259da878710b401"
+    },
+    {
+      "path": "verl/verl/utils/fs.py",
+      "public_path": "verl/verl/utils/fs.py",
+      "sha256": "c3ba5375648e7368abab3a03e06fb9a169ad7e2bceb401dbad185b6f6632ae28"
+    },
+    {
+      "path": "verl/verl/utils/fsdp_utils.py",
+      "public_path": "verl/verl/utils/fsdp_utils.py",
+      "sha256": "a39727b58dfa4847ff459d8e3f7560565098386e1e57dd06b6d846e0262caa14"
+    },
+    {
+      "path": "verl/verl/utils/hdfs_io.py",
+      "public_path": "verl/verl/utils/hdfs_io.py",
+      "sha256": "3f006815223e1798ee829b325aa942453cdb6131731f056b07fd8de957d0bcf7"
+    },
+    {
+      "path": "verl/verl/utils/import_utils.py",
+      "public_path": "verl/verl/utils/import_utils.py",
+      "sha256": "96fbdc91902ef5b62dee939d0a1f5a5cec7c5d93b240966017ef08278e644722"
+    },
+    {
+      "path": "verl/verl/utils/logger/__init__.py",
+      "public_path": "verl/verl/utils/logger/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/utils/logger/aggregate_logger.py",
+      "public_path": "verl/verl/utils/logger/aggregate_logger.py",
+      "sha256": "9fcaf99c0e6bacb838c7d1e40f1a51dcab6b4fe633b9320d97f5434f032fee9d"
+    },
+    {
+      "path": "verl/verl/utils/logging_utils.py",
+      "public_path": "verl/verl/utils/logging_utils.py",
+      "sha256": "9c9c37a6cacc9ed779e133c38ab08a73d4a5e042eafd20546af340190fb86585"
+    },
+    {
+      "path": "verl/verl/utils/megatron/__init__.py",
+      "public_path": "verl/verl/utils/megatron/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/utils/megatron/memory.py",
+      "public_path": "verl/verl/utils/megatron/memory.py",
+      "sha256": "422a9340d8aae030664b5e425bb89bffc5d428b34057d091905b84a5033291e1"
+    },
+    {
+      "path": "verl/verl/utils/megatron/optimizer.py",
+      "public_path": "verl/verl/utils/megatron/optimizer.py",
+      "sha256": "257d9c2070f419e3a52b6e996d7c71127f6c276c500537d062016c428eed1909"
+    },
+    {
+      "path": "verl/verl/utils/megatron/pipeline_parallel.py",
+      "public_path": "verl/verl/utils/megatron/pipeline_parallel.py",
+      "sha256": "322d879dbfd3ae6219944ec328b2b6c0fb19091a45bb4a2257402b4934f1dd46"
+    },
+    {
+      "path": "verl/verl/utils/megatron/sequence_parallel.py",
+      "public_path": "verl/verl/utils/megatron/sequence_parallel.py",
+      "sha256": "5291153114babd5010d809c671c17fe14a7ac06c2ea4d997844bf3b6f1f4154e"
+    },
+    {
+      "path": "verl/verl/utils/megatron/tensor_parallel.py",
+      "public_path": "verl/verl/utils/megatron/tensor_parallel.py",
+      "sha256": "b9b0be00bd03b96f906166ae211ee5a5b9796db7a7f15f1b8cd3f8d2f7d2d18c"
+    },
+    {
+      "path": "verl/verl/utils/megatron_utils.py",
+      "public_path": "verl/verl/utils/megatron_utils.py",
+      "sha256": "79155df9c97f22a3b51688ed9f155a226360790057d83ff5ee05e178ec15c2b3"
+    },
+    {
+      "path": "verl/verl/utils/memory_buffer.py",
+      "public_path": "verl/verl/utils/memory_buffer.py",
+      "sha256": "5c7d202002ed638cf7e6760594f5d18a055cc3b0c16cf7c64de47767369141a0"
+    },
+    {
+      "path": "verl/verl/utils/model.py",
+      "public_path": "verl/verl/utils/model.py",
+      "sha256": "488cd01f02acd28b3c85a592939de1360f275169655edf7d64bef48d7ac3a934"
+    },
+    {
+      "path": "verl/verl/utils/py_functional.py",
+      "public_path": "verl/verl/utils/py_functional.py",
+      "sha256": "2b7cb3329422c6d5efef8e922eabf4f0942dfc330c04728d6d99159e953a3e6f"
+    },
+    {
+      "path": "verl/verl/utils/ray_utils.py",
+      "public_path": "verl/verl/utils/ray_utils.py",
+      "sha256": "77ef654419c1c1de59a6ec2b32b457eca7dd8cc73fe74a0d98278a3255835b58"
+    },
+    {
+      "path": "verl/verl/utils/rendezvous/__init__.py",
+      "public_path": "verl/verl/utils/rendezvous/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/utils/rendezvous/ray_backend.py",
+      "public_path": "verl/verl/utils/rendezvous/ray_backend.py",
+      "sha256": "902cda6fef0dd91061454e2f2461e3766eaa6b3227d4f7a9e829ab96b3e0b63d"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/__init__.py",
+      "public_path": "verl/verl/utils/reward_score/__init__.py",
+      "sha256": "0213314f90fd39cc92cc5d7a740792d8bdcabd688feb958db936a92c997eaaa8"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/geo3k.py",
+      "public_path": "verl/verl/utils/reward_score/geo3k.py",
+      "sha256": "676b484dc8550ba30cdff4211f7a8c13e3af25df2b8cb85ce3b20712881eac09"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/gsm8k.py",
+      "public_path": "verl/verl/utils/reward_score/gsm8k.py",
+      "sha256": "ad8c22fa6becda86f429a9cac622aa9a2e9178758ecde00e3a02a55e09b93b6e"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/math.py",
+      "public_path": "verl/verl/utils/reward_score/math.py",
+      "sha256": "fd0eb6f4702e249e3386e91ac03964214bd3deafa5a0b3d9f9a05849930735c7"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/math_dapo.py",
+      "public_path": "verl/verl/utils/reward_score/math_dapo.py",
+      "sha256": "0731f5c2aaca848e5e7935efb59a0788c97d1beadc9dc9eda9804058ff8ece9b"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/math_verify.py",
+      "public_path": "verl/verl/utils/reward_score/math_verify.py",
+      "sha256": "321d621585ddb1ebd26d2a26137496aa90e57c4a9a71c790d23cf110c0b96714"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/prime_code/__init__.py",
+      "public_path": "verl/verl/utils/reward_score/prime_code/__init__.py",
+      "sha256": "904617ab9607fb306000fc2de423747ef642c4ea8d20a71533c2a900c5552d47"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/prime_code/testing_util.py",
+      "public_path": "verl/verl/utils/reward_score/prime_code/testing_util.py",
+      "sha256": "d70ae8183c55adac2de92a3f1a47076f852c79bbcc3a87613d9060852aef27a6"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/prime_code/utils.py",
+      "public_path": "verl/verl/utils/reward_score/prime_code/utils.py",
+      "sha256": "f718147b689f279171dda0d9c1b9059678e07bf2cee69ae18fb0d6cd504fabcc"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/prime_math/__init__.py",
+      "public_path": "verl/verl/utils/reward_score/prime_math/__init__.py",
+      "sha256": "7c303baac3c8e2729765eaffde7cc018c8ea825dc458369dfaf9fd95145ba9bb"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/prime_math/grader.py",
+      "public_path": "verl/verl/utils/reward_score/prime_math/grader.py",
+      "sha256": "54656724a7dea29f643ce5207952fb18250e9c8460ad9c29e38201197f408116"
+    },
+    {
+      "path": "verl/verl/utils/reward_score/prime_math/math_normalize.py",
+      "public_path": "verl/verl/utils/reward_score/prime_math/math_normalize.py",
+      "sha256": "23849a0b74900e292dfea35fd8763708377defd1a618b15e53ac2c4876a6f109"
+    },
+    {
+      "path": "verl/verl/utils/seqlen_balancing.py",
+      "public_path": "verl/verl/utils/seqlen_balancing.py",
+      "sha256": "836a381b88a7c2185aea684b8e8c26e7eb0c25c6183e8f2f4d1686c85636fefb"
+    },
+    {
+      "path": "verl/verl/utils/tokenizer.py",
+      "public_path": "verl/verl/utils/tokenizer.py",
+      "sha256": "82f6869eb0b363db6a73b97098c855e54b6c825d03c1c219259c95c94ce39357"
+    },
+    {
+      "path": "verl/verl/utils/torch_dtypes.py",
+      "public_path": "verl/verl/utils/torch_dtypes.py",
+      "sha256": "78db43b44160363e89091ddb677d02370b3f616a59fac0db0ebe24a26ee4f842"
+    },
+    {
+      "path": "verl/verl/utils/torch_functional.py",
+      "public_path": "verl/verl/utils/torch_functional.py",
+      "sha256": "cf9ecbfa6afed9981e3c14cea740509cc398da18250f7f2f990a2f56107beaae"
+    },
+    {
+      "path": "verl/verl/utils/tracking.py",
+      "public_path": "verl/verl/utils/tracking.py",
+      "sha256": "cb557c7623a173747701b51e7398d62bd6d31060ef8b5a8936f5d81a7926585b"
+    },
+    {
+      "path": "verl/verl/utils/ulysses.py",
+      "public_path": "verl/verl/utils/ulysses.py",
+      "sha256": "c47179787683e6ff73a50e09fd4acd6328bcd9d61d526afb827f234e538f238a"
+    },
+    {
+      "path": "verl/verl/version/version",
+      "public_path": "verl/verl/version/version",
+      "sha256": "308043c5811b33f87d196ddc5f3634f85f2463df67ff5416857bb6576255b370"
+    },
+    {
+      "path": "verl/verl/workers/__init__.py",
+      "public_path": "verl/verl/workers/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/verl/workers/actor/__init__.py",
+      "public_path": "verl/verl/workers/actor/__init__.py",
+      "sha256": "3053474474716dc57f7e1b5d80d23b28c7b146d9257f8b6bf3b7878de4eae219"
+    },
+    {
+      "path": "verl/verl/workers/actor/base.py",
+      "public_path": "verl/verl/workers/actor/base.py",
+      "sha256": "4afcfa27274dd1b58e40cc5484ca352890d5423ce2c162734f1ee6b4fb26890b"
+    },
+    {
+      "path": "verl/verl/workers/actor/dp_actor.py",
+      "public_path": "verl/verl/workers/actor/dp_actor.py",
+      "sha256": "d4ff0f39b0dc4da8d30aeac2ed102e52030327629d190e59cc9d70ce8902359c"
+    },
+    {
+      "path": "verl/verl/workers/actor/megatron_actor.py",
+      "public_path": "verl/verl/workers/actor/megatron_actor.py",
+      "sha256": "262cb3db95dcac2fb76b8913e109a16ea0ff9b3028b45a6b2a8e431ee1a524be"
+    },
+    {
+      "path": "verl/verl/workers/critic/__init__.py",
+      "public_path": "verl/verl/workers/critic/__init__.py",
+      "sha256": "a61c624ef2dd6bec59cc59302d88d1ccdc151ea5beb776b9733ac19bcfbe8fb7"
+    },
+    {
+      "path": "verl/verl/workers/critic/base.py",
+      "public_path": "verl/verl/workers/critic/base.py",
+      "sha256": "9609662cb80dc02afb53a424abb6a9ae93e0448d190a3dd5bc4cd5e0d92ea6a2"
+    },
+    {
+      "path": "verl/verl/workers/critic/dp_critic.py",
+      "public_path": "verl/verl/workers/critic/dp_critic.py",
+      "sha256": "4ee12443550984ecd29ad52ed20bd5a472e23cef898b7563a33f48c778af311f"
+    },
+    {
+      "path": "verl/verl/workers/critic/megatron_critic.py",
+      "public_path": "verl/verl/workers/critic/megatron_critic.py",
+      "sha256": "017160046a2b1fbbf0b99e0b946dc105473e1a445d3ff35154b97705a79bc98c"
+    },
+    {
+      "path": "verl/verl/workers/fsdp_workers.py",
+      "public_path": "verl/verl/workers/fsdp_workers.py",
+      "sha256": "0aa67e7321ea65d38f399ae6e6b469277e6276b7225695753a740a7ddfcab470"
+    },
+    {
+      "path": "verl/verl/workers/megatron_workers.py",
+      "public_path": "verl/verl/workers/megatron_workers.py",
+      "sha256": "2485cd758d41ae65f957f8d47e1f5935301fbfe91e573a3dd1bfbceaba3d9b1e"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/__init__.py",
+      "public_path": "verl/verl/workers/reward_manager/__init__.py",
+      "sha256": "a34a9714a42c916580ef27d8b9291caa9e2f1eeb39ca707a3a4b3d448eaaab18"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/naive.py",
+      "public_path": "verl/verl/workers/reward_manager/naive.py",
+      "sha256": "312b333a36c361420426d8ce21df83d4757a5e84cb209a15e244f82a85f11bf0"
+    },
+    {
+      "path": "verl/verl/workers/reward_manager/prime.py",
+      "public_path": "verl/verl/workers/reward_manager/prime.py",
+      "sha256": "6811d4aa5fda0e701aad3017bbe8958468678ad658e4b2fe6413a2371fbe8276"
+    },
+    {
+      "path": "verl/verl/workers/reward_model/__init__.py",
+      "public_path": "verl/verl/workers/reward_model/__init__.py",
+      "sha256": "969b640ba9c36d51ddf12380041963eb2255b094318027e76053c191339bd825"
+    },
+    {
+      "path": "verl/verl/workers/reward_model/base.py",
+      "public_path": "verl/verl/workers/reward_model/base.py",
+      "sha256": "7f6e0ccd8edaca5a5edc02e8f545297bef4acaea84d0858b870340a157ed0983"
+    },
+    {
+      "path": "verl/verl/workers/reward_model/megatron/__init__.py",
+      "public_path": "verl/verl/workers/reward_model/megatron/__init__.py",
+      "sha256": "1a01e19bf170896603577bc8752239de2743685141424dcef64bb685cb2ffd96"
+    },
+    {
+      "path": "verl/verl/workers/reward_model/megatron/reward_model.py",
+      "public_path": "verl/verl/workers/reward_model/megatron/reward_model.py",
+      "sha256": "c24d7ff3436f08f7972e47e114d21ae4e204379bf3dc70697d06463da0805c2b"
+    },
+    {
+      "path": "verl/verl/workers/rollout/__init__.py",
+      "public_path": "verl/verl/workers/rollout/__init__.py",
+      "sha256": "6dc2b3dd28631c76b826f545091bedc233111ad6bab00511a4fe40e6a1e4cf78"
+    },
+    {
+      "path": "verl/verl/workers/rollout/base.py",
+      "public_path": "verl/verl/workers/rollout/base.py",
+      "sha256": "480b812f13b681735e18347220dc7462a7ae982fb61a46541dc713d4e2608d12"
+    },
+    {
+      "path": "verl/verl/workers/rollout/hf_rollout.py",
+      "public_path": "verl/verl/workers/rollout/hf_rollout.py",
+      "sha256": "38d84c1bcbe61fa560dc6ab3e5f2acb46a4561c1bb329cf344d6cccc781b1009"
+    },
+    {
+      "path": "verl/verl/workers/rollout/naive/__init__.py",
+      "public_path": "verl/verl/workers/rollout/naive/__init__.py",
+      "sha256": "551983cdba422a02f03c8b9cce52face25963b511b9029e09247a16afa3c70fd"
+    },
+    {
+      "path": "verl/verl/workers/rollout/naive/naive_rollout.py",
+      "public_path": "verl/verl/workers/rollout/naive/naive_rollout.py",
+      "sha256": "6a0e5acc633674610ab7b40f6dff49307f644d6254e746511b89681318a241e4"
+    },
+    {
+      "path": "verl/verl/workers/rollout/tokenizer.py",
+      "public_path": "verl/verl/workers/rollout/tokenizer.py",
+      "sha256": "92fbaf5d1c93e2c0d2ec2e399af83be277ac744005466b3016331516708ed00b"
+    },
+    {
+      "path": "verl/verl/workers/rollout/vllm_rollout/__init__.py",
+      "public_path": "verl/verl/workers/rollout/vllm_rollout/__init__.py",
+      "sha256": "f8501216f2250b170ca5218fd93521aa0a79c3d7f6664a31306a844095b63842"
+    },
+    {
+      "path": "verl/verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py",
+      "public_path": "verl/verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py",
+      "sha256": "943c32dd4e6048325b055606a719bc6feb08e84c83d7e25ee8d7867d3034e628"
+    },
+    {
+      "path": "verl/verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "public_path": "verl/verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "sha256": "09ce0fb20ff90e4c576fd21c7891b1d9a75233898b441f45749d553b6bbd147f"
+    },
+    {
+      "path": "verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
+      "public_path": "verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
+      "sha256": "e9f1a5e5087f823533e56464f0cfd9ebd81af42710d81ba308fd0a809501bfdd"
+    },
+    {
+      "path": "verl/verl/workers/sharding_manager/__init__.py",
+      "public_path": "verl/verl/workers/sharding_manager/__init__.py",
+      "sha256": "32a39ab63010e701598f3c892357ede984a36a8e9013c78478b3f4a33e36ec21"
+    },
+    {
+      "path": "verl/verl/workers/sharding_manager/base.py",
+      "public_path": "verl/verl/workers/sharding_manager/base.py",
+      "sha256": "d249884ee73ed51563443388163d57caaff198af11f60da44c70b85568c5127f"
+    },
+    {
+      "path": "verl/verl/workers/sharding_manager/fsdp_ulysses.py",
+      "public_path": "verl/verl/workers/sharding_manager/fsdp_ulysses.py",
+      "sha256": "159a0212d6b0077431136e953f4c5814d85b59c4dd4a8de192b702812ad40739"
+    },
+    {
+      "path": "verl/verl/workers/sharding_manager/fsdp_vllm.py",
+      "public_path": "verl/verl/workers/sharding_manager/fsdp_vllm.py",
+      "sha256": "aec7f6c287909105a4b454b82ece4e0dc2bffd96a52f622b105f1a4dae803068"
+    },
+    {
+      "path": "verl/verl/workers/sharding_manager/megatron_vllm.py",
+      "public_path": "verl/verl/workers/sharding_manager/megatron_vllm.py",
+      "sha256": "f6f153350785d06def28153e8101caa7eb667a315cd0682a74bdb30ed8b25475"
+    }
+  ]
+}

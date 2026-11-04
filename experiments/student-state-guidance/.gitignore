@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+outputs/
+checkpoints/
+models/
+data/
+evaluation*/
+eval_result*/
+wandb/
+*.out
+*.err
+val_logs/
+log/
+*.jsonl
+*.log

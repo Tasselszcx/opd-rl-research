@@ -2,7 +2,7 @@
 
 11 篇论文的中文方法解读、训练步骤、实验结果与对应原文 PDF。
 
-**[在线阅读](https://tasselszcx.github.io/opd-rlvr-paper-notes/reading-notes/)**
+**[在线阅读](https://tasselszcx.github.io/opd-rl-research/reading-notes/)**
 
 也可以下载仓库，解压后用浏览器打开 `reading-notes/index.html`。页面、公式、流程图和 PDF 支持离线阅读。
 
@@ -44,4 +44,4 @@ python3 -m venv .venv
 
 论文和第三方资源保留各自的版权及许可证，相关许可证位于 `assets/fonts/OFL.txt` 和 `assets/licenses/`。
 
-研究方案与文献调研见 [OPD warmup 元教学调研](OPD_warmup_meta_teaching_论文调研与实验建议.md)。实验代码与 B300 交接见 [repositories](../repositories/README.md)。
+研究方案与文献调研见 [OPD warmup 元教学调研](OPD_warmup_meta_teaching_论文调研与实验建议.md)。当前实验代码见 [G3a](../experiments/student-state-guidance/README.md)，早期原型见 [历史归档](../archive/README.md)。

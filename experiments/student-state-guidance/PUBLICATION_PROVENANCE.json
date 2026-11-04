@@ -1,0 +1,85 @@
+{
+  "source_snapshot_commit": "140f0cb5935637c7ccc500240da9c786056424cc",
+  "upstream_repository": "https://github.com/StringNLPLAB/opd-rlvr",
+  "upstream_base_commit": "f5fd333736495608acd9415a60cd7568593aa1d4",
+  "snapshot_file_count": 721,
+  "modified_snapshot_files": [
+    {
+      "path": "guidance/env.sh",
+      "original_sha256": "dac59af61f27f5bed48e0d4c75acc268a3aacd8ddc284ffb045383d1974e869a",
+      "public_sha256": "f56dc7d3b57127c6aba3bb48032e50ec609d7cf16cfb978ec7d62866eb32b2dd",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "length_audit/env.sh",
+      "original_sha256": "779155973be7eb98cd1ea7ac10605ae4896d9792603298088c883b7de57be51c",
+      "public_sha256": "d4ed7757e76c0987443afc850c8550168cdfbc871ad68ad1eebd42175cf5189f",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "reproduction/coordinator_4x2.py",
+      "original_sha256": "b830c8547bda1e2f239fdd6fdaf30f39b0472933a8c154489d5047951a626e6a",
+      "public_sha256": "ef676930946a65c02800b8fc7cab3145c1afdb49139c855a41635dcf2842fe1c",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "reproduction/env.sh",
+      "original_sha256": "43a1b6ec8aaa548769d2cc05876cf968d01b6446879028842931523cd4b21fa8",
+      "public_sha256": "baef16d3a6fbc23a669e9d120b73c575be3624ccf82c96610aa0620290ae02e9",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "reproduction/eval_worker.py",
+      "original_sha256": "b42dff2163437f01a41d7c2cb04bc0e379dff031667bdc1dff3cb70a60e7ced8",
+      "public_sha256": "60cdb0fea4f679f4c7f443e7e55821520d7f98716b25eb03565f8223296ff8ad",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "reproduction/prepare_data.py",
+      "original_sha256": "da08af8d16fd5c567c6461b3b9855fb5bdc9f903ab5fc3a812096d7eea36173e",
+      "public_sha256": "5ab449687ccd127d8f32587276314bac259c0fed031420f0c2714d071ccfa265",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "reproduction/run_phase.py",
+      "original_sha256": "e9c3f7829cefce3a719888f756047a09753f2368b6dcc747b6369e4bcda11d3d",
+      "public_sha256": "ff9c6a19a5888e324e0cdfe233e1010935508c7084ebba53a05034add4f17779",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "state_guidance/env.sh",
+      "original_sha256": "6aaa6f22b64a215dc1531da51e818c88f1cc6eef6f100ff8651670dec2a06d2f",
+      "public_sha256": "2e183b2beafc95c230c37eedf5f48dfac748e5954a12aa60d337fa9ec1eba5af",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    },
+    {
+      "path": "state_guidance/run_phase.py",
+      "original_sha256": "fc607dc71f59dc771f4570f4b0ba8284e6ce5dda5fa32f25f6276d0ab944d811",
+      "public_sha256": "160691903be8a1a0fef917893a9afb7f3d87cfd80d2510fffeba7727e6739746",
+      "reason": "Explicit portable runtime/output/model paths; no G3 scientific parameter change."
+    }
+  ],
+  "original_protocol_sha256": "e352b3b647ca9996c603d83b39600197ec6ee9fbe3bed91c646b2f17264a6dad",
+  "public_protocol_sha256": "fb020b65cbc9b0fbc09398be0e89bf5eff8b9770a5340304f15a8b7f6490c7ed",
+  "protocol_redaction": "Removed only source_path from the protocol metadata; recomputed the public scope binding. Data hashes and scientific settings retained.",
+  "new_publication_files": [
+    "README.md",
+    "logic/README.md",
+    "state_guidance/public_setup.py",
+    "state_guidance/test_public_setup.py",
+    "scripts/run_g3.sh",
+    "scripts/test_g3_cpu.sh",
+    "tools/collect_progress.py",
+    "tools/export_progress.py",
+    "configs/"
+  ],
+  "validation": {
+    "cpu_tests_passed": 95,
+    "config_equivalence": {
+      "status": "passed",
+      "compared_configs": 18,
+      "scope": "2 references + 16 state/guidance branches; all generated scientific settings identical with explicit paths"
+    },
+    "new_gpu_training_run": false
+  }
+}

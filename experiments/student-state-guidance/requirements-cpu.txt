@@ -1,0 +1,14 @@
+# Install a CPU-only torch 2.7.1 wheel first; see README.md.
+numpy==1.26.4
+pandas==2.3.2
+ray==2.49.1
+tensordict==0.9.1
+torchdata==0.11.0
+transformers==4.55.4
+datasets==4.0.0
+hydra-core==1.3.2
+sympy==1.14.0
+antlr4-python3-runtime==4.9.3
+regex==2025.9.1
+codetiming==1.4.0
+-e ./logic

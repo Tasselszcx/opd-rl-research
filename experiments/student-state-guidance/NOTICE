@@ -1,0 +1,46 @@
+This repository vendors code from three upstream projects. Each is redistributed
+under its own license, kept alongside the code it covers, and each list below is
+exactly the set of files this project modified.
+
+--------------------------------------------------------------------------------
+verl  -  vendored in verl/
+    Source:  https://github.com/zwhe99/verl @ 05dc0fc (branch: deepmath), itself
+             a fork of https://github.com/volcengine/verl
+    License: Apache License 2.0  (verl/LICENSE)
+    Copyright 2024 Bytedance Ltd. and/or its affiliates
+
+    Modified by this project:
+  - verl/trainer/config/ppo_trainer.yaml
+  - verl/trainer/main_ppo.py
+  - verl/trainer/ppo/core_algos.py
+  - verl/trainer/ppo/ray_trainer.py
+  - verl/utils/dataset/rl_dataset.py
+  - verl/workers/actor/dp_actor.py
+  - verl/workers/fsdp_workers.py
+
+--------------------------------------------------------------------------------
+reasoning-gym  -  vendored in logic/
+    Source:  https://github.com/open-thought/reasoning-gym @ b8aa557
+    License: Apache License 2.0  (logic/LICENSE.reasoning-gym, logic/NOTICE.txt)
+
+    Modified by this project:
+  - reasoning_gym/logic/knights_knaves.py
+  - training/train_grpo.py
+  - training/trainers/ray_grpo_trainer.py
+  - training/utils/datasets.py
+
+--------------------------------------------------------------------------------
+DeepMath  -  vendored in math/
+    Source:  https://github.com/zwhe99/DeepMath @ 0d97187
+    License: MIT  (math/LICENSE.deepmath)
+    Copyright (c) 2025 Zhiwei He
+
+    Modified by this project:
+  - uni_eval.py
+  - utils/reward_utils/reward_func.py
+
+--------------------------------------------------------------------------------
+Every vendored tree was committed unmodified first, so the exact change set for
+any file is visible with:
+
+    git log -p <path>

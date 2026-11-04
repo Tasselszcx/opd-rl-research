@@ -1,0 +1,14 @@
+历史归档：不要把本文件当成当前G3a的执行指令。当前入口为仓库 experiments/student-state-guidance/README.md。以下仅保留原始方案与当时的验收要求。
+
+仓库地址：https://github.com/Tasselszcx/opd-rl-research
+如果尚未 clone，执行：
+git clone https://github.com/Tasselszcx/opd-rl-research.git
+然后进入：
+cd opd-rl-research/archive/gopd-meta-teaching-mvp
+若已有 checkout，直接使用并保留已有修改。后续命令均在该 MVP 子目录执行。
+
+请接手当前仓库，在这台 B300 上完成 G-OPD 元教学 MVP 的真实单机 8 卡 smoke。先阅读 HANDOFF_B300.md，再看 README_MVP_zh.md 和 MVP_FILE_MAP.md。
+本包训练代码尚未做 B300 真机验证。先核对 GPU、可用卡和现有 Python/CUDA/torch/vLLM/FlashAttention 环境，在项目专用环境或容器中适配。不要使用 install-hopper，不要依据旧版本警告降级 B300 环境；优先复用本机已验证的环境，并检查本仓库旧 verl 的 vLLM 接口。
+设置本地 STUDENT_MODEL、TEACHER_MODEL 和 MVP_PYTHON；保留严格 tokenizer 检查。按 handoff 跑 demo 数据准备、plan、preflight、真实 smoke、成功后 resume 验收。默认 smoke 总预算 8 GPU 小时，不能将预算耗尽标记为成功。若兼容性修复需要改代码，保留 diff，使用新 run 目录重新验收。
+验收必须包含 student 生成、teacher token 评分、OPD 更新、完整 checkpoint、无 teacher 的后续 RL、最终评测和教学选择器更新，不能只交 simulate 或 import 成功。方法不变：冻结 teacher，小型教法选择器，后续 RL 反馈更新策略，所有试验分支计入成本。
+完成后交回 B300_RUN_REPORT.md、可复现环境版本、兼容性修改、真实结果和日志路径、resume 检查结论。本任务先完成 smoke，随后汇报 pilot 的准备情况；不自动启动 72 GPU 小时的 pilot。不要操作其他人的 GPU 作业或修改共享系统环境。
