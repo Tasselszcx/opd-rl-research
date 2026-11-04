@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "authorization": "explicit_user_scope_revision",
+  "tasks": [
+    "kk"
+  ],
+  "training_seeds": [
+    42
+  ],
+  "modes": [
+    "plain",
+    "answer_only",
+    "full_reasoning",
+    "error_targeted"
+  ],
+  "states": [
+    30,
+    90
+  ],
+  "training_routes": 9,
+  "reference_runs": 1,
+  "formal_branches": 8,
+  "branch_additional_steps": 150,
+  "baseline_plan_sha256": "fb020b65cbc9b0fbc09398be0e89bf5eff8b9770a5340304f15a8b7f6490c7ed",
+  "user_instruction": "Current K&K: seed42; four teacher conditions at student states30/90;150 additional updates each.",
+  "cancelled_future_conditions": {
+    "training_seeds": [
+      43,
+      44
+    ],
+    "tasks": [
+      "gsm8k",
+      "zebra",
+      "countdown"
+    ],
+    "modes": [
+      "key_steps"
+    ]
+  },
+  "retained_protocol": "Original data, teacher/student, optimizer, batch, rollout, LR, response limits, development and final evaluation sampling unchanged.",
+  "inference_scope": "One training seed; question bootstrap does not estimate training-seed variability.",
+  "ordered_modes": [
+    "plain",
+    "answer_only",
+    "full_reasoning",
+    "error_targeted"
+  ],
+  "sequential_student_states": true
+}

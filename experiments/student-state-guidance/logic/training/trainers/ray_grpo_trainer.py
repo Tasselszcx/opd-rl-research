@@ -575,6 +575,11 @@ class RayGRPOTrainer(RayPPOTrainer):
                             guidance_mode = self.config.algorithm.get('teacher_guidance', 'plain')
                             if self.config.algorithm.adv_estimator == AdvantageEstimator.GRPO:
                                 assert guidance_mode == 'plain', 'Teacher guidance must be removed during independent RL'
+                            contract_kwargs = {}
+                            if self.config.algorithm.get('kk_teacher_output_contract', False):
+                                assert self.config.data.get('g3_frozen_task') == 'kk'
+                                assert self.config.algorithm.adv_estimator != AdvantageEstimator.GRPO
+                                contract_kwargs['kk_output_contract'] = True
                             comparison = None
                             if guidance_mode != 'plain' and self.config.algorithm.get('guidance_compare_once', False) and self.global_steps == self.g3_start_step + 1:
                                 comparison = self.ref_policy_wg.compute_ref_log_prob(batch)
@@ -582,7 +587,7 @@ class RayGRPOTrainer(RayPPOTrainer):
                                 batch, self.tokenizer, guidance_mode,
                                 self.config.algorithm.get('teacher_guidance_file', ''),
                                 self.config.data.max_prompt_length,
-                                self.config.data.get('cot_suffix', None))
+                                self.config.data.get('cot_suffix', None), **contract_kwargs)
                             ref_log_prob = self.ref_policy_wg.compute_ref_log_prob(teacher_batch)
                             assert ref_log_prob.batch['ref_log_prob'].shape == batch.batch['responses'].shape
                             if comparison is not None:
@@ -662,7 +667,15 @@ class RayGRPOTrainer(RayPPOTrainer):
                             opd_beta=current_opd_beta,
                             rlsd_eps_w=self.config.algorithm.get('rlsd_eps_w', 0.2),
                             rlsd_lambda=self.config.algorithm.get('rlsd_lambda', 1.0),
+                            opd_eos_mode=self.config.algorithm.get('opd_eos_mode', 'legacy_mask'),
                         )
+                        if self.config.algorithm.get('opd_eos_mode') == 'semantic':
+                            responses = batch.batch['responses']
+                            mask = batch.batch['attention_mask'][:, -responses.shape[-1]:].bool()
+                            ends = mask & (responses == self.tokenizer.eos_token_id)
+                            metrics['guidance/eos_semantic_enabled'] = 1
+                            metrics['guidance/eos_scored_count'] = ends.sum().item()
+                            metrics['guidance/eos_advantage_mean'] = batch.batch['advantages'][ends].mean().item() if ends.any() else 0.
 
                         # Pop immediately — before any further dispatch, before update_actor.
                         if injected_correctness and 'correctness_scores' in batch.batch.keys():

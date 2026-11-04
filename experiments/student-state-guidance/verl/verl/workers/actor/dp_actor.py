@@ -29,6 +29,7 @@ from verl.utils.py_functional import append_to_dict
 from verl.utils.torch_functional import logprobs_from_logits, masked_mean
 from verl.utils.ulysses import ulysses_pad_and_slice_inputs, gather_outpus_and_unpad
 from verl.utils.seqlen_balancing import rearrange_micro_batches, get_reverse_idx
+from verl.utils.eos_alignment import semantic_eos_log_probs
 import verl.utils.torch_functional as verl_F
 
 from flash_attn.bert_padding import pad_input, unpad_input, rearrange, index_first_axis
@@ -121,6 +122,9 @@ class DataParallelPPOActor(BasePPOActor):
 
                 # if use_sp: ((total_nnz / sp) + pad) ; if not use_sp: (batch, seqlen)
                 log_probs = logprobs_from_logits(logits=logits_rmpad, labels=input_ids_rmpad_rolled)
+                if self.config.get('eos_semantic_student_id') is not None:
+                    log_probs = semantic_eos_log_probs(logits_rmpad, input_ids_rmpad_rolled, log_probs,
+                        self.config.eos_semantic_student_id, self.config.eos_semantic_teacher_ids)
 
                 # gather log_prob if sp > 1
                 if self.use_ulysses_sp:
@@ -154,6 +158,9 @@ class DataParallelPPOActor(BasePPOActor):
                 logits.div_(temperature)
                 logits = logits[:, -response_length - 1:-1, :]  # (bsz, response_length, vocab_size)
                 log_probs = logprobs_from_logits(logits, micro_batch['responses'])
+                if self.config.get('eos_semantic_student_id') is not None:
+                    log_probs = semantic_eos_log_probs(logits, micro_batch['responses'], log_probs,
+                        self.config.eos_semantic_student_id, self.config.eos_semantic_teacher_ids)
                 entropy = verl_F.entropy_from_logits(logits)  # (bsz, response_length)
 
             return entropy, log_probs

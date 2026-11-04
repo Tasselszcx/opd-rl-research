@@ -8,13 +8,26 @@ from state_guidance.public_setup import initialize, metadata, fetch_file, check_
 
 
 class PublicSetupTests(unittest.TestCase):
-    def test_fresh_preset_is_eighteen_routes(self):
+    def test_fresh_preset_is_eight_comparisons_with_repaired_inputs(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = initialize(Path(tmp))
             plan, scope = metadata(root)
-            self.assertEqual(scope['training_routes'], 18)
+            self.assertEqual(scope['training_routes'], 9)
+            self.assertEqual(scope['tasks'], ['kk'])
+            self.assertEqual(scope['formal_branches'], 8)
             self.assertEqual(scope['training_seeds'], [42])
             self.assertEqual(plan['global_endpoints'], [180, 240])
+            self.assertEqual(json.loads((root/'PROMPT_FORMAT.json').read_text())['cot_suffix_by_task']['kk'],"Let's think step by step.\n")
+            from state_guidance.coordinator import phases
+            from state_guidance.run_phase import command
+            routes=phases(root)
+            self.assertEqual([p['start'] for p in routes],[0]+[30]*4+[90]*4)
+            for phase in routes:
+                resume=Path(phase['resume']) if phase['resume'] else None
+                _,cfg,_,_=command(root,'kk',phase['mode'],42,root/'runs'/phase['name'],resume)
+                self.assertEqual(cfg['algorithm.opd_eos_mode'],'semantic')
+                self.assertEqual(cfg['data.cot_suffix'],"Let's think step by step.\n")
+                self.assertFalse(cfg.get('algorithm.kk_teacher_output_contract',False))
 
     def test_conflicting_scope_does_not_partially_initialize(self):
         with tempfile.TemporaryDirectory() as tmp:

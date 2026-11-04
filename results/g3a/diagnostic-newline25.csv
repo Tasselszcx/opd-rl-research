@@ -1,0 +1,3 @@
+﻿condition,updates,questions,samples_per_question,pass1_pct,noncap_missing_answer,at_length_limit,mean_tokens
+旧换行输入,25,512,8,30.2734375,538,347,1180.36474609375
+修正换行输入,25,512,8,36.0595703125,0,180,956.661865234375

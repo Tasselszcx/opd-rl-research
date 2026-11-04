@@ -21,6 +21,21 @@ def atomic(path, data):
     tmp.replace(path)
 
 
+def hydra_value(value):
+    """Hydra quoted strings are not JSON strings: keep real control characters.
+
+    JSON's backslash-n and Unicode escapes otherwise survive as literal text.
+    Arguments are passed as a list to Popen, never through a shell.
+    """
+    if isinstance(value,str):
+        if '\x00' in value:raise ValueError('NUL is not valid in an OS argument')
+        from hydra.core.override_parser.types import QuotedString,Quote
+        return QuotedString(text=value,quote=Quote.double).with_quotes()
+    if isinstance(value,(list,tuple)):
+        return '['+','.join(hydra_value(x) for x in value)+']'
+    return json.dumps(value,ensure_ascii=False,allow_nan=False)
+
+
 def argv_for(method, folder, end_step, resume=None, smoke=False, n_gpus=8):
     adv = {'grpo': 'grpo', 'opd': 'on_policy_distillation', 'opd_then_rl': 'grpo',
            'kdrl_anneal': 'grpo_opd'}[method]
@@ -70,7 +85,7 @@ def argv_for(method, folder, end_step, resume=None, smoke=False, n_gpus=8):
                     'algorithm.opd_beta_delta': 0.0016})
     args = [sys.executable, '-u', str(REPO / 'logic/training/train_grpo.py'),
             '--config-path', str(REPO / 'logic/training/configs/gkd_configs'), '--config-name', 'kk']
-    args += ['++' + k + '=' + json.dumps(v, ensure_ascii=False) for k, v in cfg.items()]
+    args += ['++' + k + '=' + hydra_value(v) for k, v in cfg.items()]
     return args, cfg
 
 

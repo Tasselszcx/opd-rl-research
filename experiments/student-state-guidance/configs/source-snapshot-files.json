@@ -1,5 +1,5 @@
 {
-  "commit": "140f0cb5935637c7ccc500240da9c786056424cc",
+  "commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
   "files": [
     {
       "path": ".gitignore",
@@ -1224,7 +1224,7 @@
     {
       "path": "logic/training/trainers/ray_grpo_trainer.py",
       "public_path": "logic/training/trainers/ray_grpo_trainer.py",
-      "sha256": "8842a8bc375d9c5c38e0c218c4da966ee1c651fe185f85cbc29eddde7ae2711f"
+      "sha256": "cc86797a2f28410bef21ffcbfff8b0964e20d1172cb0fd95410c6f76df127137"
     },
     {
       "path": "logic/training/utils/__init__.py",
@@ -1394,7 +1394,7 @@
     {
       "path": "reproduction/run_phase.py",
       "public_path": "reproduction/run_phase.py",
-      "sha256": "e9c3f7829cefce3a719888f756047a09753f2368b6dcc747b6369e4bcda11d3d"
+      "sha256": "ff322a57252d9e338804c2c323be78ab93989a8dc394cdedf3957578655f8436"
     },
     {
       "path": "reproduction/tests/test_parallel_coordinator.py",
@@ -1457,14 +1457,19 @@
       "sha256": "3f536008282824533e314bccc28b2d09da2bcb31b770750570a962845710842f"
     },
     {
+      "path": "state_guidance/checkpoint_export.py",
+      "public_path": "state_guidance/checkpoint_export.py",
+      "sha256": "685fe640be5e21b275c8b20d5f2b463a336a094f5c9fabcef8b435b0bf8dec15"
+    },
+    {
       "path": "state_guidance/control.py",
       "public_path": "state_guidance/control.py",
-      "sha256": "0dc8c6850e35136af6c0bd0f98625376b5af78420fbc3c9d21ea6747aaa8dbe8"
+      "sha256": "d954ed2430d200ba3e4cbe0dc33a8c3e6a3827fe3fd809daff4db3f85f755e6d"
     },
     {
       "path": "state_guidance/coordinator.py",
       "public_path": "state_guidance/coordinator.py",
-      "sha256": "cb3f02dfd55509c84a2391d1893b5222d05e61d02b294714a837b193b2a1d237"
+      "sha256": "0931cff453f2d5096f7e8a0ff7656166c054497438f137f6e80024c397bf449e"
     },
     {
       "path": "state_guidance/data.py",
@@ -1477,9 +1482,14 @@
       "sha256": "6aaa6f22b64a215dc1531da51e818c88f1cc6eef6f100ff8651670dec2a06d2f"
     },
     {
+      "path": "state_guidance/eos_probe.py",
+      "public_path": "state_guidance/eos_probe.py",
+      "sha256": "81e21b0bc8cc2a6dd6567588bff13e7c551591d2761630564b2ee97bd70baf4f"
+    },
+    {
       "path": "state_guidance/eval_worker.py",
       "public_path": "state_guidance/eval_worker.py",
-      "sha256": "8260aa74ce8494f288867727e0509b25acc16e4220135ac62e418f664febeeda"
+      "sha256": "e4697a0ded5b03933dce956f0bb971f25e9731cb01edf9561f51e7b9e513e92a"
     },
     {
       "path": "state_guidance/finalize.py",
@@ -1512,6 +1522,11 @@
       "sha256": "79551c5e5a34898121710f7a3815c49f5dcf2881a9ea60dab7f9181089a11451"
     },
     {
+      "path": "state_guidance/output_contract_probe.py",
+      "public_path": "state_guidance/output_contract_probe.py",
+      "sha256": "65bde3ec26be79e05c9c4589bfbc1c2062ca442134bf7ac84fd617b6d1319411"
+    },
+    {
       "path": "state_guidance/prepare_data.py",
       "public_path": "state_guidance/prepare_data.py",
       "sha256": "c291fcdd58192ea5cb446ee4535187a19788512a510c5b8aa76e62d5367d6ac2"
@@ -1524,7 +1539,7 @@
     {
       "path": "state_guidance/run_phase.py",
       "public_path": "state_guidance/run_phase.py",
-      "sha256": "fc607dc71f59dc771f4570f4b0ba8284e6ce5dda5fa32f25f6276d0ab944d811"
+      "sha256": "18bf44a8bab0ce345587598142a84dd91cca12283045e51d4cabf4a4345cde2b"
     },
     {
       "path": "state_guidance/runtime_paths.py",
@@ -1539,12 +1554,17 @@
     {
       "path": "state_guidance/teacher_inputs.py",
       "public_path": "state_guidance/teacher_inputs.py",
-      "sha256": "67cdb705de103e922254f042c0ab00b7eccbabc65b0947a441d710b6c788dbdd"
+      "sha256": "41e8775e164a38ad9077fa4dc1e3eb22f81aa3e3cd6f823558965e34f168a85c"
     },
     {
       "path": "state_guidance/test_cost_discovery.py",
       "public_path": "state_guidance/test_cost_discovery.py",
       "sha256": "3693998774427e09562dada27ac2eb2594639ed2ca4a54bed449fb5a332ce67b"
+    },
+    {
+      "path": "state_guidance/test_eos_alignment.py",
+      "public_path": "state_guidance/test_eos_alignment.py",
+      "sha256": "ceebd05df37c49dd21107d06168e65e5fde1a499cdd1f734ff9a2196b55c7db4"
     },
     {
       "path": "state_guidance/test_finalizer.py",
@@ -1562,9 +1582,29 @@
       "sha256": "449aee025eb16df3a974ce703348b0905319c8cb4e464737cc8663c0705a5504"
     },
     {
+      "path": "state_guidance/test_hydra_values.py",
+      "public_path": "state_guidance/test_hydra_values.py",
+      "sha256": "a43bd176b634d013d1790e237f323d2dc6e8aecf4240a2e42c36314b775b83cd"
+    },
+    {
+      "path": "state_guidance/test_kk_repaired_scope.py",
+      "public_path": "state_guidance/test_kk_repaired_scope.py",
+      "sha256": "774bae20acd32242b6ceee77f1255f942ebb25a9dd3ec9279d981418d30a20c9"
+    },
+    {
       "path": "state_guidance/test_migration.py",
       "public_path": "state_guidance/test_migration.py",
       "sha256": "5ac72db07a0713235eff0e9c8717261e4c109bcfddd118c2d1eb5280ee59441d"
+    },
+    {
+      "path": "state_guidance/test_output_contract.py",
+      "public_path": "state_guidance/test_output_contract.py",
+      "sha256": "2b88d3ea6a76a3b818f17701244512b1885ae8e9e2430c1327db807b71680503"
+    },
+    {
+      "path": "state_guidance/test_prompt_format.py",
+      "public_path": "state_guidance/test_prompt_format.py",
+      "sha256": "aa291f4a0da1e589f1fc846d4c825e20a6fd88a59f836848ebfe05004ef45a75"
     },
     {
       "path": "state_guidance/test_protocol.py",
@@ -1580,6 +1620,11 @@
       "path": "state_guidance/test_scope.py",
       "public_path": "state_guidance/test_scope.py",
       "sha256": "825d989f7b900e502355874a663b5aa9f25698eb9d79448d734eeb4e31693a8b"
+    },
+    {
+      "path": "state_guidance/test_storage_policy.py",
+      "public_path": "state_guidance/test_storage_policy.py",
+      "sha256": "2a9ac6c66af1b7b2c4a5676f02aa1a7680a13c41b8c84c32cdb3a963ad8d7df3"
     },
     {
       "path": "verl/.github/dependabot.yml",
@@ -3164,7 +3209,7 @@
     {
       "path": "verl/verl/trainer/ppo/ray_trainer.py",
       "public_path": "verl/verl/trainer/ppo/ray_trainer.py",
-      "sha256": "a1039466479075762dda65d90608692d7e513f8526f4a537322c0da8cc34bc13"
+      "sha256": "b708adfdce77ab9c5b050484bb07dd12689d99a65760ed87622b812cb1e8090d"
     },
     {
       "path": "verl/verl/trainer/runtime_env.yaml",
@@ -3189,7 +3234,7 @@
     {
       "path": "verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
       "public_path": "verl/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
-      "sha256": "2f6b4a861df02460bde7da5f94d1b25272ea469d9c2ebcd1aa282ae53e8bf628"
+      "sha256": "d74d07482a89df86f1ccb637517b38e58660c6663c2a9b974fa2afccfcc70228"
     },
     {
       "path": "verl/verl/utils/config.py",
@@ -3240,6 +3285,11 @@
       "path": "verl/verl/utils/distributed.py",
       "public_path": "verl/verl/utils/distributed.py",
       "sha256": "ee90007c15948b647338f404dd865cc5a0e2586903b8790ce6331d1cf01d2244"
+    },
+    {
+      "path": "verl/verl/utils/eos_alignment.py",
+      "public_path": "verl/verl/utils/eos_alignment.py",
+      "sha256": "aa287227a0a861c98302a98034badb9540dd92af6825a1fd79b495ad8484a769"
     },
     {
       "path": "verl/verl/utils/flops_counter.py",
@@ -3459,7 +3509,7 @@
     {
       "path": "verl/verl/workers/actor/dp_actor.py",
       "public_path": "verl/verl/workers/actor/dp_actor.py",
-      "sha256": "d4ff0f39b0dc4da8d30aeac2ed102e52030327629d190e59cc9d70ce8902359c"
+      "sha256": "ffeb53b1c8b0e149f3bf38c26b114f209ceaf9cec3a942b60cb7ec9e5baa033b"
     },
     {
       "path": "verl/verl/workers/actor/megatron_actor.py",
@@ -3489,7 +3539,7 @@
     {
       "path": "verl/verl/workers/fsdp_workers.py",
       "public_path": "verl/verl/workers/fsdp_workers.py",
-      "sha256": "0aa67e7321ea65d38f399ae6e6b469277e6276b7225695753a740a7ddfcab470"
+      "sha256": "a9b5068d658b66d45bb598fdc7c1a84409c95c518185290e495d703038240334"
     },
     {
       "path": "verl/verl/workers/megatron_workers.py",

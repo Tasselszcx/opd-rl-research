@@ -14,7 +14,7 @@ import time
 
 REPO=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(REPO/'reproduction'))
-from run_phase import argv_for, atomic
+from run_phase import argv_for, atomic, hydra_value
 
 
 def command(root,task,mode,seed,folder,resume=None,steps=150,check=False,continuation=None):
@@ -52,13 +52,35 @@ def command(root,task,mode,seed,folder,resume=None,steps=150,check=False,continu
             'trainer.extra_save_steps':[30,90] if start==0 and not check else [],
             'trainer.remove_previous_ckpt_in_save':False}
     values.update({'hydra.job.chdir':False,'hydra.run.dir':str(folder/'hydra')})
+    amendment=root/'PROTOCOL_AMENDMENT.json'
+    if amendment.exists():
+        approved=json.loads(amendment.read_text())
+        assert approved['status']=='approved_user_repair' and approved['method_revision']=='semantic_eos_v1'
+        values.update({'algorithm.opd_eos_mode':'semantic',
+                       'actor_rollout_ref.ref.eos_semantic_student_id':151643,
+                       'actor_rollout_ref.ref.eos_semantic_teacher_ids':[151643,151645]})
+    output_policy=root/'TEACHER_OUTPUT_POLICY.json'
+    if output_policy.exists():
+        policy=json.loads(output_policy.read_text())
+        from state_guidance.teacher_inputs import KK_OUTPUT_CONTRACT
+        assert task=='kk' and policy['status']=='validated_for_formal'
+        assert policy['kind']=='kk_teacher_completion_contract_v1'
+        assert policy['reminder_sha256']==hashlib.sha256(KK_OUTPUT_CONTRACT.encode()).hexdigest()
+        # The same format requirement applies to every condition, including plain.
+        # Only the non-plain conditions receive answers/reasoning references.
+        values['algorithm.kk_teacher_output_contract']=True
+    storage=root/'STORAGE_POLICY.json'
+    if storage.exists() and not check and steps==150 and start in (0,30,90):
+        policy=json.loads(storage.read_text())
+        assert policy['status']=='approved_by_user' and policy['policy']=='fork_states_full_terminal_model_only'
+        values.update({'trainer.save_freq':150,'trainer.g3_terminal_model_only':True})
     if continuation:
         assert continuation['data_seed']==values['data.seed']
         values.update({'trainer.g3_origin_step':start,'trainer.require_dataloader_resume':True,
                        'trainer.val_before_train':False})
     for key,value in values.items():
         args=[v for v in args if not v.startswith('++'+key+'=')]
-        args.append('++'+key+'='+json.dumps(value));cfg[key]=value
+        args.append('++'+key+'='+hydra_value(value));cfg[key]=value
     return args,cfg,start,end
 
 
@@ -75,6 +97,9 @@ def validate(folder,start,end,mode):
     assert all(r['metrics']['guidance/response_alignment_ok']==1 for r in rows)
     assert all(math.isfinite(r['metrics']['actor/grad_norm']) for r in rows)
     assert all(r['metrics']['guidance/conditioned_sequences']==(0 if mode=='plain' else 1024) for r in rows)
+    if start in (30,90) and (folder.parent.parent/'PROTOCOL_AMENDMENT.json').exists():
+        assert all(r['metrics'].get('guidance/eos_semantic_enabled')==1 for r in rows)
+        assert json.loads((folder/'request.json').read_text())['config']['algorithm.opd_eos_mode']=='semantic'
     final=folder/'checkpoints'/f'global_step_{end}'
     assert (final/'data.pt').is_file() and (final/'actor').is_dir()
     checkpoints=[final]
@@ -82,7 +107,15 @@ def validate(folder,start,end,mode):
         checkpoints += [folder/'checkpoints'/f'global_step_{step}' for step in [30,90]]
     for checkpoint in checkpoints:
         assert (checkpoint/'data.pt').is_file()
-        for kind in ['model','optim','extra_state']:
+        marker=checkpoint/'checkpoint_kind.json'
+        model_only=marker.exists() and json.loads(marker.read_text()).get('kind')=='model_only'
+        if model_only:
+            assert checkpoint==final, 'Branch start states must retain optimizer and RNG'
+            policy=json.loads((folder.parent.parent/'STORAGE_POLICY.json').read_text())
+            assert policy['policy']=='fork_states_full_terminal_model_only' and policy['status']=='approved_by_user'
+            assert (checkpoint/'actor/huggingface/config.json').is_file()
+            assert json.loads((checkpoint/'actor/checkpoint_contents.json').read_text())['model_only'] is True
+        for kind in (['model'] if model_only else ['model','optim','extra_state']):
             for rank in range(4):
                 file=checkpoint/'actor'/f'{kind}_world_size_4_rank_{rank}.pt'
                 assert file.is_file() and file.stat().st_size>0,str(file)

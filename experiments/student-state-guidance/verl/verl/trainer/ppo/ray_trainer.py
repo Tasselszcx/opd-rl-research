@@ -176,7 +176,8 @@ def apply_kl_penalty(data: DataProto, kl_ctrl: core_algos.AdaptiveKLController, 
 
 
 def compute_advantage(data: DataProto, adv_estimator, gamma=1.0, lam=1.0, num_repeat=1,
-                      opd_beta=0.0, rlsd_eps_w=0.2, rlsd_lambda=1.0, opd_clip=5.0):
+                      opd_beta=0.0, rlsd_eps_w=0.2, rlsd_lambda=1.0, opd_clip=5.0,
+                      opd_eos_mode='legacy_mask'):
     # prepare response group
     # TODO: add other ways to estimate advantages
     if adv_estimator == AdvantageEstimator.GAE:
@@ -250,9 +251,16 @@ def compute_advantage(data: DataProto, adv_estimator, gamma=1.0, lam=1.0, num_re
         response_mask = attention_mask[:, -response_length:].clone()   # (bs, response_len); clone before masking
 
         # ---- drop the last kept token (usually eos/end token) ----
-        lengths = response_mask.long().sum(dim=1)          # (bs,)
-        last_idx = (lengths - 1).clamp(min=0)             # (bs,)
-        response_mask[torch.arange(response_mask.size(0), device=response_mask.device), last_idx] = 0
+        if opd_eos_mode == 'legacy_mask':
+            lengths = response_mask.long().sum(dim=1)
+            last_idx = (lengths - 1).clamp(min=0)
+            response_mask[torch.arange(response_mask.size(0), device=response_mask.device), last_idx] = 0
+        elif opd_eos_mode == 'semantic':
+            assert data.meta_info.get('opd_eos_semantic') is True, 'Aligned teacher EOS scores required'
+            # Preserve every actual response token, including EOS and a
+            # non-EOS token at the length cap. Padding remains masked.
+        else:
+            raise ValueError('Unknown OPD EOS mode: ' + str(opd_eos_mode))
         # ---------------------------------------------------------
 
         student_logprob = data.batch['old_log_probs']          # (bs, response_len)
@@ -891,6 +899,9 @@ class RayPPOTrainer(object):
         self.actor_rollout_wg.init_model()
 
     def _save_checkpoint(self):
+        model_only=bool(self.config.trainer.get('g3_terminal_model_only',False) and
+                        self.global_steps==self.total_training_steps)
+        assert not (model_only and self.use_critic), 'Model-only endpoints are supported for this actor-only OPD study'
         # path: given_path + `/global_step_{global_steps}` + `/actor`
         local_global_step_folder = os.path.join(self.config.trainer.default_local_dir,
                                                 f'global_step_{self.global_steps}')
@@ -901,7 +912,8 @@ class RayPPOTrainer(object):
         self.actor_rollout_wg.save_checkpoint(actor_local_path,
                                               actor_remote_path,
                                               self.global_steps,
-                                              remove_previous_ckpt=self.config.trainer.remove_previous_ckpt_in_save)
+                                              remove_previous_ckpt=self.config.trainer.remove_previous_ckpt_in_save,
+                                              model_only=model_only)
 
         if self.use_critic:
             critic_local_path = os.path.join(local_global_step_folder, 'critic')
@@ -916,6 +928,9 @@ class RayPPOTrainer(object):
         dataloader_local_path = os.path.join(local_global_step_folder, 'data.pt')
         dataloader_state_dict = self.train_dataloader.state_dict()
         torch.save(dataloader_state_dict, dataloader_local_path)
+        with open(os.path.join(local_global_step_folder,'checkpoint_kind.json'),'w') as output:
+            json.dump({'kind':'model_only' if model_only else 'full','global_step':self.global_steps,
+                       'training_resume_supported':not model_only},output)
 
         # latest checkpointed iteration tracker (for atomic usage)
         local_latest_checkpointed_iteration = os.path.join(self.config.trainer.default_local_dir,

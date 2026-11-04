@@ -52,6 +52,7 @@ def collect(root):
                'attempt_id': str(record.get('scientific_attempt_started_unix', record['started_unix'])),
                'start_step': record['start_step'], 'guidance': record['mode'], 'status': record['status'],
                'train': [], 'dev': []}
+        run['reused_reference']=bool(record.get('reuse_only') and record['start_step']==0)
         path = folder/'checkpoints/metrics.jsonl'
         if path.exists():
             raw = path.read_bytes()
@@ -93,6 +94,9 @@ def collect(root):
                          'mean_response_tokens': sum(r['response_tokens'] for r in rows)/4096,
                          'output_limit_fraction': sum(bool(r['at_output_limit']) for r in rows)/4096,
                          'question_scores': [{'index': i, 'question_sha256': hashes[i], 'correct_count': counts[i]} for i in range(512)]}
+                if all('pred' in row for row in rows):
+                    point['final_answer_present_fraction']=sum(bool(r['pred']) for r in rows)/4096
+                    point['no_final_before_limit_fraction']=sum(not r['pred'] and not r['at_output_limit'] for r in rows)/4096
                 run['dev'].append(point); seen_steps.add(step)
                 result['source_sha256'][str(path.relative_to(root))] = hashlib.sha256(raw).hexdigest()
             except (OSError, ValueError, AssertionError, RuntimeError) as exc:

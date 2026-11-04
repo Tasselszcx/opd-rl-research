@@ -37,8 +37,19 @@ def phases(root):
                                        resume=str(root/'runs'/reference/'checkpoints'/f'global_step_{start}')))
     assert len(result)==132 and len({p['name'] for p in result})==132
     scope=load_scope(root)
-    return [p for p in result if p['task'] in scope['tasks'] and p['seed'] in scope['training_seeds']
+    result=[p for p in result if p['task'] in scope['tasks'] and p['seed'] in scope['training_seeds']
             and (p['resume'] is None or p['mode'] in scope['modes'])]
+    if scope.get('ordered_modes'):
+        assert set(scope['ordered_modes'])==set(scope['modes'])
+        result.sort(key=lambda p:(p['seed'],scope['tasks'].index(p['task']),p['start'],
+                                 scope['ordered_modes'].index(p['mode'])))
+    return result
+
+
+def state_candidates(candidates,all_phases,completed,seed,enabled):
+    if not enabled:return candidates
+    remaining=[p['start'] for p in all_phases if p['seed']==seed and p['name'] not in completed]
+    return [p for p in candidates if remaining and p['start']==min(remaining)]
 
 
 def next_candidate(candidates,active):
@@ -77,9 +88,14 @@ def main():
         active=adoption_items(root,manifest,all_phases,SLOTS)
     state={'status':'running','stage':'preparing','identity':owner,'source':str(REPO),'plan_sha256':plan_hash,
            'scope_sha256':scope['scope_sha256'],'active_scope':scope,'formal_route_count':len(all_phases)}
+    amendment=root/'PROTOCOL_AMENDMENT.json'
+    amendment_hash=hashlib.sha256(amendment.read_bytes()).hexdigest() if amendment.exists() else None
+    state['protocol_amendment_sha256']=amendment_hash
     def save(stage,**extra):
         if hashlib.sha256(plan_path.read_bytes()).hexdigest()!=plan_hash:raise RuntimeError('Frozen study plan changed')
         if load_scope(root)['scope_sha256']!=scope['scope_sha256']:raise RuntimeError('Approved scope changed')
+        if amendment_hash is not None and hashlib.sha256(amendment.read_bytes()).hexdigest()!=amendment_hash:
+            raise RuntimeError('Approved protocol amendment changed')
         state.update(stage=stage,updated_unix=time.time(),completed_runs=sorted(completed),failed_runs=list(failed),
                      active={k:{'name':v['phase']['name'],'identity':v['identity']} for k,v in active.items()},**extra)
         atomic(root/'study_state.json',state)
@@ -169,6 +185,7 @@ def main():
             running_names={v['phase']['name'] for v in active.values()}
             candidates=[p for p in all_phases if p['seed']==current_seed and p['name'] not in completed|running_names
                         and (p['dependency'] is None or p['dependency'] in completed) and ready(root,p['task'])]
+            candidates=state_candidates(candidates,all_phases,completed,current_seed,scope.get('sequential_student_states',False))
             used=subprocess.check_output(['nvidia-smi','--query-gpu=index,memory.used','--format=csv,noheader,nounits'],text=True)
             memory={int(line.split(',')[0]):int(line.split(',')[1]) for line in used.splitlines()}
             for slot in SLOTS:

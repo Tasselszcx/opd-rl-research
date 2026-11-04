@@ -1,3 +1,5 @@
+> 这是历史论文脚本说明。当前K&K八组使用[当前代码README](../README.md)和`run_g3.sh`；下文的EOS屏蔽描述只对应legacy模式，修复版对齐结束符并保留监督。
+
 # Running the experiments
 
 ```bash

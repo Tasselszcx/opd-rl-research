@@ -23,6 +23,7 @@ def export(root, output, plot=True):
         routes.append({'run': run['run'], 'task': run['task'], 'training_seed': run['training_seed'],
                        'student_start_step': run['start_step'], 'guidance': run['guidance'],
                        'status': run['status'], 'completed_updates': len(run['train']),
+                       'reused_reference':run.get('reused_reference',False),
                        'latest_validation_update': last['additional_step'] if last else None})
         for point in run['dev']:
             points.append({'run': run['run'], 'task': run['task'], 'training_seed': run['training_seed'],
@@ -30,9 +31,11 @@ def export(root, output, plot=True):
                            'additional_step': point['additional_step'], 'global_step': point['global_step'],
                            'pass_at_1_pct': 100 * point['pass_at_1'], 'pass_at_8_pct': 100 * point['pass_at_8'],
                            'mean_response_tokens': point['mean_response_tokens'],
-                           'output_limit_pct': 100 * point['output_limit_fraction']})
+                           'output_limit_pct': 100 * point['output_limit_fraction'],
+                           'noncap_missing_answer_pct':100*point['no_final_before_limit_fraction'] if 'no_final_before_limit_fraction' in point else None,
+                           'reused_reference':run.get('reused_reference',False)})
     for filename, rows in [('routes.csv', routes), ('development.csv', points),
-                           ('milestones.csv', [p for p in points if p['additional_step'] in [50, 100, 150]])]:
+                           ('milestones.csv', [p for p in points if not p['reused_reference'] and p['additional_step'] in [50, 100, 150]])]:
         if not rows:
             continue
         with (output / filename).open('w', newline='') as stream:
@@ -52,7 +55,7 @@ def export(root, output, plot=True):
             fig, axes = plt.subplots(2, 2, figsize=(12, 7.5), layout='constrained')
             for run in [r for r in data['runs'] if (r['task'], r['start_step']) == (task, state)]:
                 dev, train = run['dev'], run['train']
-                label = LABELS[run['guidance']] + ' / seed' + str(run['training_seed'])
+                label = ('Historical reference' if run.get('reused_reference') else LABELS[run['guidance']]) + ' / seed' + str(run['training_seed'])
                 color = COLORS[run['guidance']]
                 for ax, key in zip(axes[0], ['pass_at_1', 'pass_at_8']):
                     ax.plot([p['additional_step'] for p in dev], [100 * p[key] for p in dev],

@@ -55,5 +55,9 @@ def ledger(root):
                 charge=n*max(0,now-rec['started_unix'])/3600
             entries.append({'record':str(path.relative_to(root)),'gpu_hours':charge,
                             'running_estimate':rec['status'] in ('starting','running')})
-    return {'allocated_gpu_hours':sum(x['gpu_hours'] for x in entries),'records':entries,
-            'updated_unix':now,'budget_cap':None,'historical_study_cost_included':False}
+    history=Path(root)/'HISTORICAL_COST.json'
+    prior=read(history)['allocated_gpu_hours'] if history.exists() else 0.
+    assert isinstance(prior,(int,float)) and 0<=prior<float('inf')
+    return {'allocated_gpu_hours':prior+sum(x['gpu_hours'] for x in entries),'records':entries,
+            'historical_allocated_gpu_hours':prior,
+            'updated_unix':now,'budget_cap':None,'historical_study_cost_included':history.exists()}

@@ -1,4 +1,4 @@
-"""Portable, CPU-only preparation for the approved 18-route study.
+"""Portable, CPU-only preparation for K&K's eight comparisons and shared reference.
 
 This module never launches training or rewrites an existing run configuration.
 """
@@ -34,10 +34,22 @@ def write_once(path, content):
 def initialize(root):
     root = root.resolve()
     plan = (CONFIGS / 'protocol-baseline.json').read_bytes()
-    scope = json.loads((CONFIGS / 'core18-scope.json').read_text())
+    scope = json.loads((CONFIGS / 'kk8-scope.json').read_text())
     scope['baseline_plan_sha256'] = hashlib.sha256(plan).hexdigest()
     scope_bytes = (json.dumps(scope, indent=2) + '\n').encode()
+    repair = {'status':'approved_user_repair','method_revision':'semantic_eos_v1',
+              'teacher_eos_ids':[151643,151645],'student_eos_id':151643,
+              'source_release':'0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4',
+              'reference_states':'Fresh public runs build new reference states with the repaired code. The deployed result reused historical full checkpoints; exact replay requires those checkpoints.',
+              'extra_teacher_format_reminder':False}
+    storage = {'status':'approved_by_user','policy':'fork_states_full_terminal_model_only'}
+    suffix = "Let's think step by step.\n"
+    prompt = {'status':'frozen_training_runtime','cot_suffix_by_task':{'kk':suffix},
+              'cot_suffix_sha256':hashlib.sha256(suffix.encode()).hexdigest(),
+              'source':'Corrected Hydra string serialization; shared by training and final evaluation.'}
     targets = [(root / 'study_plan.json', plan), (root / 'ACTIVE_SCOPE.json', scope_bytes)]
+    targets += [(root/name,(json.dumps(value,indent=2)+'\n').encode()) for name,value in
+                [('PROTOCOL_AMENDMENT.json',repair),('STORAGE_POLICY.json',storage),('PROMPT_FORMAT.json',prompt)]]
     # Check every conflict before writing either file.
     for path, raw in targets:
         if path.exists() and path.read_bytes() != raw:
@@ -53,16 +65,27 @@ def metadata(root):
     raw = (root / 'study_plan.json').read_bytes()
     plan = json.loads(raw)
     scope = json.loads((root / 'ACTIVE_SCOPE.json').read_text())
-    required = {'tasks': ['kk', 'gsm8k'], 'training_seeds': [42], 'states': [30, 90],
+    required = {'tasks': ['kk'], 'training_seeds': [42], 'states': [30, 90],
                 'modes': ['plain', 'answer_only', 'full_reasoning', 'error_targeted'],
-                'training_routes': 18, 'branch_additional_steps': 150}
+                'training_routes': 9, 'formal_branches':8,'branch_additional_steps': 150,
+                'ordered_modes':['plain','answer_only','full_reasoning','error_targeted'],
+                'sequential_student_states':True}
     for key, value in required.items():
         if scope.get(key) != value:
-            raise ValueError('Not the published core18 preset: ' + key)
+            raise ValueError('Not the current K&K eight-comparison preset: ' + key)
     if scope['baseline_plan_sha256'] != hashlib.sha256(raw).hexdigest():
         raise ValueError('Scope does not match the frozen protocol hash')
     if plan['branch_additional_steps'] != 150 or plan['reference_checkpoints'] != [30, 90]:
         raise ValueError('Training horizons differ from the published protocol')
+    repair=json.loads((root/'PROTOCOL_AMENDMENT.json').read_text())
+    prompt=json.loads((root/'PROMPT_FORMAT.json').read_text())
+    storage=json.loads((root/'STORAGE_POLICY.json').read_text())
+    if repair.get('method_revision')!='semantic_eos_v1' or prompt['cot_suffix_by_task']['kk']!="Let's think step by step.\n":
+        raise ValueError('Current EOS/newline repair is required')
+    if storage.get('policy')!='fork_states_full_terminal_model_only':
+        raise ValueError('Current storage policy is required')
+    if (root/'TEACHER_OUTPUT_POLICY.json').exists():
+        raise ValueError('The extra teacher-format reminder is experimental, not the selected current protocol')
     return plan, scope
 
 
@@ -97,9 +120,9 @@ def fetch_sources(root):
 
 
 def check_inputs(root):
-    plan, _ = metadata(root)
+    plan, scope = metadata(root)
     frozen = json.loads((CONFIGS / 'frozen-inputs.json').read_text())
-    for task in ['kk', 'gsm8k']:
+    for task in scope['tasks']:
         folder = root / 'data' / task
         for split, item in plan['data'][task]['splits'].items():
             if digest(folder / (split + '.jsonl')) != item['sha256']:
@@ -149,8 +172,8 @@ def main():
         metadata(root)
         from state_guidance.coordinator import phases
         rows = phases(root)
-        if len(rows) != 18:
-            raise ValueError('Expected exactly 18 routes')
+        if len(rows) != 9:
+            raise ValueError('Expected one shared reference and eight comparisons')
         print(json.dumps({'routes': [{k: x[k] for k in ['name', 'task', 'seed', 'mode', 'start', 'steps']}
                                      for x in rows]}, indent=2))
         return
@@ -161,7 +184,7 @@ def main():
         expected = json.loads((CONFIGS / 'model-files.json').read_text())['files']
         check_model_cache(a.models.resolve(), expected, a.hash_models)
     print(json.dumps({'status': a.action + '_passed', 'training_started': False,
-                      'scope': '18 routes; fixed teacher; no independent RL or guidance generator'}))
+                      'scope': 'K&K: eight comparisons plus one shared reference; fixed teacher'}))
 
 
 if __name__ == '__main__':

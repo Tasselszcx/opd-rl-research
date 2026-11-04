@@ -9,6 +9,16 @@ from state_guidance.data import read_rows,extract_final,score_answer,sha_text
 from state_guidance.guides import error_hint
 
 
+def prompt_suffix(root, task):
+    path=Path(root)/'PROMPT_FORMAT.json'
+    if path.exists():
+        frozen=json.loads(path.read_text())
+        assert frozen['status']=='frozen_training_runtime'
+        return frozen['cot_suffix_by_task'][task] or ''
+    assert not (Path(root)/'PROTOCOL_AMENDMENT.json').exists(), 'Repaired runs require a frozen runtime prompt format'
+    return '' if task=='gsm8k' else "Let's think step by step.\n"
+
+
 def suite_settings(samples,suite):
     if suite=='diagnostic':return 16,(2000 if samples==16 else 3000)
     return samples,42
@@ -34,6 +44,7 @@ def main():
     p.add_argument('--prompt-cap',type=int,required=True);a=p.parse_args()
     from vllm import LLM,SamplingParams
     root=Path(os.environ['REPRO_ROOT']);max_tokens=8192 if a.task=='gsm8k' else 4096
+    suffix=prompt_suffix(root,a.task)
     path=a.output/f'rank_{a.rank}.jsonl'
     if path.exists():raise RuntimeError('Existing evaluation retained')
     a.output.mkdir(parents=True,exist_ok=True)
@@ -48,7 +59,7 @@ def main():
             for row in rows:
                 prompt=tokenizer.apply_chat_template([{'role':'system','content':SYSTEM_PROMPTS['default']},
                     {'role':'user','content':row['question']}],tokenize=False,add_generation_prompt=True,enable_thinking=False)
-                if a.task!='gsm8k':prompt+="Let's think step by step.\n"
+                prompt+=suffix
                 assert len(tokenizer.encode(prompt,add_special_tokens=False))<=a.prompt_cap
                 prompts.append(prompt)
             suite_samples,seed_start=suite_settings(a.samples,suite)

@@ -422,6 +422,8 @@ class ActorRolloutRefWorker(Worker):
             with open_dict(self.config.ref):
                 self.config.ref.use_remove_padding = use_remove_padding
             self.ref_policy = DataParallelPPOActor(config=self.config.ref, actor_module=self.ref_module_fsdp)
+            if self.config.ref.get('eos_semantic_student_id') is not None:
+                assert self.tokenizer.eos_token_id in self.config.ref.eos_semantic_teacher_ids
 
         if self._is_actor:
             self.flops_counter = FlopsCounter(self.actor_model_config)
@@ -568,6 +570,8 @@ class ActorRolloutRefWorker(Worker):
             data = self.ulysses_sharding_manager.preprocess_data(data)
             output = self.ref_policy.compute_log_prob(data=data)
             output = DataProto.from_dict(tensors={'ref_log_prob': output})
+            if self.config.ref.get('eos_semantic_student_id') is not None:
+                output.meta_info['opd_eos_semantic'] = True
             output = self.ulysses_sharding_manager.postprocess_data(output)
 
         output = output.to('cpu')
@@ -580,7 +584,7 @@ class ActorRolloutRefWorker(Worker):
         return output
 
     @register(dispatch_mode=Dispatch.ONE_TO_ALL)
-    def save_checkpoint(self, local_path, hdfs_path=None, global_step=0, remove_previous_ckpt=False):
+    def save_checkpoint(self, local_path, hdfs_path=None, global_step=0, remove_previous_ckpt=False, model_only=False):
         # only support save and load ckpt for actor
         assert self._is_actor
         import torch
@@ -590,7 +594,8 @@ class ActorRolloutRefWorker(Worker):
         self.checkpoint_manager.save_checkpoint(local_path=local_path,
                                                 hdfs_path=hdfs_path,
                                                 global_step=global_step,
-                                                remove_previous_ckpt=remove_previous_ckpt)
+                                                remove_previous_ckpt=remove_previous_ckpt,
+                                                model_only=model_only)
 
         torch.distributed.barrier()
         if self._is_offload_param:

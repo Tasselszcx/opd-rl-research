@@ -1,12 +1,5 @@
-# G3a开发结果快照
+# 当前八组实验快照
 
-这是带采集时间的开发集快照，不是实时状态，也不是独立终测。
+[结果解释](../../docs/g3a-results.md) · [summary.json](summary.json) · [开发点CSV](development.csv) · [50/100/150节点](milestones.csv) · [25步修复对照](diagnostic-newline25.csv)
 
-- [结果解释](../../docs/g3a-results.md)
-- [summary.json](summary.json)：18条路线状态、全部已完成开发点及来源哈希
-- [development.csv](development.csv)：每25步开发点
-- [milestones.csv](milestones.csv)：50/100/150步节点
-- [figures/](figures/)：每任务、每学生起点单独绘图
-- [validation.json](validation.json)：本次代码发布的CPU与配置等价检查
-
-原始题目、学生回答、模型权重、checkpoint、身份文件和机器路径不在这个目录中。曲线里的训练reward与开发成功率分开；缺少的点不填造。
+这是带日期的静态快照。初始step0不是当前训练分数，正式终测尚未完成。[旧18路线快照](legacy-20261104/LEGACY_STATUS.md)单独保留。原始回答、权重、凭据、身份和机器路径不发布。

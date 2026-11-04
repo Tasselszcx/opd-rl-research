@@ -14,6 +14,7 @@
 
 import ray
 import os
+import json
 
 import warnings
 from typing import Union
@@ -61,6 +62,11 @@ class FSDPCheckpointManager(BaseCheckpointManager):
     def load_checkpoint(self, path=None, del_local_after_load=False, *args, **kwargs):
         if path is None:
             return
+        contents=os.path.join(path,'checkpoint_contents.json')
+        if os.path.exists(contents):
+            with open(contents) as stream:
+                if json.load(stream).get('model_only'):
+                    raise ValueError('This endpoint contains model weights only; training resume requires a full state30/state90 checkpoint')
 
         # every rank download its own checkpoint
         remote_model_path = os.path.join(path, f'model_world_size_{self.world_size}_rank_{self.rank}.pt')
@@ -103,7 +109,7 @@ class FSDPCheckpointManager(BaseCheckpointManager):
         if self.lr_scheduler is not None:
             self.lr_scheduler.load_state_dict(lr_scheduler_state_dict)
 
-    def save_checkpoint(self, local_path: str, global_step: int, remove_previous_ckpt=False, *args, **kwargs):
+    def save_checkpoint(self, local_path: str, global_step: int, remove_previous_ckpt=False, model_only=False, *args, **kwargs):
         # record the previous global step
         self.previous_global_step = global_step
 
@@ -121,18 +127,18 @@ class FSDPCheckpointManager(BaseCheckpointManager):
             warnings.simplefilter("ignore")
             with FSDP.state_dict_type(self.model, StateDictType.SHARDED_STATE_DICT, state_dict_cfg, optim_cfg):
                 model_state_dict = self.model.state_dict()
-                if self.optimizer is not None:
+                if self.optimizer is not None and not model_only:
                     optimizer_state_dict = self.optimizer.state_dict()
                 else:
                     optimizer_state_dict = None
-                if self.lr_scheduler is not None:
+                if self.lr_scheduler is not None and not model_only:
                     lr_scheduler_state_dict = self.lr_scheduler.state_dict()
                 else:
                     lr_scheduler_state_dict = None
 
                 extra_state_dict = {
                     'lr_scheduler': lr_scheduler_state_dict,
-                    'rng': self.get_rng_state(),
+                    'rng': self.get_rng_state() if not model_only else None,
                 }
                 model_path = os.path.join(local_path, f'model_world_size_{self.world_size}_rank_{self.rank}.pt')
                 optim_path = os.path.join(local_path, f'optim_world_size_{self.world_size}_rank_{self.rank}.pt')
@@ -140,10 +146,12 @@ class FSDPCheckpointManager(BaseCheckpointManager):
 
                 print(f'[rank-{self.rank}]: Saving model to {os.path.abspath(model_path)}')
                 print(f'[rank-{self.rank}]: Saving checkpoint to {os.path.abspath(model_path)}')
-                print(f'[rank-{self.rank}]: Saving extra_state to {os.path.abspath(extra_path)}')
+                if not model_only:
+                    print(f'[rank-{self.rank}]: Saving extra_state to {os.path.abspath(extra_path)}')
                 torch.save(model_state_dict, model_path)
-                torch.save(optimizer_state_dict, optim_path)  # TODO: address optimizer is None
-                torch.save(extra_state_dict, extra_path)
+                if not model_only:
+                    torch.save(optimizer_state_dict, optim_path)
+                    torch.save(extra_state_dict, extra_path)
 
         # wait for everyone to dump to local
         torch.distributed.barrier()
@@ -153,6 +161,9 @@ class FSDPCheckpointManager(BaseCheckpointManager):
             os.makedirs(hf_local_path, exist_ok=True)
             self.model._fsdp_wrapped_module.config.save_pretrained(hf_local_path)
             self.processing_class.save_pretrained(hf_local_path)
+            with open(os.path.join(local_path,'checkpoint_contents.json'),'w') as stream:
+                json.dump({'model_only':bool(model_only),'global_step':global_step,
+                           'training_resume_supported':not model_only},stream)
 
         torch.distributed.barrier()
 
