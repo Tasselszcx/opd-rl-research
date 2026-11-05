@@ -1,5 +1,5 @@
 {
-  "commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
+  "commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "files": [
     {
       "path": ".gitignore",
@@ -1462,6 +1462,11 @@
       "sha256": "685fe640be5e21b275c8b20d5f2b463a336a094f5c9fabcef8b435b0bf8dec15"
     },
     {
+      "path": "state_guidance/clean_reference.py",
+      "public_path": "state_guidance/clean_reference.py",
+      "sha256": "b35074ba8c819c5e841868fa2403cc4b1024c002761f2e40f0c7df0dc51bc4bd"
+    },
+    {
       "path": "state_guidance/control.py",
       "public_path": "state_guidance/control.py",
       "sha256": "d954ed2430d200ba3e4cbe0dc33a8c3e6a3827fe3fd809daff4db3f85f755e6d"
@@ -1539,7 +1544,7 @@
     {
       "path": "state_guidance/run_phase.py",
       "public_path": "state_guidance/run_phase.py",
-      "sha256": "18bf44a8bab0ce345587598142a84dd91cca12283045e51d4cabf4a4345cde2b"
+      "sha256": "fa34b977d4052e6d1ac83ec09683a0bf93fe8b8248105a535423864ba5b50942"
     },
     {
       "path": "state_guidance/runtime_paths.py",
@@ -1557,9 +1562,19 @@
       "sha256": "41e8775e164a38ad9077fa4dc1e3eb22f81aa3e3cd6f823558965e34f168a85c"
     },
     {
+      "path": "state_guidance/test_clean_reference.py",
+      "public_path": "state_guidance/test_clean_reference.py",
+      "sha256": "50b9657cb468bd01c13619d7193e2b112f11d2bbede529072ea6e05acf0b0b0e"
+    },
+    {
       "path": "state_guidance/test_cost_discovery.py",
       "public_path": "state_guidance/test_cost_discovery.py",
       "sha256": "3693998774427e09562dada27ac2eb2594639ed2ca4a54bed449fb5a332ce67b"
+    },
+    {
+      "path": "state_guidance/test_development_seed.py",
+      "public_path": "state_guidance/test_development_seed.py",
+      "sha256": "d7594cf01104284b5c8d2b828ebcccdffbea3f3e2e127b5a041db0ec808e4c2c"
     },
     {
       "path": "state_guidance/test_eos_alignment.py",
@@ -3629,7 +3644,7 @@
     {
       "path": "verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
       "public_path": "verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
-      "sha256": "e9f1a5e5087f823533e56464f0cfd9ebd81af42710d81ba308fd0a809501bfdd"
+      "sha256": "7117cb7a6697e6379f1441d9a3194ecb779562df47111956273a07d1f68247d4"
     },
     {
       "path": "verl/verl/workers/sharding_manager/__init__.py",

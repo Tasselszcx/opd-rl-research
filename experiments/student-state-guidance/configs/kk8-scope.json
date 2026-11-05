@@ -22,7 +22,7 @@
   "formal_branches": 8,
   "branch_additional_steps": 150,
   "baseline_plan_sha256": "fb020b65cbc9b0fbc09398be0e89bf5eff8b9770a5340304f15a8b7f6490c7ed",
-  "user_instruction": "Current K&K: seed42; four teacher conditions at student states30/90;150 additional updates each.",
+  "user_instruction": "Clean-v4: official Base warmup with repairs from step0, fresh full state30/90, then same K&K eight branches seed42 each150. No legacy parents.",
   "cancelled_future_conditions": {
     "training_seeds": [
       43,
@@ -45,5 +45,6 @@
     "full_reasoning",
     "error_targeted"
   ],
-  "sequential_student_states": true
+  "sequential_student_states": true,
+  "legacy_reference_allowed": false
 }

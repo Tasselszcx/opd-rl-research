@@ -1,68 +1,68 @@
 {
-  "source_snapshot_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
+  "source_snapshot_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "upstream_repository": "https://github.com/StringNLPLAB/opd-rlvr",
   "upstream_base_commit": "f5fd333736495608acd9415a60cd7568593aa1d4",
-  "snapshot_file_count": 731,
+  "snapshot_file_count": 734,
   "modified_snapshot_files": [
     {
       "path": "guidance/env.sh",
       "original_sha256": "dac59af61f27f5bed48e0d4c75acc268a3aacd8ddc284ffb045383d1974e869a",
       "public_sha256": "f56dc7d3b57127c6aba3bb48032e50ec609d7cf16cfb978ec7d62866eb32b2dd",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "length_audit/env.sh",
       "original_sha256": "779155973be7eb98cd1ea7ac10605ae4896d9792603298088c883b7de57be51c",
       "public_sha256": "d4ed7757e76c0987443afc850c8550168cdfbc871ad68ad1eebd42175cf5189f",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "reproduction/coordinator_4x2.py",
       "original_sha256": "b830c8547bda1e2f239fdd6fdaf30f39b0472933a8c154489d5047951a626e6a",
       "public_sha256": "ef676930946a65c02800b8fc7cab3145c1afdb49139c855a41635dcf2842fe1c",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "reproduction/env.sh",
       "original_sha256": "43a1b6ec8aaa548769d2cc05876cf968d01b6446879028842931523cd4b21fa8",
       "public_sha256": "baef16d3a6fbc23a669e9d120b73c575be3624ccf82c96610aa0620290ae02e9",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "reproduction/eval_worker.py",
       "original_sha256": "b42dff2163437f01a41d7c2cb04bc0e379dff031667bdc1dff3cb70a60e7ced8",
       "public_sha256": "60cdb0fea4f679f4c7f443e7e55821520d7f98716b25eb03565f8223296ff8ad",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "reproduction/prepare_data.py",
       "original_sha256": "da08af8d16fd5c567c6461b3b9855fb5bdc9f903ab5fc3a812096d7eea36173e",
       "public_sha256": "5ab449687ccd127d8f32587276314bac259c0fed031420f0c2714d071ccfa265",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "reproduction/run_phase.py",
       "original_sha256": "ff322a57252d9e338804c2c323be78ab93989a8dc394cdedf3957578655f8436",
       "public_sha256": "67905bc5b81ed94b9ed00cb43d27b29fe750edbbb06a642b77f6f209776ce40c",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "scripts/README.md",
       "original_sha256": "6c0f5e6b93b49e53d0492372084c1571ac34c0360c822fee3a69d6400c1bdb34",
       "public_sha256": "c6a4a15708be897367fb8d6c2cc599a61be73b47cb480ea565381c3a22944606",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "state_guidance/env.sh",
       "original_sha256": "6aaa6f22b64a215dc1531da51e818c88f1cc6eef6f100ff8651670dec2a06d2f",
       "public_sha256": "2e183b2beafc95c230c37eedf5f48dfac748e5954a12aa60d337fa9ec1eba5af",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     },
     {
       "path": "state_guidance/run_phase.py",
-      "original_sha256": "18bf44a8bab0ce345587598142a84dd91cca12283045e51d4cabf4a4345cde2b",
-      "public_sha256": "5f8b03c148f1ca53d2eba30b2b072a23692936dbf62ae77add0759c94e38ba59",
-      "reason": "Portable deployment paths/publication navigation; repaired training semantics retained. See current protocol and start-state provenance."
+      "original_sha256": "fa34b977d4052e6d1ac83ec09683a0bf93fe8b8248105a535423864ba5b50942",
+      "public_sha256": "a82cd4b96fc6190c2df4d1888e437d3669f959fc029a3ca3be3aea9744d15d3b",
+      "reason": "Portable paths/publication navigation; same generated scientific settings with explicit model/output roots."
     }
   ],
   "original_protocol_sha256": "e352b3b647ca9996c603d83b39600197ec6ee9fbe3bed91c646b2f17264a6dad",
@@ -81,53 +81,35 @@
   ],
   "validation": {
     "status": "passed",
-    "cpu_tests": 126,
+    "canonical_runtime_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
+    "canonical_targeted_cpu_tests": 32,
+    "public_targeted_cpu_tests": 17,
     "gpu_generation_performed_for_publication": false,
+    "first_actual_clean_reference_update_verified": true,
+    "formal_matrix_complete": false,
+    "independent_final_test_complete": false,
     "config_equivalence": {
       "status": "passed",
       "compared_configs": 9,
-      "formal_branches": 8,
       "reference_routes": 1,
+      "formal_branches": 8,
       "exact_generated_settings_match": true,
       "independent_python_processes": true,
-      "gpu_generation_performed": false,
-      "scope": "Public path adaptation compared to canonical repaired source with identical explicit output/model roots. Binary historical start states are not reproduced by this CPU check."
+      "scope": "Identical explicit model/output roots; portable source-directory identity recorded separately."
     },
-    "tested_source_archive_sha256": "54ca5e814a5385d6ac8b2f92a813a0bf03a310bf8166d5333b8a82dfd424d89e",
-    "canonical_runtime_source_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
-    "canonical_debug_validation": {
-      "condition": "answer_only,state30,25 updates,batch128,rollout8,development512x8",
-      "original_scorer_retained": true,
-      "pass1_pct": [
-        30.2734375,
-        36.0595703125
-      ],
-      "missing_before_length_limit": [
-        538,
-        0
-      ],
-      "at_length_limit": [
-        347,
-        180
-      ],
-      "paired_question_pass1_delta_pp": 5.7861328125,
-      "paired_question_95ci_pp": [
-        3.6865234375,
-        7.8125
-      ]
-    },
-    "formal_matrix_complete": false,
-    "note": "CPU publication checks are separate from live canonical GPU training. Deployed historical starting checkpoints are not in Git."
+    "tested_source_archive_sha256": "44c5f2fcb90f720841a227603526cdcbfffcf1461c00cacc64fa45c9d6eba6a4"
   },
-  "previous_source_snapshot_commit": "140f0cb5935637c7ccc500240da9c786056424cc",
+  "previous_source_snapshot_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
   "current_scope": "K&K seed42:8 formal branches,1 shared reference; state30 before state90",
   "runtime_repairs": [
     "Semantic teacher/student EOS alignment and terminal supervision",
-    "Hydra-native string serialization preserves real newline",
-    "Training/final-evaluation prompt manifest",
-    "Full source states; terminal model-only branch storage"
+    "Hydra-native real newline serialization",
+    "Shared training/evaluation prompt manifest",
+    "Full reference states30/90; branch terminal model-only",
+    "Development seed4200 explicitly forwarded",
+    "Fresh reference provenance and timestamp guard"
   ],
-  "starting_state_provenance": "Deployed eight-branch run reuses historical state30/90 complete checkpoints. Public fresh setup builds new repaired reference states and does not claim exact replay of the unreleased binary checkpoints.",
+  "starting_state_provenance": "Clean-v4 deployment and public fresh setup both train repaired ordinary-OPD reference states from official Base step0. Legacy and external parent checkpoints are rejected. Public source-directory identity and canonical hashes are recorded separately.",
   "selected_extra_teacher_format_reminder": false,
   "validation_history": [
     {
@@ -141,6 +123,52 @@
         },
         "new_gpu_training_run": false
       }
+    },
+    {
+      "source_snapshot_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
+      "validation": {
+        "status": "passed",
+        "cpu_tests": 126,
+        "gpu_generation_performed_for_publication": false,
+        "config_equivalence": {
+          "status": "passed",
+          "compared_configs": 9,
+          "formal_branches": 8,
+          "reference_routes": 1,
+          "exact_generated_settings_match": true,
+          "independent_python_processes": true,
+          "gpu_generation_performed": false,
+          "scope": "Public path adaptation compared to canonical repaired source with identical explicit output/model roots. Binary historical start states are not reproduced by this CPU check."
+        },
+        "tested_source_archive_sha256": "54ca5e814a5385d6ac8b2f92a813a0bf03a310bf8166d5333b8a82dfd424d89e",
+        "canonical_runtime_source_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
+        "canonical_debug_validation": {
+          "condition": "answer_only,state30,25 updates,batch128,rollout8,development512x8",
+          "original_scorer_retained": true,
+          "pass1_pct": [
+            30.2734375,
+            36.0595703125
+          ],
+          "missing_before_length_limit": [
+            538,
+            0
+          ],
+          "at_length_limit": [
+            347,
+            180
+          ],
+          "paired_question_pass1_delta_pp": 5.7861328125,
+          "paired_question_95ci_pp": [
+            3.6865234375,
+            7.8125
+          ]
+        },
+        "formal_matrix_complete": false,
+        "note": "CPU publication checks are separate from live canonical GPU training. Deployed historical starting checkpoints are not in Git."
+      },
+      "starting_state_provenance": "Deployed eight-branch run reuses historical state30/90 complete checkpoints. Public fresh setup builds new repaired reference states and does not claim exact replay of the unreleased binary checkpoints.",
+      "status": "historical legacy-parent campaign stopped by user"
     }
-  ]
+  ],
+  "public_clean_reference_policy": "The portable initializer binds the clean policy SHA into ACTIVE_SCOPE, records the canonical source commit, and uses the local source-directory name for source_path identity. It never imports deployed private checkpoints."
 }

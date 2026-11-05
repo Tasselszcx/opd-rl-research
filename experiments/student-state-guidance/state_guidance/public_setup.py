@@ -7,9 +7,11 @@ import hashlib
 import json
 from pathlib import Path
 import tempfile
+import time
 from urllib.request import urlopen
 
 CONFIGS = Path(__file__).resolve().parents[1] / 'configs'
+SOURCE_COMMIT = json.loads((CONFIGS/'source-snapshot-files.json').read_text())['commit']
 
 
 def digest(path):
@@ -36,11 +38,26 @@ def initialize(root):
     plan = (CONFIGS / 'protocol-baseline.json').read_bytes()
     scope = json.loads((CONFIGS / 'kk8-scope.json').read_text())
     scope['baseline_plan_sha256'] = hashlib.sha256(plan).hexdigest()
+    clean_path = root/'CLEAN_REFERENCE_REQUIREMENT.json'
+    clean = json.loads(clean_path.read_text()) if clean_path.exists() else {
+        'status':'clean_reference_required', 'approved_unix':time.time(),
+        'training_release':Path(__file__).resolve().parents[1].name,
+        'canonical_training_source_commit':SOURCE_COMMIT,
+        'source_identity_policy':'Public checkout directory; canonical hashes recorded in publication provenance.',
+        'reference_source':'Official Qwen3-1.7B-Base; checkpoint resume disabled',
+        'reference_steps':150, 'full_fork_steps':[30,90], 'legacy_reference_allowed':False}
+    if clean.get('status')!='clean_reference_required' or clean.get('canonical_training_source_commit')!=SOURCE_COMMIT:
+        raise RuntimeError('Existing reference policy differs; use a fresh run directory')
+    clean_bytes=(json.dumps(clean,indent=2)+'\n').encode()
+    scope['clean_reference_requirement_sha256']=hashlib.sha256(clean_bytes).hexdigest()
+    scope['legacy_reference_allowed']=False
     scope_bytes = (json.dumps(scope, indent=2) + '\n').encode()
     repair = {'status':'approved_user_repair','method_revision':'semantic_eos_v1',
               'teacher_eos_ids':[151643,151645],'student_eos_id':151643,
-              'source_release':'0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4',
-              'reference_states':'Fresh public runs build new reference states with the repaired code. The deployed result reused historical full checkpoints; exact replay requires those checkpoints.',
+              'source_release':SOURCE_COMMIT,
+              'reference_states':'Clean-v4 starts from official Base and trains repaired reference states from step0; legacy parent checkpoints are forbidden.',
+              'clean_reference_from_step0':True,
+              'development_seed_forwarding':'4200 explicitly forwarded from warmup and across all eight branches',
               'extra_teacher_format_reminder':False}
     storage = {'status':'approved_by_user','policy':'fork_states_full_terminal_model_only'}
     suffix = "Let's think step by step.\n"
@@ -48,6 +65,7 @@ def initialize(root):
               'cot_suffix_sha256':hashlib.sha256(suffix.encode()).hexdigest(),
               'source':'Corrected Hydra string serialization; shared by training and final evaluation.'}
     targets = [(root / 'study_plan.json', plan), (root / 'ACTIVE_SCOPE.json', scope_bytes)]
+    targets.append((clean_path,clean_bytes))
     targets += [(root/name,(json.dumps(value,indent=2)+'\n').encode()) for name,value in
                 [('PROTOCOL_AMENDMENT.json',repair),('STORAGE_POLICY.json',storage),('PROMPT_FORMAT.json',prompt)]]
     # Check every conflict before writing either file.
@@ -84,6 +102,10 @@ def metadata(root):
         raise ValueError('Current EOS/newline repair is required')
     if storage.get('policy')!='fork_states_full_terminal_model_only':
         raise ValueError('Current storage policy is required')
+    from state_guidance.clean_reference import requirement
+    clean=requirement(root)
+    if clean is None or clean.get('canonical_training_source_commit')!=SOURCE_COMMIT or scope.get('legacy_reference_allowed') is not False:
+        raise ValueError('Fresh repaired reference policy is required')
     if (root/'TEACHER_OUTPUT_POLICY.json').exists():
         raise ValueError('The extra teacher-format reminder is experimental, not the selected current protocol')
     return plan, scope

@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "cpu_tests": 126,
+  "gpu_generation_performed_for_publication": false,
+  "config_equivalence": {
+    "status": "passed",
+    "compared_configs": 9,
+    "formal_branches": 8,
+    "reference_routes": 1,
+    "exact_generated_settings_match": true,
+    "independent_python_processes": true,
+    "gpu_generation_performed": false,
+    "scope": "Public path adaptation compared to canonical repaired source with identical explicit output/model roots. Binary historical start states are not reproduced by this CPU check."
+  },
+  "tested_source_archive_sha256": "54ca5e814a5385d6ac8b2f92a813a0bf03a310bf8166d5333b8a82dfd424d89e",
+  "canonical_runtime_source_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
+  "canonical_debug_validation": {
+    "condition": "answer_only,state30,25 updates,batch128,rollout8,development512x8",
+    "original_scorer_retained": true,
+    "pass1_pct": [
+      30.2734375,
+      36.0595703125
+    ],
+    "missing_before_length_limit": [
+      538,
+      0
+    ],
+    "at_length_limit": [
+      347,
+      180
+    ],
+    "paired_question_pass1_delta_pp": 5.7861328125,
+    "paired_question_95ci_pp": [
+      3.6865234375,
+      7.8125
+    ]
+  },
+  "formal_matrix_complete": false,
+  "note": "CPU publication checks are separate from live canonical GPU training. Deployed historical starting checkpoints are not in Git."
+}

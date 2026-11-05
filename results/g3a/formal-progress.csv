@@ -1,0 +1,9 @@
+task,seed,student_start_step,guidance,status,completed_updates,target_updates,current_global_step,latest_development_update,dev_pass_at_1_pct,dev_pass_at_8_pct
+kk,42,30,plain,waiting_clean_reference,0,150,,,,
+kk,42,30,answer_only,waiting_clean_reference,0,150,,,,
+kk,42,30,full_reasoning,waiting_clean_reference,0,150,,,,
+kk,42,30,error_targeted,waiting_clean_reference,0,150,,,,
+kk,42,90,plain,waiting_clean_reference,0,150,,,,
+kk,42,90,answer_only,waiting_clean_reference,0,150,,,,
+kk,42,90,full_reasoning,waiting_clean_reference,0,150,,,,
+kk,42,90,error_targeted,waiting_clean_reference,0,150,,,,

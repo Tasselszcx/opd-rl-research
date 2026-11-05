@@ -17,6 +17,8 @@ class PublicSetupTests(unittest.TestCase):
             self.assertEqual(scope['formal_branches'], 8)
             self.assertEqual(scope['training_seeds'], [42])
             self.assertEqual(plan['global_endpoints'], [180, 240])
+            self.assertFalse(scope['legacy_reference_allowed'])
+            self.assertTrue((root/'CLEAN_REFERENCE_REQUIREMENT.json').exists())
             self.assertEqual(json.loads((root/'PROMPT_FORMAT.json').read_text())['cot_suffix_by_task']['kk'],"Let's think step by step.\n")
             from state_guidance.coordinator import phases
             from state_guidance.run_phase import command
@@ -28,6 +30,27 @@ class PublicSetupTests(unittest.TestCase):
                 self.assertEqual(cfg['algorithm.opd_eos_mode'],'semantic')
                 self.assertEqual(cfg['data.cot_suffix'],"Let's think step by step.\n")
                 self.assertFalse(cfg.get('algorithm.kk_teacher_output_contract',False))
+
+    def test_clean_initialization_is_idempotent_before_execution(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=initialize(Path(tmp));before=(root/'CLEAN_REFERENCE_REQUIREMENT.json').read_bytes()
+            initialize(root)
+            self.assertEqual((root/'CLEAN_REFERENCE_REQUIREMENT.json').read_bytes(),before)
+            metadata(root)
+
+    def test_public_reference_origin_uses_portable_source_identity(self):
+        from state_guidance.clean_reference import check_reference_origin
+        from state_guidance.run_phase import command
+        with tempfile.TemporaryDirectory() as tmp:
+            root=initialize(Path(tmp));rule=json.loads((root/'CLEAN_REFERENCE_REQUIREMENT.json').read_text())
+            folder=root/'runs/kk-s42-reference';folder.mkdir(parents=True)
+            _,cfg,_,_=command(root,'kk','plain',42,folder)
+            (folder/'request.json').write_text(json.dumps({'config':cfg,'source_resume':None}))
+            record={'start_step':0,'end_step':150,'started_unix':rule['approved_unix']+1,
+                    'source_path':str(Path(__file__).resolve().parents[1])}
+            (folder/'launcher_record.json').write_text(json.dumps(record));check_reference_origin(root)
+            record['reuse_only']=True;(folder/'launcher_record.json').write_text(json.dumps(record))
+            with self.assertRaisesRegex(AssertionError,'legacy'):check_reference_origin(root)
 
     def test_conflicting_scope_does_not_partially_initialize(self):
         with tempfile.TemporaryDirectory() as tmp:

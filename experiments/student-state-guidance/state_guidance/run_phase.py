@@ -81,6 +81,8 @@ def command(root,task,mode,seed,folder,resume=None,steps=150,check=False,continu
     for key,value in values.items():
         args=[v for v in args if not v.startswith('++'+key+'=')]
         args.append('++'+key+'='+hydra_value(value));cfg[key]=value
+    from state_guidance.clean_reference import check_configuration
+    check_configuration(root,cfg,resume,check)
     return args,cfg,start,end
 
 
@@ -97,9 +99,13 @@ def validate(folder,start,end,mode):
     assert all(r['metrics']['guidance/response_alignment_ok']==1 for r in rows)
     assert all(math.isfinite(r['metrics']['actor/grad_norm']) for r in rows)
     assert all(r['metrics']['guidance/conditioned_sequences']==(0 if mode=='plain' else 1024) for r in rows)
-    if start in (30,90) and (folder.parent.parent/'PROTOCOL_AMENDMENT.json').exists():
+    clean = (folder.parent.parent/'CLEAN_REFERENCE_REQUIREMENT.json').exists() and folder.parent.name=='runs'
+    if (start in (30,90) or clean) and (folder.parent.parent/'PROTOCOL_AMENDMENT.json').exists():
         assert all(r['metrics'].get('guidance/eos_semantic_enabled')==1 for r in rows)
         assert json.loads((folder/'request.json').read_text())['config']['algorithm.opd_eos_mode']=='semantic'
+    if clean:
+        from state_guidance.clean_reference import check_reference_origin
+        check_reference_origin(folder.parent.parent)
     final=folder/'checkpoints'/f'global_step_{end}'
     assert (final/'data.pt').is_file() and (final/'actor').is_dir()
     checkpoints=[final]
@@ -138,6 +144,9 @@ def main():
         continuation=load_continuation(folder,a.task,a.mode,a.seed)
         a.resume=folder/'checkpoints'/f'global_step_{continuation["checkpoint_step"]}'
     args,cfg,start,end=command(root,a.task,a.mode,a.seed,folder,a.resume,a.steps,a.check,continuation)
+    if a.resume and not a.check and not a.dry_run:
+        from state_guidance.clean_reference import check_fork_parent
+        check_fork_parent(root,a.resume)
     if continuation:
         parent=json.loads((folder/'parent_request.json').read_text())['config']
         relocated={'data.frozen_train_file','data.frozen_validation_file','algorithm.teacher_guidance_file',

@@ -1,0 +1,40 @@
+{
+  "status": "stopped_by_user_for_clean_reference_rebuild",
+  "interpretation": "Exploratory comparisons from legacy reference states; not clean-v4 results.",
+  "routes": [
+    {
+      "guidance": "plain",
+      "updates": 150,
+      "status": "completed",
+      "latest_dev_step": 150,
+      "pass1_pct": 50.4150390625,
+      "pass8_pct": 93.75
+    },
+    {
+      "guidance": "answer_only",
+      "updates": 150,
+      "status": "completed",
+      "latest_dev_step": 150,
+      "pass1_pct": 45.5810546875,
+      "pass8_pct": 87.6953125
+    },
+    {
+      "guidance": "full_reasoning",
+      "updates": 64,
+      "status": "user_stopped",
+      "latest_dev_step": 50,
+      "pass1_pct": 26.07421875,
+      "pass8_pct": 66.796875
+    },
+    {
+      "guidance": "error_targeted",
+      "updates": 46,
+      "status": "user_stopped",
+      "latest_dev_step": 25,
+      "pass1_pct": 35.302734375,
+      "pass8_pct": 82.2265625
+    }
+  ],
+  "state90_started": false,
+  "independent_final_test_complete": false
+}

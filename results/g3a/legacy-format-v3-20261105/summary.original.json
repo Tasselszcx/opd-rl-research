@@ -1,0 +1,297 @@
+{
+  "checked_beijing": "2026-11-05T20:46:35.334366+08:00",
+  "campaign": "K&K format-v3",
+  "formal_branches": 8,
+  "counts": {
+    "completed": 0,
+    "running": 2,
+    "pending": 6
+  },
+  "routes": [
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 30,
+      "guidance": "plain",
+      "status": "completed",
+      "completed_updates": 150,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "status": "completed",
+      "completed_updates": 150,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 30,
+      "guidance": "full_reasoning",
+      "status": "running",
+      "completed_updates": 15,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 30,
+      "guidance": "error_targeted",
+      "status": "running",
+      "completed_updates": 2,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 90,
+      "guidance": "plain",
+      "status": "pending",
+      "completed_updates": 0,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 90,
+      "guidance": "answer_only",
+      "status": "pending",
+      "completed_updates": 0,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 90,
+      "guidance": "full_reasoning",
+      "status": "pending",
+      "completed_updates": 0,
+      "target_updates": 150
+    },
+    {
+      "task": "kk",
+      "seed": 42,
+      "student_start_step": 90,
+      "guidance": "error_targeted",
+      "status": "pending",
+      "completed_updates": 0,
+      "target_updates": 150
+    }
+  ],
+  "development": [
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 0,
+      "global_step": 30,
+      "pass_at_1_pct": 25.634765625,
+      "pass_at_8_pct": 74.21875,
+      "mean_response_tokens": 1030.92041015625,
+      "output_limit_pct": 7.421875,
+      "noncap_missing_answer_pct": 11.083984375
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 25,
+      "global_step": 55,
+      "pass_at_1_pct": 38.0615234375,
+      "pass_at_8_pct": 84.375,
+      "mean_response_tokens": 1087.78173828125,
+      "output_limit_pct": 4.98046875,
+      "noncap_missing_answer_pct": 0.29296875
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 50,
+      "global_step": 80,
+      "pass_at_1_pct": 43.3349609375,
+      "pass_at_8_pct": 86.5234375,
+      "mean_response_tokens": 1053.251708984375,
+      "output_limit_pct": 4.39453125,
+      "noncap_missing_answer_pct": 0.6591796875
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 75,
+      "global_step": 105,
+      "pass_at_1_pct": 42.67578125,
+      "pass_at_8_pct": 87.5,
+      "mean_response_tokens": 1074.732421875,
+      "output_limit_pct": 4.6630859375,
+      "noncap_missing_answer_pct": 0.439453125
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 47.16796875,
+      "pass_at_8_pct": 90.8203125,
+      "mean_response_tokens": 1086.490478515625,
+      "output_limit_pct": 4.638671875,
+      "noncap_missing_answer_pct": 0.78125
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 125,
+      "global_step": 155,
+      "pass_at_1_pct": 49.6826171875,
+      "pass_at_8_pct": 91.6015625,
+      "mean_response_tokens": 1047.78271484375,
+      "output_limit_pct": 3.7353515625,
+      "noncap_missing_answer_pct": 0.9765625
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 150,
+      "global_step": 180,
+      "pass_at_1_pct": 50.4150390625,
+      "pass_at_8_pct": 93.75,
+      "mean_response_tokens": 1060.60791015625,
+      "output_limit_pct": 4.8095703125,
+      "noncap_missing_answer_pct": 0.244140625
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 0,
+      "global_step": 30,
+      "pass_at_1_pct": 25.634765625,
+      "pass_at_8_pct": 74.21875,
+      "mean_response_tokens": 1030.92041015625,
+      "output_limit_pct": 7.421875,
+      "noncap_missing_answer_pct": 11.083984375
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 25,
+      "global_step": 55,
+      "pass_at_1_pct": 36.3525390625,
+      "pass_at_8_pct": 81.4453125,
+      "mean_response_tokens": 894.4970703125,
+      "output_limit_pct": 2.6123046875,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 50,
+      "global_step": 80,
+      "pass_at_1_pct": 40.4296875,
+      "pass_at_8_pct": 88.0859375,
+      "mean_response_tokens": 972.455810546875,
+      "output_limit_pct": 3.90625,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 75,
+      "global_step": 105,
+      "pass_at_1_pct": 43.4814453125,
+      "pass_at_8_pct": 88.0859375,
+      "mean_response_tokens": 950.17626953125,
+      "output_limit_pct": 3.9306640625,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 45.2880859375,
+      "pass_at_8_pct": 89.453125,
+      "mean_response_tokens": 1020.642822265625,
+      "output_limit_pct": 6.005859375,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 125,
+      "global_step": 155,
+      "pass_at_1_pct": 45.2392578125,
+      "pass_at_8_pct": 88.8671875,
+      "mean_response_tokens": 1009.55908203125,
+      "output_limit_pct": 5.419921875,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 150,
+      "global_step": 180,
+      "pass_at_1_pct": 45.5810546875,
+      "pass_at_8_pct": 87.6953125,
+      "mean_response_tokens": 968.200927734375,
+      "output_limit_pct": 4.833984375,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "full_reasoning",
+      "additional_step": 0,
+      "global_step": 30,
+      "pass_at_1_pct": 25.634765625,
+      "pass_at_8_pct": 74.21875,
+      "mean_response_tokens": 1030.92041015625,
+      "output_limit_pct": 7.421875,
+      "noncap_missing_answer_pct": 11.083984375
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "error_targeted",
+      "additional_step": 0,
+      "global_step": 30,
+      "pass_at_1_pct": 25.634765625,
+      "pass_at_8_pct": 74.21875,
+      "mean_response_tokens": 1030.92041015625,
+      "output_limit_pct": 7.421875,
+      "noncap_missing_answer_pct": 11.083984375
+    }
+  ],
+  "source_scope_sha256": "61dd02614fa82fb385187e7864e1f41aac4f6b98c55396bb89ec900d281f91e4",
+  "source_input_sha256": {
+    "data/kk/dev.jsonl": "49c79a7d92b972e96cf3bdbde8730ccd21746f050ade6f53703ae1ce825fbbf6",
+    "runs/kk-s42-reference/checkpoints/metrics.jsonl": "3f832fba6fe0b70476e98d3f4fb44bfc1b31627d50055393b041c8722289a70f",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_100/val.jsonl": "cf9767c770a0f7c4eb452243ee6902ede4a8ba82b74a55a1f5759afb069b6795",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_125/val.jsonl": "b49aa14a9ddd8912eb4753ef93549353658b544ce9ffe6811ebba93bcd9da6fd",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_150/val.jsonl": "36ac4dddb2c4ca92bbb2fe8ac230bffab6a8b2d03b1f872ebd3f54353ca3679c",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_25/val.jsonl": "e659599e8efcbb6a24a245f38586c6153354123be0181c2af265e387f532bceb",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_50/val.jsonl": "16f2a9873ec6ddfb8187b77ba18182d57a27ae5c1824910aebd8ee61716f33bf",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_75/val.jsonl": "b7ab7be40d3088f0d0754efc483215ee50c98f3b72ae668c00560521c1859ea9",
+    "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_initial/step_0/val.jsonl": "f999b0d5c0df40e5b4b76453caf8d05834c19d8c62500539d665cf8ab57d279f",
+    "runs/kk-s42-state30-answer_only/checkpoints/metrics.jsonl": "d2946962840be79cd7dc8cb114943122beab54c2830f5f34568dff16230e13b7",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_105/val.jsonl": "3d861341452edeb93fe880109a27e1696ddd8bfa719d7f67683400696f675921",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_130/val.jsonl": "010d80eec4873f1df71a612d3238e64d26854725a9ee49006c1338d39b106658",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_155/val.jsonl": "3166ebaf578f693cf2f5d8a2df3cde26366d4ea2b4de79b860c09b579792fb1e",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_180/val.jsonl": "4b015d4fd76c26c76e014f179affa5ef33d7132468fad1e72df4ac3de504070c",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_55/val.jsonl": "df8041358321fe3f566100151acb0029691b42523f1d0ce390e559d06c5d1ba0",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_80/val.jsonl": "76d355959ca3fb0d59ed2128ec7f1035f780c1443f688f45cc3566c4f0834483",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3",
+    "runs/kk-s42-state30-error_targeted/checkpoints/metrics.jsonl": "41b99ad76a7c2325e82792c88b21ceb51a6405f24be36ef71d69afcd084d9f57",
+    "runs/kk-s42-state30-error_targeted/val_logs/kk-s42-state30-error_targeted/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3",
+    "runs/kk-s42-state30-full_reasoning/checkpoints/metrics.jsonl": "39c41521d9bc3923c6e3329176ed4b7430be0bedc135c387c197243b4d4089b9",
+    "runs/kk-s42-state30-full_reasoning/val_logs/kk-s42-state30-full_reasoning/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3",
+    "runs/kk-s42-state30-plain/checkpoints/metrics.jsonl": "55f2760c1485d58437b875b64c75d2066cfd1a1b4401cb71cd8e51978ab61bb4",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_105/val.jsonl": "05c95c5e2e9e6acd6109224a7a36722a2e04017c118794493b47131ec31ef356",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_130/val.jsonl": "70317071c95e290cd01e5c2106b9b31176fcea7f772fd40cb963dce605f59107",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_155/val.jsonl": "5052ffd3fdfef0d645b49587cebb309d88130c9f6ee08caae4a095fafcb75edf",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_180/val.jsonl": "976719a5800a52c5de7c03c41b6ff6e7d84024007fc625368cba1937210f88f2",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_55/val.jsonl": "fdecd8818e3d781373da3092753dbebb09275f3e8233245abc4a6c4ae3850984",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_80/val.jsonl": "ee9680f431f90f04e1be3b0f1a1be360eaf7c14fac8e86c76d788d94783009aa",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3"
+  },
+  "training_source_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
+  "starting_states": "Historical complete state30/90 checkpoints; original binary assets are not published.",
+  "final_evaluation_completed": false
+}

@@ -1,40 +1,41 @@
 {
-  "status": "passed",
-  "cpu_tests": 126,
-  "gpu_generation_performed_for_publication": false,
-  "config_equivalence": {
+  "canonical_runtime_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
+  "canonical_targeted_cpu_checks": {
+    "status": "passed",
+    "tests": 32,
+    "gpu_generation_for_checks": false
+  },
+  "public_targeted_cpu_checks": {
+    "status": "passed",
+    "tests": 17,
+    "gpu_generation_performed": false
+  },
+  "configuration_equivalence": {
     "status": "passed",
     "compared_configs": 9,
-    "formal_branches": 8,
     "reference_routes": 1,
+    "formal_branches": 8,
     "exact_generated_settings_match": true,
     "independent_python_processes": true,
-    "gpu_generation_performed": false,
-    "scope": "Public path adaptation compared to canonical repaired source with identical explicit output/model roots. Binary historical start states are not reproduced by this CPU check."
+    "scope": "Identical explicit model/output roots; portable source-directory identity recorded separately."
   },
-  "tested_source_archive_sha256": "54ca5e814a5385d6ac8b2f92a813a0bf03a310bf8166d5333b8a82dfd424d89e",
-  "canonical_runtime_source_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",
-  "canonical_debug_validation": {
-    "condition": "answer_only,state30,25 updates,batch128,rollout8,development512x8",
-    "original_scorer_retained": true,
-    "pass1_pct": [
-      30.2734375,
-      36.0595703125
-    ],
-    "missing_before_length_limit": [
-      538,
-      0
-    ],
-    "at_length_limit": [
-      347,
-      180
-    ],
-    "paired_question_pass1_delta_pp": 5.7861328125,
-    "paired_question_95ci_pp": [
-      3.6865234375,
-      7.8125
-    ]
+  "first_actual_clean_reference_update": {
+    "status": "passed",
+    "reference_start": "official_base_fresh",
+    "actual_updates_observed": 1,
+    "reference_resume_disabled": true,
+    "semantic_eos_enabled": true,
+    "real_newline": true,
+    "teacher_used": true,
+    "plain_has_no_hint": true,
+    "response_alignment": true,
+    "finite_gradient": 9.888750076293945,
+    "sampler_seed42_matches": true,
+    "question_batch": 128,
+    "extra_gpu_work": false
   },
   "formal_matrix_complete": false,
-  "note": "CPU publication checks are separate from live canonical GPU training. Deployed historical starting checkpoints are not in Git."
+  "independent_final_test_complete": false,
+  "historical_validation": "legacy-format-v3-20261105/validation.json",
+  "tested_public_source_archive_sha256": "44c5f2fcb90f720841a227603526cdcbfffcf1461c00cacc64fa45c9d6eba6a4"
 }

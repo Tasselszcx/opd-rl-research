@@ -1,17 +1,14 @@
-# 本次发布验证
+# 检查范围与证据
 
-当前运行核心对应`0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4`。公开副本保留可移植路径和输入准备入口；活跃训练release独立保存。
+当前运行核心为`5c4cfa4cef25cb31002811bfbecf39165b2dda32`。clean-v4从官方Base重新训练公共参考，旧存档不再作为新起点。
 
-- Linux隔离副本的126项CPU测试全部通过，覆盖结束符语义对齐、换行编码、teacher-only响应保留、存储、调度、身份和准备入口。
-- 用两个独立Python进程比较公开副本与运行核心：1条参考＋8条分支，共9份生成配置，给定相同显式路径时全部一致。
-- 仓库检查核对731个源码快照文件、导航链接、发布体积以及凭据/私有路径规则。原有阅读笔记与许可保留。
+- 32项相关CPU检查通过，覆盖新起点来源限制、开发种子下传、EOS、真实换行、存储与范围。
+- 现有运行已验证首个真实更新：从step0开始、无checkpoint恢复，128题匹配seed42，teacher信号、响应对齐、EOS和梯度检查通过。
+- 全量输入审计：21,664道原题最多361 token，20,000份完整指导最多1616，均低于4096输入上限。Base与teacher的当前非思考模板渲染一致。
+- 旧轮77,824条输出评分复算一致，按首个特殊结束符截断后评分也不变。输出仍可能触及4096预算上限；这类回答照原规则计分，不能说所有模型回答都已完善。
 
-独立GitHub CI发现公开依赖清单漏列`math-verify`，现已补齐运行环境中的0.8.0及其LaTeX解析依赖。判分测试保留，不以跳过测试替代依赖修复。[持续检查](https://github.com/Tasselszcx/opd-rl-research/actions/workflows/checks.yml)
+公开准备入口同时写入新起点约束，并与当前源码保持科学配置一致。公开路径适配的17项针对性CPU检查与9份配置比较见[验证摘要](../results/g3a/validation.json)；未为发布重复做GPU采样。[源码与公开适配](../experiments/student-state-guidance/PUBLICATION_PROVENANCE.json)
 
-真实GPU证据来自运行核心：原配置25步回归通过，随后两条正式分支已完成真实首批更新。发布路径适配没有额外做GPU采样；CPU通过不能代替八组150步终点和独立终测。
+旧版126项发布测试及历史诊断结果单独保留在[旧发布验证](../results/g3a/legacy-format-v3-20261105/validation.json)。当前CPU和首步通过，不代表八组150步终点、独立终测或状态交互已经完成。
 
-换行转义错误来自本项目启动封装。旧EOS屏蔽沿用上游，用于避免师生结束符不一致；当前先对齐结束语义，再保留结束监督。未修改原评分规则。
-
-精确重放当前部署还需要未公开的历史30/90完整存档；公开从头准备得到的是新起点。原始模型、数据、指导预期SHA保留，完整模型SHA由bootstrap缓存步骤核验，不在每次启动时重复重算。
-
-[验证摘要](../results/g3a/validation.json) · [来源与公开适配](../experiments/student-state-guidance/PUBLICATION_PROVENANCE.json) · [旧发布记录](../results/g3a/legacy-20261104/validation.json)
+[GitHub持续检查](https://github.com/Tasselszcx/opd-rl-research/actions/workflows/checks.yml) · [当前进度](g3a-results.md)

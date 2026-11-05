@@ -86,6 +86,19 @@ def main():
         if private.search(text):
             errors.append(rel + ': machine-specific deployment path/address')
     source = ROOT / 'experiments/student-state-guidance'
+    # A previous snapshot updated route rows but retained a stale completed count.
+    progress = json.loads((ROOT / 'results/g3a/summary.json').read_text())
+    routes = progress['routes']
+    groups = {'completed':'completed', 'running':'running', 'starting':'running',
+              'pending':'pending', 'waiting_clean_reference':'pending', 'failed':'failed'}
+    actual = {key: 0 for key in ['completed','running','pending','failed']}
+    for route in routes:
+        if route['status'] not in groups:
+            errors.append('current snapshot has an unknown route status: '+route['status'])
+        else:
+            actual[groups[route['status']]] += 1
+    if len(routes) != progress['formal_branches'] or any(progress['counts'].get(key,0) != value for key,value in actual.items()):
+        errors.append('current formal counters differ from route rows; shared reference must be separate')
     manifest = json.loads((source / 'configs/source-snapshot-files.json').read_text())
     provenance = json.loads((source / 'PUBLICATION_PROVENANCE.json').read_text())
     modified = {x['path']: x['public_sha256'] for x in provenance['modified_snapshot_files']}

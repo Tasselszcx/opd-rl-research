@@ -209,6 +209,9 @@ class vLLMRollout(BaseRollout):
                 'temperature': self.config.val_kwargs.temperature,
                 'n': self.config.val_kwargs.n,
             }
+            # The development seed must reach vLLM, not remain an unused config field.
+            if self.config.val_kwargs.get('seed') is not None:
+                kwargs['seed'] = int(self.config.val_kwargs.seed)
 
         # users can customize different sampling_params at different run
         with self.update_sampling_params(**kwargs):
