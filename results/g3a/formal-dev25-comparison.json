@@ -1,0 +1,41 @@
+{
+  "benchmark": "K&K",
+  "student_start": 30,
+  "seed": 42,
+  "additional_step": 25,
+  "questions": 512,
+  "samples_per_question": 8,
+  "sampling_scope": "Early development, one training seed; question bootstrap is conditional on that seed.",
+  "groups": {
+    "plain": {
+      "pass_at_1": 0.380615234375,
+      "pass_at_8": 0.84375,
+      "mean_response_tokens": 1087.78173828125,
+      "output_limit_fraction": 0.0498046875,
+      "final_answer_present_fraction": 0.947265625,
+      "no_final_before_limit_fraction": 0.0029296875
+    },
+    "answer_only": {
+      "pass_at_1": 0.363525390625,
+      "pass_at_8": 0.814453125,
+      "mean_response_tokens": 894.4970703125,
+      "output_limit_fraction": 0.026123046875,
+      "final_answer_present_fraction": 0.973876953125,
+      "no_final_before_limit_fraction": 0.0
+    }
+  },
+  "pass1_answer_minus_plain_pp": {
+    "difference": -1.708984375,
+    "paired_question_ci95": [
+      -3.6376953125,
+      0.244140625
+    ]
+  },
+  "pass8_answer_minus_plain_pp": {
+    "difference": -2.9296875,
+    "paired_question_ci95": [
+      -6.640625,
+      0.78125
+    ]
+  }
+}
