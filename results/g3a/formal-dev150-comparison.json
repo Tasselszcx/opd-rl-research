@@ -1,0 +1,51 @@
+{
+  "benchmark": "K&K",
+  "student_start": 30,
+  "seed": 42,
+  "additional_step": 150,
+  "global_step": 180,
+  "questions": 512,
+  "samples_per_question": 8,
+  "source_checked_beijing": "2026-11-05T20:27:34.159082+08:00",
+  "sampling_scope": "Fixed endpoint DEVELOPMENT, paired-question CI conditional on one training seed; exploratory, no multiplicity correction. Independent final test still pending.",
+  "paired_question_hashes_verified": true,
+  "both_terminal_training_records_completed": true,
+  "bootstrap_seed": 20261101,
+  "bootstrap_source_sha256": "f0f13ec60b738807e6cc94a07e2b8efa2a0156542fd9218a890f4437536d6b4b",
+  "groups": {
+    "answer_only": {
+      "pass_at_1": 0.455810546875,
+      "pass_at_8": 0.876953125,
+      "mean_response_tokens": 968.200927734375,
+      "output_limit_fraction": 0.04833984375,
+      "final_answer_present_fraction": 0.95166015625,
+      "no_final_before_limit_fraction": 0.0
+    },
+    "plain": {
+      "pass_at_1": 0.504150390625,
+      "pass_at_8": 0.9375,
+      "mean_response_tokens": 1060.60791015625,
+      "output_limit_fraction": 0.048095703125,
+      "final_answer_present_fraction": 0.949462890625,
+      "no_final_before_limit_fraction": 0.00244140625
+    }
+  },
+  "pass1_answer_minus_plain_pp": {
+    "difference": -4.833984375,
+    "paired_question_ci95": [
+      -6.8115234375,
+      -2.8564453125
+    ],
+    "draws": 10000,
+    "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction"
+  },
+  "pass8_answer_minus_plain_pp": {
+    "difference": -6.0546875,
+    "paired_question_ci95": [
+      -9.1796875,
+      -3.125
+    ],
+    "draws": 10000,
+    "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction"
+  }
+}
