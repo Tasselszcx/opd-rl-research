@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-05T10:55:27.925910+08:00",
+  "checked_beijing": "2026-11-05T15:31:14.908483+08:00",
   "campaign": "K&K format-v3",
   "formal_branches": 8,
   "counts": {
@@ -14,7 +14,7 @@
       "student_start_step": 30,
       "guidance": "plain",
       "status": "running",
-      "completed_updates": 54,
+      "completed_updates": 101,
       "target_updates": 150
     },
     {
@@ -23,7 +23,7 @@
       "student_start_step": 30,
       "guidance": "answer_only",
       "status": "running",
-      "completed_updates": 58,
+      "completed_updates": 109,
       "target_updates": 150
     },
     {
@@ -117,6 +117,28 @@
     },
     {
       "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 75,
+      "global_step": 105,
+      "pass_at_1_pct": 42.67578125,
+      "pass_at_8_pct": 87.5,
+      "mean_response_tokens": 1074.732421875,
+      "output_limit_pct": 4.6630859375,
+      "noncap_missing_answer_pct": 0.439453125
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 47.16796875,
+      "pass_at_8_pct": 90.8203125,
+      "mean_response_tokens": 1086.490478515625,
+      "output_limit_pct": 4.638671875,
+      "noncap_missing_answer_pct": 0.78125
+    },
+    {
+      "student_start_step": 30,
       "guidance": "answer_only",
       "additional_step": 0,
       "global_step": 30,
@@ -147,6 +169,28 @@
       "mean_response_tokens": 972.455810546875,
       "output_limit_pct": 3.90625,
       "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 75,
+      "global_step": 105,
+      "pass_at_1_pct": 43.4814453125,
+      "pass_at_8_pct": 88.0859375,
+      "mean_response_tokens": 950.17626953125,
+      "output_limit_pct": 3.9306640625,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 45.2880859375,
+      "pass_at_8_pct": 89.453125,
+      "mean_response_tokens": 1020.642822265625,
+      "output_limit_pct": 6.005859375,
+      "noncap_missing_answer_pct": 0.0
     }
   ],
   "source_scope_sha256": "61dd02614fa82fb385187e7864e1f41aac4f6b98c55396bb89ec900d281f91e4",
@@ -160,11 +204,15 @@
     "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_50/val.jsonl": "16f2a9873ec6ddfb8187b77ba18182d57a27ae5c1824910aebd8ee61716f33bf",
     "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_75/val.jsonl": "b7ab7be40d3088f0d0754efc483215ee50c98f3b72ae668c00560521c1859ea9",
     "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_initial/step_0/val.jsonl": "f999b0d5c0df40e5b4b76453caf8d05834c19d8c62500539d665cf8ab57d279f",
-    "runs/kk-s42-state30-answer_only/checkpoints/metrics.jsonl": "389ec0ecc1b4ec88975d47e4e4caa578286c44219a88d0efb281b337df8ad704",
+    "runs/kk-s42-state30-answer_only/checkpoints/metrics.jsonl": "02f1442c00539877e61cf0e39183188c1ff10c0650b23d10a6c8ae548ccd7ef2",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_105/val.jsonl": "3d861341452edeb93fe880109a27e1696ddd8bfa719d7f67683400696f675921",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_130/val.jsonl": "010d80eec4873f1df71a612d3238e64d26854725a9ee49006c1338d39b106658",
     "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_55/val.jsonl": "df8041358321fe3f566100151acb0029691b42523f1d0ce390e559d06c5d1ba0",
     "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_80/val.jsonl": "76d355959ca3fb0d59ed2128ec7f1035f780c1443f688f45cc3566c4f0834483",
     "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3",
-    "runs/kk-s42-state30-plain/checkpoints/metrics.jsonl": "e631be0e1084eac706543ec70d19207d730f49307e923f5a5553a40aa803a79d",
+    "runs/kk-s42-state30-plain/checkpoints/metrics.jsonl": "49d6a99f04c705ebacd0bc5023bc04af7712283d919e83de94d502a8f71b40fe",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_105/val.jsonl": "05c95c5e2e9e6acd6109224a7a36722a2e04017c118794493b47131ec31ef356",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_130/val.jsonl": "70317071c95e290cd01e5c2106b9b31176fcea7f772fd40cb963dce605f59107",
     "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_55/val.jsonl": "fdecd8818e3d781373da3092753dbebb09275f3e8233245abc4a6c4ae3850984",
     "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_80/val.jsonl": "ee9680f431f90f04e1be3b0f1a1be360eaf7c14fac8e86c76d788d94783009aa",
     "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3"
