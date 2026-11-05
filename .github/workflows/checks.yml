@@ -13,6 +13,7 @@ jobs:
         with:
           python-version: '3.10'
       - run: python tools/check_repository.py
+      - run: python -m unittest discover -s tools -p 'test_g3a_snapshot.py'
   g3-cpu:
     runs-on: ubuntu-latest
     defaults:

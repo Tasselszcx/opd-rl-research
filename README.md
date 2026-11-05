@@ -12,6 +12,6 @@
 | 论文中文解读与原文 | [阅读笔记](reading-notes/README.md) · [在线阅读](https://tasselszcx.github.io/opd-rl-research/reading-notes/) |
 | 旧起点探索与早期原型 | [旧轮结果](results/g3a/legacy-format-v3-20261105/README.md) · [历史代码](archive/README.md) |
 
-新公共参考已验证完成首个真实更新；正式8组等待新起点。旧轮两组完成150步，另两组按用户要求停止，结果和成本保留为历史探索，不能算作新轮进度。当前独立终测尚未开始。
+公共参考和正式八组分别计数，实际步数与测验成绩见带时间的结果快照。旧轮两组完成150步，另两组按用户要求停止，结果和成本保留为历史探索，不能算作新轮进度。当前独立终测尚未开始。
 
 EOS监督、真实换行和开发采样种子修复从参考训练第1步生效。[检查范围](docs/validation.md)。权重、原始回答、凭据和机器配置不进Git；许可见[第三方说明](THIRD_PARTY_NOTICES.md)。

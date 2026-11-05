@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-06T01:26:42.644251+08:00",
+  "checked_beijing": "2026-11-06T04:30:21.143937+08:00",
   "campaign": "K&K clean-v4",
   "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "phase": "fresh_reference_training",
@@ -7,7 +7,8 @@
   "counts": {
     "completed": 0,
     "running": 0,
-    "pending": 8
+    "pending": 8,
+    "failed": 0
   },
   "routes": [
     {
@@ -115,9 +116,23 @@
       "dev_pass_at_8_pct": null
     }
   ],
+  "development": [
+    {
+      "route_kind": "reference",
+      "student_start_step": 0,
+      "guidance": "plain",
+      "additional_step": 25,
+      "global_step": 25,
+      "pass_at_1_pct": 31.8115234375,
+      "pass_at_8_pct": 77.34375,
+      "mean_response_tokens": 1185.1201171875,
+      "output_limit_pct": 7.1533203125,
+      "noncap_missing_answer_pct": 0.0
+    }
+  ],
   "reference": {
     "status": "running",
-    "completed_updates": 1,
+    "completed_updates": 30,
     "target_updates": 150,
     "source": "official Qwen3-1.7B-Base; checkpoint resume disabled",
     "full_fork_checkpoints": [
@@ -125,7 +140,19 @@
       90
     ],
     "gpus": 4,
-    "counts_as_formal_branch": false
+    "counts_as_formal_branch": false,
+    "latest_development": {
+      "route_kind": "reference",
+      "student_start_step": 0,
+      "guidance": "plain",
+      "additional_step": 25,
+      "global_step": 25,
+      "pass_at_1_pct": 31.8115234375,
+      "pass_at_8_pct": 77.34375,
+      "mean_response_tokens": 1185.1201171875,
+      "output_limit_pct": 7.1533203125,
+      "noncap_missing_answer_pct": 0.0
+    }
   },
   "repairs_active_from_reference_step0": [
     "semantic EOS alignment and supervision",
@@ -136,7 +163,9 @@
   "selected_extra_teacher_format_reminder": false,
   "independent_final_test_complete": false,
   "state_guidance_interaction_available": false,
-  "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Starting step0 grades are not current trained accuracy.",
+  "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.",
+  "source_snapshot_sha256": "9405aa320a4cfc176349fd1cf6d444e275a831ff868c9d9c1ea055211ac7b7f5",
+  "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
   "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",
   "historical_results": "legacy-format-v3-20261105/README.md"
 }

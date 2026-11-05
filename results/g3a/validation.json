@@ -37,5 +37,28 @@
   "formal_matrix_complete": false,
   "independent_final_test_complete": false,
   "historical_validation": "legacy-format-v3-20261105/validation.json",
-  "tested_public_source_archive_sha256": "44c5f2fcb90f720841a227603526cdcbfffcf1461c00cacc64fa45c9d6eba6a4"
+  "tested_public_source_archive_sha256": "44c5f2fcb90f720841a227603526cdcbfffcf1461c00cacc64fa45c9d6eba6a4",
+  "new_reference_full_states_structure_verified": [
+    30
+  ],
+  "checkpoint_validation_scope": "File sizes and archive metadata; no full tensor content loading or hash claim. Actual fork loading and terminal runtime validation are separate.",
+  "reference_development25_scoring_audit": {
+    "reference_global_step": 25,
+    "counts": {
+      "outputs": 4096,
+      "scorer_mismatches": 0,
+      "first_special_stop_score_changes": 0,
+      "complete_role_assignments": 3801,
+      "complete_and_correct": 1303,
+      "complete_but_logically_inconsistent": 2498,
+      "noncap_missing_tag": 0,
+      "noncap_invalid_role_assignment": 2,
+      "at_limit": 293,
+      "short_missing_under128": 0
+    },
+    "raw_evidence_sha256": "99597ac50593a37e5adf91d652bca84f42fccf4d47dff185d4f33fd9650e3d4b",
+    "scoring_changed": false,
+    "extra_gpu_work": false,
+    "scope": "Shared reference development only, not formal guidance comparison or final test."
+  }
 }
