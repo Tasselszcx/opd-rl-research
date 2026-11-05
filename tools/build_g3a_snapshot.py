@@ -139,7 +139,7 @@ def write(summary, output):
         lines.append(f"| {'公共参考' if point['route_kind']=='reference' else '正式对照'} | {point['student_start_step']} | {MODES[point['guidance']]} | {point['additional_step']}／{point['global_step']} | {point['pass_at_1_pct']:.2f}% | {point['pass_at_8_pct']:.2f}% | {point['mean_response_tokens']:.1f} | {point['output_limit_pct']:.2f}% | {point['noncap_missing_answer_pct']:.2f}% |")
     if not summary['development']:
         lines += ['', '尚无新轮训练后开发测验，不用旧成绩或step0分数代替。']
-    lines += ['', '开发集固定512题×8次，每25步记录；固定终点另做独立测试1024题×32次。缺答案标签为0不代表逻辑答案全对，所有不合法或错误答案仍按原评分规则计错。', '',
+    lines += ['', '开发集固定512题×8次，每25步记录；固定终点另做独立测试1024题×32次。格式完整也不代表逻辑答案全对，所有不合法或错误答案仍按原评分规则计错。', '',
         '## 历史与检查', '', '修复从参考训练第1步生效，禁止旧参考起点。旧轮结果、调试对照和成本保留在[历史探索](../results/g3a/legacy-format-v3-20261105/README.md)，不计入新轮。', '',
         '[新轮快照](../results/g3a/summary.json) · [八组进度](../results/g3a/formal-progress.csv) · [开发点](../results/g3a/development.csv) · [检查范围](validation.md) · [实验设计](g3a-study.md)']
     return '\n'.join(lines) + '\n'

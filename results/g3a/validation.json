@@ -60,5 +60,24 @@
     "scoring_changed": false,
     "extra_gpu_work": false,
     "scope": "Shared reference development only, not formal guidance comparison or final test."
+  },
+  "reference_development50_output_format_case": {
+    "reference_global_step": 50,
+    "outputs": 4096,
+    "noncap_missing_standard_answer_tag": 1,
+    "case_response_tokens": 959,
+    "at_output_limit": false,
+    "ends_with_model_endoftext": true,
+    "endoftext_occurrences": 1,
+    "im_start_occurrences": 0,
+    "im_end_occurrences": 0,
+    "contains_final_answer_text": true,
+    "contains_required_answer_tag": false,
+    "observed_failure": "Complete identity assignment was generated, but the required answer block was omitted. No evidence of length-limit or intermediate special-token truncation in this case.",
+    "correctness_score": 0.0,
+    "scoring_changed": false,
+    "raw_trajectory_retained": true,
+    "training_modified": false,
+    "extra_gpu_work": false
   }
 }
