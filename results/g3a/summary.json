@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-05T08:52:37.014413+08:00",
+  "checked_beijing": "2026-11-05T10:55:27.925910+08:00",
   "campaign": "K&K format-v3",
   "formal_branches": 8,
   "counts": {
@@ -14,7 +14,7 @@
       "student_start_step": 30,
       "guidance": "plain",
       "status": "running",
-      "completed_updates": 33,
+      "completed_updates": 54,
       "target_updates": 150
     },
     {
@@ -23,7 +23,7 @@
       "student_start_step": 30,
       "guidance": "answer_only",
       "status": "running",
-      "completed_updates": 35,
+      "completed_updates": 58,
       "target_updates": 150
     },
     {
@@ -106,6 +106,17 @@
     },
     {
       "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 50,
+      "global_step": 80,
+      "pass_at_1_pct": 43.3349609375,
+      "pass_at_8_pct": 86.5234375,
+      "mean_response_tokens": 1053.251708984375,
+      "output_limit_pct": 4.39453125,
+      "noncap_missing_answer_pct": 0.6591796875
+    },
+    {
+      "student_start_step": 30,
       "guidance": "answer_only",
       "additional_step": 0,
       "global_step": 30,
@@ -125,6 +136,17 @@
       "mean_response_tokens": 894.4970703125,
       "output_limit_pct": 2.6123046875,
       "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 50,
+      "global_step": 80,
+      "pass_at_1_pct": 40.4296875,
+      "pass_at_8_pct": 88.0859375,
+      "mean_response_tokens": 972.455810546875,
+      "output_limit_pct": 3.90625,
+      "noncap_missing_answer_pct": 0.0
     }
   ],
   "source_scope_sha256": "61dd02614fa82fb385187e7864e1f41aac4f6b98c55396bb89ec900d281f91e4",
@@ -138,11 +160,13 @@
     "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_50/val.jsonl": "16f2a9873ec6ddfb8187b77ba18182d57a27ae5c1824910aebd8ee61716f33bf",
     "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_0/step_75/val.jsonl": "b7ab7be40d3088f0d0754efc483215ee50c98f3b72ae668c00560521c1859ea9",
     "runs/kk-s42-reference/val_logs/kk-s42-reference/epoch_initial/step_0/val.jsonl": "f999b0d5c0df40e5b4b76453caf8d05834c19d8c62500539d665cf8ab57d279f",
-    "runs/kk-s42-state30-answer_only/checkpoints/metrics.jsonl": "32c00e4e5ef31ec552eb9940b23f595130bac3d4911fa1cdfa2ee3f36cdbd35c",
+    "runs/kk-s42-state30-answer_only/checkpoints/metrics.jsonl": "389ec0ecc1b4ec88975d47e4e4caa578286c44219a88d0efb281b337df8ad704",
     "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_55/val.jsonl": "df8041358321fe3f566100151acb0029691b42523f1d0ce390e559d06c5d1ba0",
+    "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_0/step_80/val.jsonl": "76d355959ca3fb0d59ed2128ec7f1035f780c1443f688f45cc3566c4f0834483",
     "runs/kk-s42-state30-answer_only/val_logs/kk-s42-state30-answer_only/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3",
-    "runs/kk-s42-state30-plain/checkpoints/metrics.jsonl": "e1cb9a777aa697a960cc1aa9a9a0fe5861d34462845b35a59059fb277f9af1b2",
+    "runs/kk-s42-state30-plain/checkpoints/metrics.jsonl": "e631be0e1084eac706543ec70d19207d730f49307e923f5a5553a40aa803a79d",
     "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_55/val.jsonl": "fdecd8818e3d781373da3092753dbebb09275f3e8233245abc4a6c4ae3850984",
+    "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_0/step_80/val.jsonl": "ee9680f431f90f04e1be3b0f1a1be360eaf7c14fac8e86c76d788d94783009aa",
     "runs/kk-s42-state30-plain/val_logs/kk-s42-state30-plain/epoch_initial/step_30/val.jsonl": "72ad8dc049ea10b175fe464f8ef0378e83b1343572628d28ffe0056359d886e3"
   },
   "training_source_commit": "0ee2ff2bebe692fdc5d428db5ae7cb25551ae2c4",

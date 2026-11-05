@@ -1,0 +1,42 @@
+{
+  "benchmark": "K&K",
+  "student_start": 30,
+  "seed": 42,
+  "additional_step": 50,
+  "global_step": 80,
+  "questions": 512,
+  "samples_per_question": 8,
+  "sampling_scope": "Development; paired-question intervals conditional on one training seed, exploratory.",
+  "groups": {
+    "plain": {
+      "pass_at_1": 0.433349609375,
+      "pass_at_8": 0.865234375,
+      "mean_response_tokens": 1053.251708984375,
+      "output_limit_fraction": 0.0439453125,
+      "final_answer_present_fraction": 0.949462890625,
+      "no_final_before_limit_fraction": 0.006591796875
+    },
+    "answer_only": {
+      "pass_at_1": 0.404296875,
+      "pass_at_8": 0.880859375,
+      "mean_response_tokens": 972.455810546875,
+      "output_limit_fraction": 0.0390625,
+      "final_answer_present_fraction": 0.9609375,
+      "no_final_before_limit_fraction": 0.0
+    }
+  },
+  "pass1_answer_minus_plain_pp": {
+    "difference": -2.9052734375,
+    "paired_question_ci95": [
+      -4.8095703125,
+      -0.9521484375
+    ]
+  },
+  "pass8_answer_minus_plain_pp": {
+    "difference": 1.5625,
+    "paired_question_ci95": [
+      -1.7578125,
+      4.8828125
+    ]
+  }
+}
