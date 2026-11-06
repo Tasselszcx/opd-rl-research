@@ -240,5 +240,48 @@
     "individual75_missing_cases_not_classified": true,
     "original_scores_unchanged": true,
     "extra_gpu_sampling": false
+  },
+  "formal_state30_development100_protocol_audit": {
+    "additional_step": 100,
+    "global_step": 130,
+    "matched_actual_question_batch_sets": 100,
+    "questions_each_batch": 128,
+    "rows_contiguous": true,
+    "teacher_EOS_alignment_gradients_all_passed": true,
+    "teacher_conditioned_counts_all_rows": {
+      "plain": 0,
+      "answer_only": 1024
+    },
+    "extra_gpu_work": false,
+    "training_modified": false
+  },
+  "formal_state30_development100_format_audit": {
+    "additional_step": 100,
+    "global_step": 130,
+    "groups": {
+      "plain": {
+        "outputs": 4096,
+        "noncap_missing": 8,
+        "normal_terminal_only": 8,
+        "other_special_stops": 0,
+        "missing_both_tags": 8,
+        "six_expected_final_roles": 7,
+        "original_scores_all_zero": true,
+        "raw_sha256": "12b0da321c36edb3f887776848761a218ce5a268b6804d6406e9cde15a3d8c14"
+      },
+      "answer_only": {
+        "outputs": 4096,
+        "noncap_missing": 0,
+        "normal_terminal_only": 0,
+        "other_special_stops": 0,
+        "missing_both_tags": 0,
+        "six_expected_final_roles": 0,
+        "original_scores_all_zero": true,
+        "raw_sha256": "9fd4c3bddf79d4c2d234cd1e2757f8752426af5b3da663e7bff123f62063c579"
+      }
+    },
+    "logical_correctness_of_untagged_answers_not_claimed": true,
+    "scoring_changed": false,
+    "extra_gpu_work": false
   }
 }

@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-07T00:09:20.061512+08:00",
+  "checked_beijing": "2026-11-07T02:11:25.225789+08:00",
   "campaign": "K&K clean-v4",
   "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "phase": "formal_training",
@@ -17,12 +17,12 @@
       "student_start_step": 30,
       "guidance": "plain",
       "status": "running",
-      "completed_updates": 81,
+      "completed_updates": 103,
       "target_updates": 150,
-      "current_global_step": 111,
-      "latest_development_update": 75,
-      "dev_pass_at_1_pct": 45.41015625,
-      "dev_pass_at_8_pct": 89.2578125
+      "current_global_step": 133,
+      "latest_development_update": 100,
+      "dev_pass_at_1_pct": 47.9736328125,
+      "dev_pass_at_8_pct": 91.40625
     },
     {
       "task": "kk",
@@ -30,12 +30,12 @@
       "student_start_step": 30,
       "guidance": "answer_only",
       "status": "running",
-      "completed_updates": 80,
+      "completed_updates": 102,
       "target_updates": 150,
-      "current_global_step": 110,
-      "latest_development_update": 75,
-      "dev_pass_at_1_pct": 44.6044921875,
-      "dev_pass_at_8_pct": 87.890625
+      "current_global_step": 132,
+      "latest_development_update": 100,
+      "dev_pass_at_1_pct": 46.6796875,
+      "dev_pass_at_8_pct": 90.0390625
     },
     {
       "task": "kk",
@@ -228,6 +228,18 @@
     {
       "route_kind": "formal",
       "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 46.6796875,
+      "pass_at_8_pct": 90.0390625,
+      "mean_response_tokens": 956.675048828125,
+      "output_limit_pct": 3.662109375,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "route_kind": "formal",
+      "student_start_step": 30,
       "guidance": "plain",
       "additional_step": 25,
       "global_step": 55,
@@ -260,6 +272,18 @@
       "mean_response_tokens": 1089.752685546875,
       "output_limit_pct": 3.8330078125,
       "noncap_missing_answer_pct": 0.439453125
+    },
+    {
+      "route_kind": "formal",
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 47.9736328125,
+      "pass_at_8_pct": 91.40625,
+      "mean_response_tokens": 1098.95703125,
+      "output_limit_pct": 4.0771484375,
+      "noncap_missing_answer_pct": 0.1953125
     }
   ],
   "reference": {
@@ -296,7 +320,7 @@
   "independent_final_test_complete": false,
   "state_guidance_interaction_available": false,
   "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.",
-  "source_snapshot_sha256": "257aba0d1440637f6ad78c20e2cbcf9f6a1c7c180c5ef18768ed4c558a68be83",
+  "source_snapshot_sha256": "855e4acf2bc41510a1b22c4834d2affedd108a84e93d6f0f8848a44f2e0160e9",
   "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
   "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/v0/overview",
   "reference_swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",

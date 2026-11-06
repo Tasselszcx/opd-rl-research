@@ -1,6 +1,6 @@
 task,seed,student_start_step,guidance,status,completed_updates,target_updates,current_global_step,latest_development_update,dev_pass_at_1_pct,dev_pass_at_8_pct
-kk,42,30,plain,running,81,150,111,75,45.41015625,89.2578125
-kk,42,30,answer_only,running,80,150,110,75,44.6044921875,87.890625
+kk,42,30,plain,running,103,150,133,100,47.9736328125,91.40625
+kk,42,30,answer_only,running,102,150,132,100,46.6796875,90.0390625
 kk,42,30,full_reasoning,waiting_clean_reference,0,150,,,,
 kk,42,30,error_targeted,waiting_clean_reference,0,150,,,,
 kk,42,90,plain,waiting_clean_reference,0,150,,,,
