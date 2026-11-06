@@ -39,7 +39,8 @@
   "historical_validation": "legacy-format-v3-20261105/validation.json",
   "tested_public_source_archive_sha256": "44c5f2fcb90f720841a227603526cdcbfffcf1461c00cacc64fa45c9d6eba6a4",
   "new_reference_full_states_structure_verified": [
-    30
+    30,
+    90
   ],
   "checkpoint_validation_scope": "File sizes and archive metadata; no full tensor content loading or hash claim. Actual fork loading and terminal runtime validation are separate.",
   "reference_development25_scoring_audit": {
@@ -79,5 +80,41 @@
     "raw_trajectory_retained": true,
     "training_modified": false,
     "extra_gpu_work": false
+  },
+  "reference_development75_output_format_audit": {
+    "reference_step": 75,
+    "raw_sha256": "b35c680d7fb09a59f3630deaa7d1ad80cb12d5cd761e2b757fa68b049c750cbd",
+    "outputs": 4096,
+    "noncap_missing_standard_answer_tag": 12,
+    "fraction": 0.0029296875,
+    "all_twelve_have_six_identity_assignments": true,
+    "all_twelve_missing_both_answer_tags": true,
+    "all_twelve_end_with_one_normal_endoftext": true,
+    "intermediate_im_start_or_im_end": 0,
+    "response_token_min": 663,
+    "response_token_max": 1542,
+    "all_twelve_score_zero_unchanged": true,
+    "observed_failure": "Complete identity assignments in angle brackets instead of the required answer tags. No evidence of hard length limit or intermediate special-stop truncation in these cases.",
+    "scoring_changed": false,
+    "raw_cases_retained_privately": true,
+    "training_modified": false,
+    "extra_gpu_work": false
+  },
+  "reference_development100_output_format_audit": {
+    "reference_step": 100,
+    "raw_sha256": "cb4f22619893a15cecc3719bc02509830991bd11cba500735750fde007c922aa",
+    "outputs": 4096,
+    "noncap_missing_standard_answer_tag": 19,
+    "fraction": 0.004638671875,
+    "normal_single_terminal_endoftext_cases": 19,
+    "six_identity_assignment_cases": 19,
+    "missing_both_standard_answer_tags_cases": 19,
+    "response_token_min": 443,
+    "response_token_max": 1219,
+    "all_scores_zero_preserved": true,
+    "unusual_case_count": 0,
+    "scoring_changed": false,
+    "extra_gpu_work": false,
+    "training_modified": false
   }
 }

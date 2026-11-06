@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-06T06:32:08.231894+08:00",
+  "checked_beijing": "2026-11-06T11:36:08.731296+08:00",
   "campaign": "K&K clean-v4",
   "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "phase": "fresh_reference_training",
@@ -140,11 +140,35 @@
       "mean_response_tokens": 1031.28271484375,
       "output_limit_pct": 4.19921875,
       "noncap_missing_answer_pct": 0.0244140625
+    },
+    {
+      "route_kind": "reference",
+      "student_start_step": 0,
+      "guidance": "plain",
+      "additional_step": 75,
+      "global_step": 75,
+      "pass_at_1_pct": 42.333984375,
+      "pass_at_8_pct": 87.5,
+      "mean_response_tokens": 1114.32080078125,
+      "output_limit_pct": 4.8828125,
+      "noncap_missing_answer_pct": 0.29296875
+    },
+    {
+      "route_kind": "reference",
+      "student_start_step": 0,
+      "guidance": "plain",
+      "additional_step": 100,
+      "global_step": 100,
+      "pass_at_1_pct": 43.701171875,
+      "pass_at_8_pct": 85.9375,
+      "mean_response_tokens": 1042.230712890625,
+      "output_limit_pct": 4.00390625,
+      "noncap_missing_answer_pct": 0.4638671875
     }
   ],
   "reference": {
     "status": "running",
-    "completed_updates": 51,
+    "completed_updates": 101,
     "target_updates": 150,
     "source": "official Qwen3-1.7B-Base; checkpoint resume disabled",
     "full_fork_checkpoints": [
@@ -157,13 +181,13 @@
       "route_kind": "reference",
       "student_start_step": 0,
       "guidance": "plain",
-      "additional_step": 50,
-      "global_step": 50,
-      "pass_at_1_pct": 38.3056640625,
-      "pass_at_8_pct": 82.421875,
-      "mean_response_tokens": 1031.28271484375,
-      "output_limit_pct": 4.19921875,
-      "noncap_missing_answer_pct": 0.0244140625
+      "additional_step": 100,
+      "global_step": 100,
+      "pass_at_1_pct": 43.701171875,
+      "pass_at_8_pct": 85.9375,
+      "mean_response_tokens": 1042.230712890625,
+      "output_limit_pct": 4.00390625,
+      "noncap_missing_answer_pct": 0.4638671875
     }
   },
   "repairs_active_from_reference_step0": [
@@ -176,7 +200,7 @@
   "independent_final_test_complete": false,
   "state_guidance_interaction_available": false,
   "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.",
-  "source_snapshot_sha256": "fad04dc59f3574317eca245a546597aeed7820f7d9c9702d4de30c91e2532048",
+  "source_snapshot_sha256": "6f6e47ffe0683e95f4473f9f0bff159f29776c3d58af8d646f48d2a92cd465f4",
   "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
   "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",
   "historical_results": "legacy-format-v3-20261105/README.md"
