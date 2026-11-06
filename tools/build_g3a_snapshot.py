@@ -98,7 +98,8 @@ def build(snapshot, source_commit, expected_scope_sha):
         sampling_scope='Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.',
         source_snapshot_sha256=hashlib.sha256(json.dumps(snapshot, sort_keys=True, ensure_ascii=False).encode()).hexdigest(),
         scope_sha256=expected_scope_sha,
-        swanlab_url='https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c',
+        swanlab_url='https://swanlab.cn/@Tasselszcx/OPD+RL/v0/overview',
+        reference_swanlab_url='https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c',
         historical_results='legacy-format-v3-20261105/README.md')
     return summary
 
@@ -126,11 +127,13 @@ def write(summary, output):
             writer.writeheader()
             writer.writerows(rows)
     ref = summary['reference']
-    lines = ['# 当前进度与结果', '', f"快照时间：{summary['checked_beijing']}，**clean-v4**。静态快照；[SwanLab新轮]({summary['swanlab_url']})同步运行日志。", '',
+    lines = ['# 当前进度与结果', '', f"快照时间：{summary['checked_beijing']}，**clean-v4**。静态快照；[SwanLab项目]({summary['swanlab_url']})可查看当前各组运行日志。", '',
         f"公共参考从官方Base重新训练，完成**{ref['completed_updates']}／150步**，使用4张GPU，不计入正式八组。参考完成并保留新30／90状态后，先跑30起点四组，再跑90起点四组，各追加150步。", '',
         '| 学生起点 | 指导 | 已完成／计划更新 | 状态 | 最近开发测于追加步 | pass@1／pass@8 |', '|---:|---|---:|---|---:|---|']
     for route in summary['routes']:
         status = {'waiting_clean_reference': '等待公共参考完成', 'running': '训练中', 'starting': '初始化', 'completed': '已完成', 'failed': '失败'}[route['status']]
+        if route['status'] == 'waiting_clean_reference' and ref['status'] == 'completed':
+            status = '排队'
         if route['status'] == 'running' and route['completed_updates'] == 0:
             status = '初始化／起始验证'
         score = '待验证' if route['latest_development_update'] is None else f"{route['dev_pass_at_1_pct']:.2f}%／{route['dev_pass_at_8_pct']:.2f}%"

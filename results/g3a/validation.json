@@ -153,5 +153,39 @@
     "scoring_changed": false,
     "extra_gpu_work": false,
     "training_modified": false
+  },
+  "formal_state30_development25_protocol_format_audit": {
+    "student_start": 30,
+    "additional_step": 25,
+    "global_step": 55,
+    "questions": 512,
+    "samples": 8,
+    "same_first25_batch_sets_and_hashes": true,
+    "source_flags_passed": true,
+    "groups": {
+      "plain": {
+        "raw_sha256": "52a0a722a63db7aed516f646eb8f713426c6915a3176ec6e2bb0469511bcc21b",
+        "noncap_unparseable_final": 2,
+        "outputs": 4096,
+        "training_prefix": 25
+      },
+      "answer_only": {
+        "raw_sha256": "e1deb640545b04910a90617b44bf9f686528c9a0dabceeea4800eef045052132",
+        "noncap_unparseable_final": 0,
+        "outputs": 4096,
+        "training_prefix": 25
+      }
+    },
+    "baseline2_cases_have_six_expected_names_once": true,
+    "baseline2_cases_normal_single_terminal_endoftext": true,
+    "baseline2_cases_missing_both_answer_tags": true,
+    "baseline_missing_case_tokens": [
+      821,
+      1007
+    ],
+    "answer_noncap_unparseable": 0,
+    "scoring_changed": false,
+    "new_gpu_work": false,
+    "training_control": false
   }
 }

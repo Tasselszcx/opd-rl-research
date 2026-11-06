@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-06T16:26:35.752464+08:00",
+  "checked_beijing": "2026-11-06T20:05:59.545693+08:00",
   "campaign": "K&K clean-v4",
   "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "phase": "formal_training",
@@ -17,12 +17,12 @@
       "student_start_step": 30,
       "guidance": "plain",
       "status": "running",
-      "completed_updates": 0,
+      "completed_updates": 37,
       "target_updates": 150,
-      "current_global_step": 30,
-      "latest_development_update": null,
-      "dev_pass_at_1_pct": null,
-      "dev_pass_at_8_pct": null
+      "current_global_step": 67,
+      "latest_development_update": 25,
+      "dev_pass_at_1_pct": 39.2822265625,
+      "dev_pass_at_8_pct": 85.3515625
     },
     {
       "task": "kk",
@@ -30,12 +30,12 @@
       "student_start_step": 30,
       "guidance": "answer_only",
       "status": "running",
-      "completed_updates": 0,
+      "completed_updates": 36,
       "target_updates": 150,
-      "current_global_step": 30,
-      "latest_development_update": null,
-      "dev_pass_at_1_pct": null,
-      "dev_pass_at_8_pct": null
+      "current_global_step": 66,
+      "latest_development_update": 25,
+      "dev_pass_at_1_pct": 36.865234375,
+      "dev_pass_at_8_pct": 84.1796875
     },
     {
       "task": "kk",
@@ -188,6 +188,30 @@
       "mean_response_tokens": 1070.773193359375,
       "output_limit_pct": 4.2724609375,
       "noncap_missing_answer_pct": 0.3662109375
+    },
+    {
+      "route_kind": "formal",
+      "student_start_step": 30,
+      "guidance": "answer_only",
+      "additional_step": 25,
+      "global_step": 55,
+      "pass_at_1_pct": 36.865234375,
+      "pass_at_8_pct": 84.1796875,
+      "mean_response_tokens": 981.9375,
+      "output_limit_pct": 3.5888671875,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "route_kind": "formal",
+      "student_start_step": 30,
+      "guidance": "plain",
+      "additional_step": 25,
+      "global_step": 55,
+      "pass_at_1_pct": 39.2822265625,
+      "pass_at_8_pct": 85.3515625,
+      "mean_response_tokens": 1072.451171875,
+      "output_limit_pct": 4.2236328125,
+      "noncap_missing_answer_pct": 0.048828125
     }
   ],
   "reference": {
@@ -224,8 +248,9 @@
   "independent_final_test_complete": false,
   "state_guidance_interaction_available": false,
   "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.",
-  "source_snapshot_sha256": "12242a0dbd1e2e57c444f6a763ce9a22ed404cd458554e6dc3e8b155e13595a0",
+  "source_snapshot_sha256": "4e563c41d8b9507647f1e8e0dec18a2a7fce3c5cce1837f108dbe4b854e4ad54",
   "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
-  "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",
+  "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/v0/overview",
+  "reference_swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",
   "historical_results": "legacy-format-v3-20261105/README.md"
 }
