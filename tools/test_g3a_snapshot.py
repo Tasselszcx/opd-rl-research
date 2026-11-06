@@ -1,9 +1,11 @@
 """Regression checks for false completion, historical reuse, and score attribution."""
 from copy import deepcopy
 import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 
-from build_g3a_snapshot import build
+from build_g3a_snapshot import build, write
 
 
 def fixture():
@@ -51,6 +53,9 @@ class SnapshotChecks(unittest.TestCase):
         self.assertEqual(summary['counts']['running'],1)
         self.assertIsNone(summary['routes'][0]['latest_development_update'])
         self.assertTrue(all(p['route_kind']=='reference' for p in summary['development']))
+        with TemporaryDirectory() as folder:
+            document = write(summary, Path(folder))
+        self.assertIn('初始化／起始验证', document)
 
 
 if __name__=='__main__':unittest.main()

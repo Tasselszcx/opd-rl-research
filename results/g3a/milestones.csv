@@ -1,3 +1,4 @@
 route_kind,student_start_step,guidance,additional_step,global_step,pass_at_1_pct,pass_at_8_pct,mean_response_tokens,output_limit_pct,noncap_missing_answer_pct
 reference,0,plain,50,50,38.3056640625,82.421875,1031.28271484375,4.19921875,0.0244140625
 reference,0,plain,100,100,43.701171875,85.9375,1042.230712890625,4.00390625,0.4638671875
+reference,0,plain,150,150,47.7294921875,89.453125,1070.773193359375,4.2724609375,0.3662109375

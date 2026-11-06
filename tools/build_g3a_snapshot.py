@@ -131,6 +131,8 @@ def write(summary, output):
         '| 学生起点 | 指导 | 已完成／计划更新 | 状态 | 最近开发测于追加步 | pass@1／pass@8 |', '|---:|---|---:|---|---:|---|']
     for route in summary['routes']:
         status = {'waiting_clean_reference': '等待公共参考完成', 'running': '训练中', 'starting': '初始化', 'completed': '已完成', 'failed': '失败'}[route['status']]
+        if route['status'] == 'running' and route['completed_updates'] == 0:
+            status = '初始化／起始验证'
         score = '待验证' if route['latest_development_update'] is None else f"{route['dev_pass_at_1_pct']:.2f}%／{route['dev_pass_at_8_pct']:.2f}%"
         lines.append(f"| {route['student_start_step']} | {MODES[route['guidance']]} | {route['completed_updates']}／150 | {status} | {route['latest_development_update'] or '—'} | {score} |")
     lines += ['', f"正式八组完成**{summary['counts']['completed']}／8**。分数对应表内测验步数，不代表当前未测步数；单训练种子，暂不下指导优劣或状态交互结论。", '',

@@ -1,13 +1,13 @@
 {
-  "checked_beijing": "2026-11-06T11:36:08.731296+08:00",
+  "checked_beijing": "2026-11-06T16:26:35.752464+08:00",
   "campaign": "K&K clean-v4",
   "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
-  "phase": "fresh_reference_training",
+  "phase": "formal_training",
   "formal_branches": 8,
   "counts": {
     "completed": 0,
-    "running": 0,
-    "pending": 8,
+    "running": 2,
+    "pending": 6,
     "failed": 0
   },
   "routes": [
@@ -16,10 +16,10 @@
       "seed": 42,
       "student_start_step": 30,
       "guidance": "plain",
-      "status": "waiting_clean_reference",
+      "status": "running",
       "completed_updates": 0,
       "target_updates": 150,
-      "current_global_step": null,
+      "current_global_step": 30,
       "latest_development_update": null,
       "dev_pass_at_1_pct": null,
       "dev_pass_at_8_pct": null
@@ -29,10 +29,10 @@
       "seed": 42,
       "student_start_step": 30,
       "guidance": "answer_only",
-      "status": "waiting_clean_reference",
+      "status": "running",
       "completed_updates": 0,
       "target_updates": 150,
-      "current_global_step": null,
+      "current_global_step": 30,
       "latest_development_update": null,
       "dev_pass_at_1_pct": null,
       "dev_pass_at_8_pct": null
@@ -164,11 +164,35 @@
       "mean_response_tokens": 1042.230712890625,
       "output_limit_pct": 4.00390625,
       "noncap_missing_answer_pct": 0.4638671875
+    },
+    {
+      "route_kind": "reference",
+      "student_start_step": 0,
+      "guidance": "plain",
+      "additional_step": 125,
+      "global_step": 125,
+      "pass_at_1_pct": 47.265625,
+      "pass_at_8_pct": 90.8203125,
+      "mean_response_tokens": 1086.489013671875,
+      "output_limit_pct": 4.0771484375,
+      "noncap_missing_answer_pct": 0.5126953125
+    },
+    {
+      "route_kind": "reference",
+      "student_start_step": 0,
+      "guidance": "plain",
+      "additional_step": 150,
+      "global_step": 150,
+      "pass_at_1_pct": 47.7294921875,
+      "pass_at_8_pct": 89.453125,
+      "mean_response_tokens": 1070.773193359375,
+      "output_limit_pct": 4.2724609375,
+      "noncap_missing_answer_pct": 0.3662109375
     }
   ],
   "reference": {
-    "status": "running",
-    "completed_updates": 101,
+    "status": "completed",
+    "completed_updates": 150,
     "target_updates": 150,
     "source": "official Qwen3-1.7B-Base; checkpoint resume disabled",
     "full_fork_checkpoints": [
@@ -181,13 +205,13 @@
       "route_kind": "reference",
       "student_start_step": 0,
       "guidance": "plain",
-      "additional_step": 100,
-      "global_step": 100,
-      "pass_at_1_pct": 43.701171875,
-      "pass_at_8_pct": 85.9375,
-      "mean_response_tokens": 1042.230712890625,
-      "output_limit_pct": 4.00390625,
-      "noncap_missing_answer_pct": 0.4638671875
+      "additional_step": 150,
+      "global_step": 150,
+      "pass_at_1_pct": 47.7294921875,
+      "pass_at_8_pct": 89.453125,
+      "mean_response_tokens": 1070.773193359375,
+      "output_limit_pct": 4.2724609375,
+      "noncap_missing_answer_pct": 0.3662109375
     }
   },
   "repairs_active_from_reference_step0": [
@@ -200,7 +224,7 @@
   "independent_final_test_complete": false,
   "state_guidance_interaction_available": false,
   "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.",
-  "source_snapshot_sha256": "6f6e47ffe0683e95f4473f9f0bff159f29776c3d58af8d646f48d2a92cd465f4",
+  "source_snapshot_sha256": "12242a0dbd1e2e57c444f6a763ce9a22ed404cd458554e6dc3e8b155e13595a0",
   "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
   "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",
   "historical_results": "legacy-format-v3-20261105/README.md"

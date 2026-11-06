@@ -116,5 +116,42 @@
     "scoring_changed": false,
     "extra_gpu_work": false,
     "training_modified": false
+  },
+  "reference150_completion": {
+    "status": "completed",
+    "canonical_validator_passed": true,
+    "training_updates": 150,
+    "start_step": 0,
+    "global_endpoint": 150,
+    "terminal_model_only": true,
+    "terminal_training_resume_supported": false,
+    "full_fork_states_structure_verified": [
+      30,
+      90
+    ],
+    "wall_seconds": 54789.69345545769,
+    "allocated_gpu_hours": 60.877437172730765,
+    "private_lightweight_evidence_retained": true,
+    "private_evidence_archive_sha256": "d46f687b6270ceade17fceafc6619097af79f36964877468ac60e809f0071e84",
+    "stored_development_outputs": 28672,
+    "tensor_payloads_not_loaded_for_validation": true,
+    "extra_gpu_work": false
+  },
+  "reference_development150_output_format_audit": {
+    "reference_step": 150,
+    "raw_sha256": "307dac1b18c3061330f11555d29f545af9404686c3defd223b70ea72d5d13f23",
+    "outputs": 4096,
+    "noncap_unparseable_final_count": 15,
+    "fraction": 0.003662109375,
+    "normal_single_terminal_endoftext_cases": 15,
+    "exact_six_expected_names_once_cases": 15,
+    "missing_both_standard_answer_tags_cases": 15,
+    "response_token_min": 434,
+    "response_token_max": 1496,
+    "all_scores_zero_preserved": true,
+    "unusual_case_count": 0,
+    "scoring_changed": false,
+    "extra_gpu_work": false,
+    "training_modified": false
   }
 }
