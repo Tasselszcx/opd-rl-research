@@ -228,5 +228,17 @@
     "raw_private_not_included": true,
     "extra_gpu_work": false,
     "training_modified": false
+  },
+  "formal_state30_development75_output_observations": {
+    "additional_step": 75,
+    "global_step": 105,
+    "outputs_each": 4096,
+    "baseline_noncap_missing": 18,
+    "answer_noncap_missing": 0,
+    "baseline_at_limit": 157,
+    "answer_at_limit": 151,
+    "individual75_missing_cases_not_classified": true,
+    "original_scores_unchanged": true,
+    "extra_gpu_sampling": false
   }
 }
