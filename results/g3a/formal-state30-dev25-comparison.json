@@ -10,6 +10,52 @@
   "samples": 8,
   "bootstrap_draws": 10000,
   "bootstrap_seed": 20261101,
+  "groups": {
+    "answer_only": {
+      "additional_step": 25,
+      "global_step": 55,
+      "questions": 512,
+      "samples": 8,
+      "pass_at_1": 0.36865234375,
+      "pass_at_8": 0.841796875,
+      "pass_at_k": {
+        "1": 0.36865234375,
+        "2": 0.5346679687500006,
+        "3": 0.6344168526785715,
+        "4": 0.7023995535714278,
+        "5": 0.7517787388392857,
+        "6": 0.7891322544642865,
+        "7": 0.818359375,
+        "8": 0.841796875
+      },
+      "mean_response_tokens": 981.9375,
+      "output_limit_fraction": 0.035888671875,
+      "final_answer_present_fraction": 0.964111328125,
+      "no_final_before_limit_fraction": 0.0
+    },
+    "plain": {
+      "additional_step": 25,
+      "global_step": 55,
+      "questions": 512,
+      "samples": 8,
+      "pass_at_1": 0.392822265625,
+      "pass_at_8": 0.853515625,
+      "pass_at_k": {
+        "1": 0.392822265625,
+        "2": 0.5620814732142864,
+        "3": 0.6608537946428569,
+        "4": 0.7261160714285709,
+        "5": 0.7722516741071426,
+        "6": 0.806361607142858,
+        "7": 0.83251953125,
+        "8": 0.853515625
+      },
+      "mean_response_tokens": 1072.451171875,
+      "output_limit_fraction": 0.042236328125,
+      "final_answer_present_fraction": 0.957275390625,
+      "no_final_before_limit_fraction": 0.00048828125
+    }
+  },
   "comparisons": {
     "answer_only-minus-plain": {
       "1": {
@@ -132,49 +178,5 @@
   ],
   "checkpoint_selection": false,
   "extra_gpu_work": false,
-  "training_modified": false,
-  "groups": {
-    "answer_only": {
-      "additional_step": 25,
-      "global_step": 55,
-      "questions": 512,
-      "samples": 8,
-      "pass_at_1": 0.36865234375,
-      "pass_at_8": 0.841796875,
-      "pass_at_k": {
-        "1": 0.36865234375,
-        "2": 0.5346679687500006,
-        "3": 0.6344168526785715,
-        "4": 0.7023995535714278,
-        "5": 0.7517787388392857,
-        "6": 0.7891322544642865,
-        "7": 0.818359375,
-        "8": 0.841796875
-      },
-      "mean_response_tokens": 981.9375,
-      "output_limit_fraction": 0.035888671875,
-      "no_final_before_limit_fraction": 0.0
-    },
-    "plain": {
-      "additional_step": 25,
-      "global_step": 55,
-      "questions": 512,
-      "samples": 8,
-      "pass_at_1": 0.392822265625,
-      "pass_at_8": 0.853515625,
-      "pass_at_k": {
-        "1": 0.392822265625,
-        "2": 0.5620814732142864,
-        "3": 0.6608537946428569,
-        "4": 0.7261160714285709,
-        "5": 0.7722516741071426,
-        "6": 0.806361607142858,
-        "7": 0.83251953125,
-        "8": 0.853515625
-      },
-      "mean_response_tokens": 1072.451171875,
-      "output_limit_fraction": 0.042236328125,
-      "no_final_before_limit_fraction": 0.00048828125
-    }
-  }
+  "training_modified": false
 }
