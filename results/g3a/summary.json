@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-07T15:53:14.082525+08:00",
+  "checked_beijing": "2026-11-07T16:54:07.451688+08:00",
   "campaign": "K&K clean-v4",
   "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
   "phase": "formal_training",
@@ -43,9 +43,9 @@
       "student_start_step": 30,
       "guidance": "full_reasoning",
       "status": "running",
-      "completed_updates": 107,
+      "completed_updates": 119,
       "target_updates": 150,
-      "current_global_step": 137,
+      "current_global_step": 149,
       "latest_development_update": 100,
       "dev_pass_at_1_pct": 28.1005859375,
       "dev_pass_at_8_pct": 64.84375
@@ -56,12 +56,12 @@
       "student_start_step": 30,
       "guidance": "error_targeted",
       "status": "running",
-      "completed_updates": 97,
+      "completed_updates": 108,
       "target_updates": 150,
-      "current_global_step": 127,
-      "latest_development_update": 75,
-      "dev_pass_at_1_pct": 42.8955078125,
-      "dev_pass_at_8_pct": 86.71875
+      "current_global_step": 138,
+      "latest_development_update": 100,
+      "dev_pass_at_1_pct": 44.0673828125,
+      "dev_pass_at_8_pct": 85.7421875
     },
     {
       "task": "kk",
@@ -300,6 +300,18 @@
     {
       "route_kind": "formal",
       "student_start_step": 30,
+      "guidance": "error_targeted",
+      "additional_step": 100,
+      "global_step": 130,
+      "pass_at_1_pct": 44.0673828125,
+      "pass_at_8_pct": 85.7421875,
+      "mean_response_tokens": 1027.87158203125,
+      "output_limit_pct": 6.884765625,
+      "noncap_missing_answer_pct": 0.0
+    },
+    {
+      "route_kind": "formal",
+      "student_start_step": 30,
       "guidance": "full_reasoning",
       "additional_step": 25,
       "global_step": 55,
@@ -452,7 +464,7 @@
   "independent_final_test_complete": false,
   "state_guidance_interaction_available": false,
   "sampling_scope": "Development512x8 is separate from fixed-endpoint test1024x32. Step0 grades are excluded.",
-  "source_snapshot_sha256": "0f8b24d37b97cddbe35625c44c0bccba929f71af97515b39d2026d0aebe64864",
+  "source_snapshot_sha256": "d1d8d3a115d6c8919fb3bb5ab5c0e8a596c8124402aaf54458394f80513a7f0a",
   "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
   "swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/v0/overview",
   "reference_swanlab_url": "https://swanlab.cn/@Tasselszcx/OPD+RL/runs/d865445ade5e2c67474c",
