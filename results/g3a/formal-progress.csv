@@ -1,8 +1,8 @@
 task,seed,student_start_step,guidance,status,completed_updates,target_updates,current_global_step,latest_development_update,dev_pass_at_1_pct,dev_pass_at_8_pct
 kk,42,30,plain,completed,150,150,180,150,50.732421875,89.453125
 kk,42,30,answer_only,completed,150,150,180,150,46.630859375,89.453125
-kk,42,30,full_reasoning,running,0,150,30,,,
-kk,42,30,error_targeted,running,0,150,30,,,
+kk,42,30,full_reasoning,running,60,150,90,50,28.02734375,69.7265625
+kk,42,30,error_targeted,running,53,150,83,50,40.478515625,84.5703125
 kk,42,90,plain,waiting_clean_reference,0,150,,,,
 kk,42,90,answer_only,waiting_clean_reference,0,150,,,,
 kk,42,90,full_reasoning,waiting_clean_reference,0,150,,,,

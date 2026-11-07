@@ -1,0 +1,140 @@
+{
+  "status": "passed_existing_output_audit",
+  "groups": {
+    "plain": {
+      "development": {
+        "25": {
+          "raw_sha256": "52a0a722a63db7aed516f646eb8f713426c6915a3176ec6e2bb0469511bcc21b",
+          "outputs": 4096,
+          "correct": 1609,
+          "at_limit": 173,
+          "noncap_without_final": 2,
+          "answer_present_but_wrong": 2312,
+          "responses_with_<|im_start|>": 0,
+          "responses_with_<|im_end|>": 0,
+          "responses_with_<|endoftext|>": 3923,
+          "wrong_with_complete_six_expected_roles": 2312,
+          "wrong_assignment_violated_constraints_total": 3530,
+          "mean_response_tokens": 1072.451171875
+        }
+      },
+      "first25_training_means": {
+        "guidance/eos_scored_count": 1023.52,
+        "guidance/eos_advantage_mean": -0.001466258059322172,
+        "actor/entropy": 0.29636167055752594,
+        "actor/grad_norm": 0.8592530941963196,
+        "response_length/mean": 983.3242578125,
+        "response_length/clip_ratio": 0.00046875
+      }
+    },
+    "answer_only": {
+      "development": {
+        "25": {
+          "raw_sha256": "e1deb640545b04910a90617b44bf9f686528c9a0dabceeea4800eef045052132",
+          "outputs": 4096,
+          "correct": 1510,
+          "at_limit": 147,
+          "noncap_without_final": 0,
+          "answer_present_but_wrong": 2439,
+          "responses_with_<|im_start|>": 0,
+          "responses_with_<|im_end|>": 0,
+          "responses_with_<|endoftext|>": 3949,
+          "wrong_with_complete_six_expected_roles": 2439,
+          "wrong_assignment_violated_constraints_total": 3760,
+          "mean_response_tokens": 981.9375
+        }
+      },
+      "first25_training_means": {
+        "guidance/eos_scored_count": 1023.52,
+        "guidance/eos_advantage_mean": 1.2377401271805865e-05,
+        "actor/entropy": 0.300926408918458,
+        "actor/grad_norm": 0.9795938348770141,
+        "response_length/mean": 879.6925390625,
+        "response_length/clip_ratio": 0.00046875,
+        "guidance/teacher_prompt_tokens_mean": 363.66375
+      }
+    },
+    "full_reasoning": {
+      "development": {
+        "0": {
+          "raw_sha256": "758b04c2ca936c57f658eb35981f6878c104c5a1777e9177ba5c5ef04a068cd9",
+          "outputs": 4096,
+          "correct": 1374,
+          "at_limit": 200,
+          "noncap_without_final": 0,
+          "answer_present_but_wrong": 2522,
+          "responses_with_<|im_start|>": 0,
+          "responses_with_<|im_end|>": 0,
+          "responses_with_<|endoftext|>": 3896,
+          "wrong_with_complete_six_expected_roles": 2521,
+          "wrong_assignment_violated_constraints_total": 3988,
+          "wrong_with_invalid_or_incomplete_role_list": 1,
+          "mean_response_tokens": 1107.40380859375
+        },
+        "25": {
+          "raw_sha256": "0f9a52ac3a75788f6ae2086c308cb6d95dc4e934212421e43900831b57bf13d3",
+          "outputs": 4096,
+          "correct": 1022,
+          "at_limit": 95,
+          "noncap_without_final": 0,
+          "answer_present_but_wrong": 2979,
+          "responses_with_<|im_start|>": 0,
+          "responses_with_<|im_end|>": 0,
+          "responses_with_<|endoftext|>": 4001,
+          "wrong_with_complete_six_expected_roles": 2977,
+          "wrong_assignment_violated_constraints_total": 5623,
+          "wrong_with_invalid_or_incomplete_role_list": 2,
+          "mean_response_tokens": 706.478271484375
+        }
+      },
+      "first25_training_means": {
+        "guidance/eos_scored_count": 1023.64,
+        "guidance/eos_advantage_mean": -0.0004069902710034512,
+        "actor/entropy": 0.29586938854394246,
+        "actor/grad_norm": 1.148467049598694,
+        "response_length/mean": 614.3933203125,
+        "response_length/clip_ratio": 0.0003515625,
+        "guidance/teacher_prompt_tokens_mean": 1516.6240625
+      }
+    },
+    "error_targeted": {
+      "development": {
+        "25": {
+          "raw_sha256": "391b8318840184dbfb835c5b5105a50f899358aa20344c6103c95279a684cf98",
+          "outputs": 4096,
+          "correct": 1568,
+          "at_limit": 180,
+          "noncap_without_final": 0,
+          "answer_present_but_wrong": 2348,
+          "responses_with_<|im_start|>": 0,
+          "responses_with_<|im_end|>": 0,
+          "responses_with_<|endoftext|>": 3916,
+          "wrong_with_complete_six_expected_roles": 2348,
+          "wrong_assignment_violated_constraints_total": 3661,
+          "mean_response_tokens": 958.451171875
+        }
+      },
+      "first25_training_means": {
+        "guidance/eos_scored_count": 1023.24,
+        "guidance/eos_advantage_mean": -4.5701206736339373e-05,
+        "actor/entropy": 0.29145836193463764,
+        "actor/grad_norm": 2.943220467567444,
+        "response_length/mean": 846.6788671875,
+        "response_length/clip_ratio": 0.0007421875,
+        "guidance/teacher_prompt_tokens_mean": 394.7481640625
+      }
+    }
+  },
+  "actual_first25_common_question_batches": true,
+  "pure_production_scoring_recomputed_outputs": 20480,
+  "all_used_full_guidance_certificates_verified": 3200,
+  "each_guidance_assignment_checks": 64,
+  "full_guidance_ground_truth_role_mapping_verified": true,
+  "actual_training_invariants_passed": true,
+  "new_gpu_work": false,
+  "training_modified": false,
+  "teacher_forward_executed": false,
+  "causal_root_claimed": false,
+  "sampled_wrong_responses_reviewed": 2,
+  "observed_reviewed_behavior": "Reviewed responses restated constraints and then asserted incorrect complete role assignments; the audit independently verifies violated Boolean constraints. Not a first-free-CoT-error localization or proven teacher-logit cause."
+}

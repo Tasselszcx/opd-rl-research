@@ -525,5 +525,13 @@
       "raw_development_outputs": 28672
     }
   ],
-  "next_guidance_routes_status": "full_reasoning/error_targeted initialized from clean reference30; no new batch in this snapshot"
+  "next_guidance_routes_status": "full_reasoning/error_targeted initialized from clean reference30; no new batch in this snapshot",
+  "formal_state30_development25_existing_output_audit": {
+    "recomputed_outputs": 20480,
+    "verified_used_full_guidance_rows": 3200,
+    "assignments_per_guidance": 64,
+    "source": "formal-state30-dev25-output-audit.json",
+    "teacher_forward_executed": false,
+    "causal_root_claimed": false
+  }
 }
