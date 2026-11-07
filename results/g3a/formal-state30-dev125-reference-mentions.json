@@ -1,0 +1,68 @@
+{
+  "scope": "Literal lexical counts in existing development outputs, not proof of input leakage or causal teacher-signal mechanism",
+  "groups": {
+    "plain:125": {
+      "outputs": 4096,
+      "response_literal_reference_answer_count": 0,
+      "response_literal_reference_answer_pct": 0.0,
+      "reference_mentions_capped": 0,
+      "reference_mentions_correct": 0,
+      "reference_mentions_noncap_wrong": 0,
+      "student_prompts_with_teacher_reference_answer_marker": 0,
+      "raw_sha256": "53198e9fe66fa1efad33f71653755fa9c82ed3d5f9e8421bdfce2a61bc73218c"
+    },
+    "answer_only:125": {
+      "outputs": 4096,
+      "response_literal_reference_answer_count": 0,
+      "response_literal_reference_answer_pct": 0.0,
+      "reference_mentions_capped": 0,
+      "reference_mentions_correct": 0,
+      "reference_mentions_noncap_wrong": 0,
+      "student_prompts_with_teacher_reference_answer_marker": 0,
+      "raw_sha256": "6bd36da038a02e98687267ee8d374ac1274aec124c4bfd99590b084f0da7a0c2"
+    },
+    "full_reasoning:125": {
+      "outputs": 4096,
+      "response_literal_reference_answer_count": 1641,
+      "response_literal_reference_answer_pct": 40.0634765625,
+      "reference_mentions_capped": 234,
+      "reference_mentions_correct": 319,
+      "reference_mentions_noncap_wrong": 1088,
+      "student_prompts_with_teacher_reference_answer_marker": 0,
+      "raw_sha256": "58758178aae35ddbd7e026c369c5f59ebb50dd0b9fc236cf1921ff5836b03870"
+    },
+    "error_targeted:125": {
+      "outputs": 4096,
+      "response_literal_reference_answer_count": 2134,
+      "response_literal_reference_answer_pct": 52.099609375,
+      "reference_mentions_capped": 329,
+      "reference_mentions_correct": 483,
+      "reference_mentions_noncap_wrong": 1322,
+      "student_prompts_with_teacher_reference_answer_marker": 0,
+      "raw_sha256": "82517c3f5af158415e58c35c99d4d56d299ad4c8cdbdd0f62cd14d3e2cd2ab3f"
+    },
+    "error_targeted:100": {
+      "outputs": 4096,
+      "response_literal_reference_answer_count": 0,
+      "response_literal_reference_answer_pct": 0.0,
+      "reference_mentions_capped": 0,
+      "reference_mentions_correct": 0,
+      "reference_mentions_noncap_wrong": 0,
+      "student_prompts_with_teacher_reference_answer_marker": 0,
+      "raw_sha256": "a9e67c6e39029e0eb197cb26106fa48a6f5100cef33fe2b3335d2ae4d3e55798"
+    }
+  },
+  "unique_question_prompts": 512,
+  "logged_student_prompt_mismatches_across_groups": 0,
+  "selection": "All125 outputs in four groups, plus all error-targeted100 outputs; not selected by score",
+  "teacher_forward_executed": false,
+  "extra_gpu_work": false,
+  "training_modified": false,
+  "campaign": "student-state-guidance-03-kk-clean-v4",
+  "scope_sha256": "4356183d0ff5035e66fcee21fa9666df10f365c81cdb0362d7589f6f091217d1",
+  "training_source_commit": "5c4cfa4cef25cb31002811bfbecf39165b2dda32",
+  "source_snapshot_beijing": "2026-11-07T18:55:45.298898+08:00",
+  "counts_are_literal_mentions_not_semantically_annotated_hallucination_rates": true,
+  "not_a_direct_student_input_leak_claim": true,
+  "no_trajectories_filtered_or_rescored": true
+}

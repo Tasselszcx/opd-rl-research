@@ -1,6 +1,6 @@
 {
   "scope": "Exploratory development only; one training seed, no multiplicity correction, no final-test or state-interaction claim.",
-  "source_snapshot_beijing": "2026-11-07T06:44:20.936483+08:00",
+  "source_snapshot_beijing": "2026-11-07T19:43:27.881120+08:00",
   "source_analysis_sha256": "f0f13ec60b738807e6cc94a07e2b8efa2a0156542fd9218a890f4437536d6b4b",
   "student_start": 30,
   "additional_step": 150,
@@ -31,6 +31,28 @@
       "mean_response_tokens": 976.692626953125,
       "output_limit_fraction": 0.051025390625,
       "final_answer_present_fraction": 0.948974609375,
+      "no_final_before_limit_fraction": 0.0
+    },
+    "full_reasoning": {
+      "additional_step": 150,
+      "global_step": 180,
+      "questions": 512,
+      "samples": 8,
+      "pass_at_1": 0.2978515625,
+      "pass_at_8": 0.607421875,
+      "pass_at_k": {
+        "1": 0.2978515625,
+        "2": 0.40415736607142866,
+        "3": 0.4655412946428572,
+        "4": 0.5080357142857137,
+        "5": 0.5401785714285712,
+        "6": 0.5661272321428574,
+        "7": 0.588134765625,
+        "8": 0.607421875
+      },
+      "mean_response_tokens": 800.006591796875,
+      "output_limit_fraction": 0.058837890625,
+      "final_answer_present_fraction": 0.941162109375,
       "no_final_before_limit_fraction": 0.0
     },
     "plain": {
@@ -170,10 +192,123 @@
           3.125
         ]
       }
+    },
+    "full_reasoning-minus-plain": {
+      "1": {
+        "difference": -0.20947265625,
+        "paired_question_ci95": [
+          -0.239501953125,
+          -0.179931640625
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -20.947265625,
+        "paired_question_ci95_pp": [
+          -23.9501953125,
+          -17.9931640625
+        ]
+      },
+      "2": {
+        "difference": -0.2745535714285714,
+        "paired_question_ci95": [
+          -0.31019810267857145,
+          -0.23974609375
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -27.45535714285714,
+        "paired_question_ci95_pp": [
+          -31.019810267857146,
+          -23.974609375
+        ]
+      },
+      "3": {
+        "difference": -0.2967354910714286,
+        "paired_question_ci95": [
+          -0.3349269321986607,
+          -0.25948660714285715
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -29.67354910714286,
+        "paired_question_ci95_pp": [
+          -33.49269321986607,
+          -25.948660714285715
+        ]
+      },
+      "4": {
+        "difference": -0.30318080357142857,
+        "paired_question_ci95": [
+          -0.3431640625,
+          -0.26420200892857143
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -30.318080357142858,
+        "paired_question_ci95_pp": [
+          -34.31640625,
+          -26.420200892857142
+        ]
+      },
+      "5": {
+        "difference": -0.3031180245535714,
+        "paired_question_ci95": [
+          -0.3441685267857143,
+          -0.26252005440848214
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -30.31180245535714,
+        "paired_question_ci95_pp": [
+          -34.41685267857143,
+          -26.252005440848215
+        ]
+      },
+      "6": {
+        "difference": -0.29959542410714285,
+        "paired_question_ci95": [
+          -0.3422869001116071,
+          -0.25802001953125003
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -29.959542410714285,
+        "paired_question_ci95_pp": [
+          -34.22869001116071,
+          -25.802001953125004
+        ]
+      },
+      "7": {
+        "difference": -0.2939453125,
+        "paired_question_ci95": [
+          -0.338134765625,
+          -0.2509765625
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -29.39453125,
+        "paired_question_ci95_pp": [
+          -33.8134765625,
+          -25.09765625
+        ]
+      },
+      "8": {
+        "difference": -0.287109375,
+        "paired_question_ci95": [
+          -0.333984375,
+          -0.2421875
+        ],
+        "draws": 10000,
+        "interval_scope": "questions conditional on this training seed; exploratory, no multiplicity correction",
+        "difference_pp": -28.7109375,
+        "paired_question_ci95_pp": [
+          -33.3984375,
+          -24.21875
+        ]
+      }
     }
   },
   "absent_unmeasured_modes": [
-    "full_reasoning",
     "error_targeted"
   ],
   "checkpoint_selection": false,

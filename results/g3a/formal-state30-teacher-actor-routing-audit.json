@@ -1,0 +1,17 @@
+{
+  "status": "deployed_source_hashes_match_inspected_files",
+  "source_sha256": {
+    "logic/training/trainers/ray_grpo_trainer.py": "cc86797a2f28410bef21ffcbfff8b0964e20d1172cb0fd95410c6f76df127137",
+    "verl/verl/workers/fsdp_workers.py": "a9b5068d658b66d45bb598fdc7c1a84409c95c518185290e495d703038240334",
+    "verl/verl/protocol.py": "c7cb366d7c724900493a29f3ddcea8f787d05631adf24eabd4f451dde245d84a"
+  },
+  "training_modified": false,
+  "gpu_queries": false,
+  "static_source_findings": {
+    "trainer_reference_scores_from_separate_teacher_batch": true,
+    "reference_worker_output_contains_ref_log_prob_only": true,
+    "union_conflicting_input_tensors_raise_instead_of_overwrite": true,
+    "actor_update_uses_original_batch_with_added_reference_scores": true
+  },
+  "scope": "Static routing inspection plus deployed source provenance; not a new actor-batch or teacher-logit instrumented forward"
+}
